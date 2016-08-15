@@ -25,6 +25,9 @@
     <Filter Include="API\Comparison\EnumHolders">
       <UniqueIdentifier>{285ce0bb-5a4f-41f6-890c-50a32b450c42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API\Utility">
+      <UniqueIdentifier>{62cd0639-66ae-4e28-b2e2-235fe3051581}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -48,6 +51,9 @@
     <ClInclude Include="EnumSuit.h">
       <Filter>API\Comparison\EnumHolders</Filter>
     </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>API\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -70,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="EnumSuit.cpp">
       <Filter>API\Comparison\EnumHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="Error.cpp">
+      <Filter>API\Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

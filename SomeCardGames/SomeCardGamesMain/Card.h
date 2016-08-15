@@ -39,7 +39,7 @@ public:
 	/// <summary>
 	/// The constructor for the Card class.
 	/// </summary>
-	Card(int WhatCard);
+	Card(int WhatCard, int CardState);
 
 	/// <summary>
 	/// The deconstructor for the Card class.

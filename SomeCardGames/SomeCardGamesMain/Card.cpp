@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Card::Card(int WhatCard)
+Card::Card(int WhatCard, int CardState)
 {
 	this->WhatCard = WhatCard;
 	this->FigureOutSuit(WhatCard);
