@@ -22,6 +22,7 @@ Deck::Deck()
 
 Deck::~Deck()
 {
+	delete this->AllCards;
 }
 
 void Deck::Shuffle()

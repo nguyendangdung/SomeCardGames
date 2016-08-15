@@ -16,6 +16,9 @@ Card::Card(int WhatCard, int CardState)
 
 Card::~Card()
 {
+	delete this->Cards;
+	delete this->CardStates;
+	delete this->Suits;
 }
 
 void Card::FigureOutSuit(int WhatCard)
