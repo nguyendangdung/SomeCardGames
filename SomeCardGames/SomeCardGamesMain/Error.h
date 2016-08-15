@@ -11,7 +11,7 @@ using namespace std;
 class Error
 {
 public:
-#define ErrorValueOutOfAcceptableRange string "The value of an integer is out of the accepted range";
+string *ErrorValueOutOfAcceptableRange = new string("The value of an integer is out of the accepted range");
 
 	/// <summary>
 	/// The constructor for the Error class.
