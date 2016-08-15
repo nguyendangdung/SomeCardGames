@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SomeCardGamesMain", "SomeCardGamesMain\SomeCardGamesMain.vcxproj", "{1A452A34-639C-4D9D-AA48-6C5A5839CF21}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoreResources", "CoreResources\CoreResources.vcxproj", "{381D56E1-25E3-4B31-A9DB-CF94541F40E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{1A452A34-639C-4D9D-AA48-6C5A5839CF21}.Release|x64.Build.0 = Release|x64
 		{1A452A34-639C-4D9D-AA48-6C5A5839CF21}.Release|x86.ActiveCfg = Release|Win32
 		{1A452A34-639C-4D9D-AA48-6C5A5839CF21}.Release|x86.Build.0 = Release|Win32
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Debug|x64.ActiveCfg = Debug|x64
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Debug|x64.Build.0 = Debug|x64
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Debug|x86.ActiveCfg = Debug|Win32
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Debug|x86.Build.0 = Debug|Win32
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Release|x64.ActiveCfg = Release|x64
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Release|x64.Build.0 = Release|x64
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Release|x86.ActiveCfg = Release|Win32
+		{381D56E1-25E3-4B31-A9DB-CF94541F40E2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
