@@ -24,4 +24,3 @@ public:
 		Spades, Clubs, Hearts, Diamonds
 	};
 };
-

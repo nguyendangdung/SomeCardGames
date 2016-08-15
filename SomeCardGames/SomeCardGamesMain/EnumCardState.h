@@ -25,4 +25,3 @@ public:
 		FaceUp, FaceDown, OutOfGame
 	};
 };
-

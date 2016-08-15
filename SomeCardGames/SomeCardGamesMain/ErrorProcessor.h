@@ -29,4 +29,3 @@ public:
 	/// <param name="ReportMe">The exception to report.</param>
 	void Report(exception *ReportMe);
 };
-
