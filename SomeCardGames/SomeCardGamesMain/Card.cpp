@@ -4,7 +4,6 @@
 #include "EnumCards.h"
 #include "EnumCardState.h"
 #include "EnumSuit.h"
-#include "Error.h"
 
 using namespace std;
 
@@ -46,5 +45,12 @@ void Card::FigureOutSuit(int WhatCard)
 		return;
 	}
 
-	Errors->ThrowException(Errors->ErrorValueOutOfAcceptableRange);
+	try
+	{
+		Errors->ThrowException(Errors->ErrorValueOutOfAcceptableRange);
+	}
+	catch (exception e)
+	{
+		//Do something here, once we have a logging system
+	}
 }

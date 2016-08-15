@@ -28,6 +28,9 @@
     <Filter Include="API\Utility">
       <UniqueIdentifier>{62cd0639-66ae-4e28-b2e2-235fe3051581}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API\Utility\Error">
+      <UniqueIdentifier>{3412c55c-8033-4836-a70f-362483770d3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -52,7 +55,13 @@
       <Filter>API\Comparison\EnumHolders</Filter>
     </ClInclude>
     <ClInclude Include="Error.h">
-      <Filter>API\Utility</Filter>
+      <Filter>API\Utility\Error</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorProcessor.h">
+      <Filter>API\Utility\Error</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>API\Types</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -78,7 +87,13 @@
       <Filter>API\Comparison\EnumHolders</Filter>
     </ClCompile>
     <ClCompile Include="Error.cpp">
-      <Filter>API\Utility</Filter>
+      <Filter>API\Utility\Error</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorProcessor.cpp">
+      <Filter>API\Utility\Error</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>API\Types</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

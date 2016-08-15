@@ -1,5 +1,11 @@
 #pragma once
 
+#include "EnumCards.h"
+#include "EnumCardState.h"
+#include "EnumSuit.h"
+
+using namespace std;
+
 /// <summary>
 /// Represents a card in game.
 /// </summary>
@@ -9,17 +15,17 @@ public:
 	/// <summary>
 	/// Used to figure out what card this is.
 	/// </summary>
-	EnumCards *Cards;
+	EnumCards *Cards = new EnumCards();
 
 	/// <summary>
 	/// Used to figure out if the card is face up, face down, or out of the game.
 	/// </summary>
-	EnumCardState *CardStates;
+	EnumCardState *CardStates = new EnumCardState();
 
 	/// <summary>
 	/// Used to figure out what suit this card is.
 	/// </summary>
-	EnumSuit *Suits;
+	EnumSuit *Suits = new EnumSuit();
 
 	/// <summary>
 	/// What card this is.
@@ -51,8 +57,4 @@ public:
 	/// </summary>
 	/// <param name="WhatCard"></param>
 	void FigureOutSuit(int WhatCard);
-
-private:
-
-
 };

@@ -1,4 +1,5 @@
 #pragma once
+#include "ErrorProcessor.h"
 
 #include <exception>
 #include <string>
@@ -11,6 +12,8 @@ using namespace std;
 class Error
 {
 public:
+	ErrorProcessor *Processor = new ErrorProcessor();
+
 string *ErrorValueOutOfAcceptableRange = new string("The value of an integer is out of the accepted range");
 
 	/// <summary>
@@ -29,6 +32,7 @@ string *ErrorValueOutOfAcceptableRange = new string("The value of an integer is 
 	/// <param name="TheException">The message to give the exception.</param>
 	void ThrowException(string *TheException)
 	{
+		this->Processor->Report(new exception(TheException->c_str()));
 		throw new exception(TheException->c_str());
 	}
 };

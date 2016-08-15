@@ -17,4 +17,4 @@
 
 #include "Error.h"
 
-Error *Errors = new Error();
+static Error *Errors = new Error();
