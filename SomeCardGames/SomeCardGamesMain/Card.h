@@ -9,7 +9,7 @@ using namespace std;
 /// <summary>
 /// Represents a card in game.
 /// </summary>
-class Card
+class PROJECTAPI Card
 {
 public:
 	/// <summary>

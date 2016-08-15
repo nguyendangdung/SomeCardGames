@@ -3,7 +3,7 @@
 /// <summary>
 /// This class holds the Suit enum.
 /// </summary>
-class EnumSuit
+class PROJECTAPI EnumSuit
 {
 public:
 	/// <summary>

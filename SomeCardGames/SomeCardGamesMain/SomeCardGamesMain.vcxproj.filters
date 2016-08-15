@@ -63,6 +63,9 @@
     <ClInclude Include="Deck.h">
       <Filter>API\Types</Filter>
     </ClInclude>
+    <ClInclude Include="Export.h">
+      <Filter>API\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -94,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="Deck.cpp">
       <Filter>API\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Export.cpp">
+      <Filter>API\Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

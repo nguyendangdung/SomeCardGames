@@ -13,7 +13,7 @@ using namespace std;
 /// <summary>
 /// Used to represent a deck of cards.
 /// </summary>
-class Deck
+class PROJECTAPI Deck
 {
 public:
 

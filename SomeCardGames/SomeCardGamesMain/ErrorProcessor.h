@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Export.h"
+
 #include <exception>
 
 using namespace std;
@@ -7,7 +9,7 @@ using namespace std;
 /// <summary>
 /// This class is used to hold and report this program's errors.
 /// </summary>
-class ErrorProcessor
+class PROJECTAPI ErrorProcessor
 {
 public:
 

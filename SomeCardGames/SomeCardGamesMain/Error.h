@@ -9,7 +9,7 @@ using namespace std;
 /// <summary>
 /// A class used to throw errors.
 /// </summary>
-class Error
+class PROJECTAPI Error
 {
 public:
 	ErrorProcessor *Processor = new ErrorProcessor();

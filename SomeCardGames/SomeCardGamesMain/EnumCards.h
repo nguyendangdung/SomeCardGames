@@ -3,7 +3,7 @@
 /// <summary>
 /// This class is used to hold the Cards enum.
 /// </summary>
-class EnumCards
+class PROJECTAPI EnumCards
 {
 public:
 

@@ -3,7 +3,7 @@
 /// <summary>
 /// This class holds the State enum.
 /// </summary>
-class EnumCardState
+class PROJECTAPI EnumCardState
 {
 public:
 

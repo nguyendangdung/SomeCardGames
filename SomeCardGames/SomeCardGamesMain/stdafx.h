@@ -16,5 +16,6 @@
 // TODO: reference additional headers your program requires here
 
 #include "Error.h"
+#include "Export.h"
 
 static Error *Errors = new Error();
