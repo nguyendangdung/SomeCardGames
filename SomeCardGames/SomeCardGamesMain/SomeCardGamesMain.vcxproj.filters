@@ -39,10 +39,13 @@
     <ClInclude Include="Card.h">
       <Filter>API\Types</Filter>
     </ClInclude>
-    <ClInclude Include="CompareCards.h">
-      <Filter>API\Comparison</Filter>
-    </ClInclude>
     <ClInclude Include="EnumCards.h">
+      <Filter>API\Comparison\EnumHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumCardState.h">
+      <Filter>API\Comparison\EnumHolders</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumSuit.h">
       <Filter>API\Comparison\EnumHolders</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,10 +62,13 @@
     <ClCompile Include="Card.cpp">
       <Filter>API\Types</Filter>
     </ClCompile>
-    <ClCompile Include="CompareCards.cpp">
-      <Filter>API\Comparison</Filter>
-    </ClCompile>
     <ClCompile Include="EnumCards.cpp">
+      <Filter>API\Comparison\EnumHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumCardState.cpp">
+      <Filter>API\Comparison\EnumHolders</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumSuit.cpp">
       <Filter>API\Comparison\EnumHolders</Filter>
     </ClCompile>
   </ItemGroup>
