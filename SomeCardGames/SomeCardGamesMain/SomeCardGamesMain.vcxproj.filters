@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{ac5bbc68-4660-4500-88c2-97bd472bfc6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Types">
+      <UniqueIdentifier>{fc7548df-3082-4cdc-9e47-3de1128236de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Comparison">
+      <UniqueIdentifier>{c746c54f-132d-4877-a164-cc986eae9cf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Comparison\EnumHolders">
+      <UniqueIdentifier>{285ce0bb-5a4f-41f6-890c-50a32b450c42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +36,15 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>API\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="CompareCards.h">
+      <Filter>API\Comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumCards.h">
+      <Filter>API\Comparison\EnumHolders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -34,6 +55,15 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>API\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="CompareCards.cpp">
+      <Filter>API\Comparison</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumCards.cpp">
+      <Filter>API\Comparison\EnumHolders</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
