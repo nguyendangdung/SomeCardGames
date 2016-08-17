@@ -24,7 +24,7 @@ namespace SomeCardGames.Error
         {
             get
             {
-                return 65702856;
+                return 17660531;
             }
         }
 
@@ -62,7 +62,7 @@ namespace SomeCardGames.Error
             ToReport.Milestone = TheMileStone;
             //client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames");
 
-            MessageBox.Show(client.Issue.Create(GitRepoId, ToReport).IsCompleted.ToString());
+            client.Issue.Create(GitRepoId, ToReport);
 
             return;
         }
