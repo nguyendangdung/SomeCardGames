@@ -29,6 +29,21 @@ namespace SomeCardGames
         }
 
         /// <summary>
+        /// Called when we want to shut this program down.
+        /// </summary>
+        public void Shutdown(int Code)
+        {
+            try
+            {
+                Environment.Exit(Code);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
         /// Saves the form to this class.
         /// </summary>
         /// <param name="Form"></param>
