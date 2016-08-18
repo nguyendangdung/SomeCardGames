@@ -37,7 +37,6 @@ namespace SomeCardGames
             {
                 ErrorReporter.Report(InvalidCast);
             }
-
         }
     }
 }
