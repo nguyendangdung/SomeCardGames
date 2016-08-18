@@ -20,14 +20,6 @@ namespace SomeCardGames.Error
         /// </summary>
         public static GitHubClient client = ConstructClient();
 
-        private static int GitRepoId //65702856
-        {
-            get
-            {
-                return 17660531;
-            }
-        }
-
 
         public static void Report(Exception ex)
         {
@@ -41,28 +33,30 @@ namespace SomeCardGames.Error
             //dataStream.Close();
             //WebResponse response = request.GetResponse();
 
-            //This works
-            // MessageBox.Show(client.Issue.Get("SneakyTactician", "SomeCardGames", 1).Result.Title);
+            //string Report;
+            //Report = "Help link: " + ex.HelpLink + "\r\n";
+            //Report += "Error code: " + ex.HResult + "\r\n";
+            //Report += "Error message: " + ex.Message + "\r\n";
+            //Report += "Source: " + ex.Source + "\r\n";
+            //Report += "\r\n";
+            //Report += "Stack trace: " + "\r\n" + ex.StackTrace + "\r\n";
+            //Report += "Method: " + ex.TargetSite.Name + "\r\n";
+
+            //NewIssue ToReport = new NewIssue("Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult);
+            //ToReport.Assignee = "SneakyTactician";
+            //ToReport.Body = Report;
+            //ToReport.Labels.Add("Bug");
+            //int TheMileStone = 0;//client.Issue.Milestone.GetAllForRepository("SneakyTactician", "SomeCardGames").Result.GetEnumerator().Current.Number;
+            //ToReport.Milestone = TheMileStone;
+            ////client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames");
+
+            //var issue = client.Issue.Create(65701856, ToReport);
+            //MessageBox.Show(issue.Result.Repository.GitUrl);
             //MessageBox.Show(client.Repository.Get("SneakyTactician", "SomeCardGames").Result.Id.ToString());
 
-            string Report;
-            Report = "Help link: " + ex.HelpLink + "\r\n";
-            Report += "Error code: " + ex.HResult + "\r\n";
-            Report += "Error message: " + ex.Message + "\r\n";
-            Report += "Source: " + ex.Source + "\r\n";
-            Report += "\r\n";
-            Report += "Stack trace: " + "\r\n" + ex.StackTrace + "\r\n";
-            Report += "Method: " + ex.TargetSite.Name + "\r\n";
+            var newIssue = new NewIssue("a test issue") { Body = "A new unassigned issue" };
+            var observable = client.Issue.Create("SneakyTactician", "SomeCardGames", newIssue);
 
-            NewIssue ToReport = new NewIssue("Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult);
-            ToReport.Assignee = "SneakyTactician";
-            ToReport.Body = Report;
-            ToReport.Labels.Add("Bug");
-            int TheMileStone = 0;//client.Issue.Milestone.GetAllForRepository("SneakyTactician", "SomeCardGames").Result.GetEnumerator().Current.Number;
-            ToReport.Milestone = TheMileStone;
-            //client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames");
-
-            client.Issue.Create(GitRepoId, ToReport);
 
             return;
         }
