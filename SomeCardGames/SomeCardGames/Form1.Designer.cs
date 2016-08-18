@@ -55,7 +55,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(94, 42);
+            this.BackButton.Location = new System.Drawing.Point(13, 12);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(75, 23);
             this.BackButton.TabIndex = 2;
