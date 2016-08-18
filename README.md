@@ -1,6 +1,7 @@
 # SomeCardGames
 
-Built in C# with the power of the .net framework behind it, Some Card Games is a C# desktop application that lets the user play a few card games.
-WIP, not availible.
+Built with Visual Studio, Some Card Games is a C# application with the power of the .net framework behind it, that allows you to play a few card games.
+
+Release versions are not availible currently, but if you desperatly want to see where I am at in developing this, you can compile it yourself and see.
 
 This application uses Octokit (http://octokit.github.io/) to auto report program errors.
