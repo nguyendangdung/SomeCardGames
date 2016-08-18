@@ -267,7 +267,7 @@
     <None Include="Resources\base.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Error\ErrorHandler.snippet" />
+    <None Include="Error\Snippets\ErrorHandler.snippet" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
