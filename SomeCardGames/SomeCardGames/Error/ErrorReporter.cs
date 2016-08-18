@@ -21,7 +21,7 @@ namespace SomeCardGames.Error
         /// <summary>
         /// Used to interact with github.
         /// </summary>
-        public static GitHubClient client = ConstructClient();
+        private static GitHubClient client = ConstructClient();
 
 
         public static void Report(Exception ex)
@@ -62,7 +62,7 @@ namespace SomeCardGames.Error
         /// Constructs and authenticates the github client.
         /// </summary>
         /// <returns></returns>
-        public static GitHubClient ConstructClient()
+        private static GitHubClient ConstructClient()
         {
             GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician"));
             Credentials creds = new Credentials("SneakyTactician", "SneakyTactician_101");
