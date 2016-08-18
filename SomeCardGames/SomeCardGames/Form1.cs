@@ -33,6 +33,15 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                this.BackButton.Visible = false;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+
             main.Startup(this);
         }
 
@@ -47,7 +56,7 @@ namespace SomeCardGames
             {
                 this.ExitButton.Visible = false;
                 this.PlayButton.Visible = false;
-                throw new Exception("test");
+                this.BackButton.Visible = true;
             }
             catch (Exception TheException)
             {
@@ -71,6 +80,7 @@ namespace SomeCardGames
             {
                 this.ExitButton.Visible = true;
                 this.PlayButton.Visible = true;
+                this.BackButton.Visible = false;
             }
             catch (Exception TheException)
             {
