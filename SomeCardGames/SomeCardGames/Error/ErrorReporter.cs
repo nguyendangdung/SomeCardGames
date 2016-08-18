@@ -13,6 +13,9 @@ using System.Windows.Forms;
 
 namespace SomeCardGames.Error
 {
+    /// <summary>
+    /// Automatically reports exceptions to my github page.
+    /// </summary>
     public static class ErrorReporter
     {
         /// <summary>

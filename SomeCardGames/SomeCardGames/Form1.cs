@@ -28,7 +28,7 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            main.CaptureTheForm(1);
+            main.Startup(this);
         }
     }
 }
