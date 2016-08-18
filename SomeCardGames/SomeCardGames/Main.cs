@@ -16,7 +16,7 @@ namespace SomeCardGames
     /// </summary>
     public class Main
     {
-        Form1 TheForm;
+        private Form1 TheForm;
 
         /// <summary>
         /// Called by the form, to do some start up stuff.
@@ -32,7 +32,7 @@ namespace SomeCardGames
         /// Saves the form to this class.
         /// </summary>
         /// <param name="Form"></param>
-        public void CaptureTheForm(object Form)
+        private void CaptureTheForm(object Form)
         {
             try
             {
@@ -47,17 +47,24 @@ namespace SomeCardGames
         /// <summary>
         /// Sets up the form.
         /// </summary>
-        public void SetupForm()
+        private void SetupForm()
         {
-            TheForm.TopMost = true;
-            TheForm.FormBorderStyle = FormBorderStyle.None;
-            TheForm.WindowState = FormWindowState.Maximized;
+            try
+            {
+                TheForm.TopMost = true;
+                TheForm.FormBorderStyle = FormBorderStyle.None;
+                TheForm.WindowState = FormWindowState.Maximized;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
         /// Gets the size of the moniter.
         /// </summary>
-        public void GetScreenSize()
+        private void GetScreenSize()
         {
             try
             {
