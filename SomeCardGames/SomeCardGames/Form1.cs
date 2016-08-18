@@ -17,6 +17,7 @@ namespace SomeCardGames
     public partial class Form1 : Form
     {
         Main main = new Main();
+
         /// <summary>
         /// The inital call to this program.
         /// </summary>
@@ -42,7 +43,16 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void PlayButton_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                this.ExitButton.Visible = false;
+                this.PlayButton.Visible = false;
+                throw new Exception("test");
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -53,6 +63,19 @@ namespace SomeCardGames
         private void ExitButton_Click(object sender, EventArgs e)
         {
             main.Shutdown(0);
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ExitButton.Visible = true;
+                this.PlayButton.Visible = true;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }
