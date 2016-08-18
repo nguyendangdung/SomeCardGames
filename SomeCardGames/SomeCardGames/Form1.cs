@@ -52,7 +52,7 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
         {
-
+            main.Shutdown(0);
         }
     }
 }
