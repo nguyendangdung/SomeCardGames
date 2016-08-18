@@ -23,42 +23,36 @@ namespace SomeCardGames.Error
 
         public static void Report(Exception ex)
         {
-            //WebRequest request = WebRequest.Create("https://api.github.com/repos/SneakyTactician/SomeCardGames/issues ");
-            //request.Method = "POST";
-            //string postData = "{'title':'exception occured!', 'body':'{0}','assignee': 'SneakyTactician'}";
-            //byte[] byteArray = Encoding.UTF8.GetBytes(/*string.Format(postData, ex)*/"a");
-            //request.ContentLength = byteArray.Length;
-            //Stream dataStream = request.GetRequestStream();
-            //dataStream.Write(byteArray, 0, byteArray.Length);
-            //dataStream.Close();
-            //WebResponse response = request.GetResponse();
+            string Report;
+            Report = "Help link: " + ex.HelpLink + "\r\n";
+            Report += "Error code: " + ex.HResult + "\r\n";
+            Report += "Error message: " + ex.Message + "\r\n";
+            Report += "Source: " + ex.Source + "\r\n";
+            Report += "\r\n";
+            Report += "Stack trace: " + "\r\n" + ex.StackTrace + "\r\n";
+            Report += "Method: " + ex.TargetSite.Name + "\r\n";
 
-            //string Report;
-            //Report = "Help link: " + ex.HelpLink + "\r\n";
-            //Report += "Error code: " + ex.HResult + "\r\n";
-            //Report += "Error message: " + ex.Message + "\r\n";
-            //Report += "Source: " + ex.Source + "\r\n";
-            //Report += "\r\n";
-            //Report += "Stack trace: " + "\r\n" + ex.StackTrace + "\r\n";
-            //Report += "Method: " + ex.TargetSite.Name + "\r\n";
+            string IssueTitle = "Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult;
 
-            //NewIssue ToReport = new NewIssue("Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult);
-            //ToReport.Assignee = "SneakyTactician";
-            //ToReport.Body = Report;
-            //ToReport.Labels.Add("Bug");
-            //int TheMileStone = 0;//client.Issue.Milestone.GetAllForRepository("SneakyTactician", "SomeCardGames").Result.GetEnumerator().Current.Number;
-            //ToReport.Milestone = TheMileStone;
-            ////client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames");
+            NewIssue ToReport = new NewIssue(IssueTitle) {Body = Report};
 
-            //var issue = client.Issue.Create(65701856, ToReport);
-            //MessageBox.Show(issue.Result.Repository.GitUrl);
-            //MessageBox.Show(client.Repository.Get("SneakyTactician", "SomeCardGames").Result.Id.ToString());
+            var AllIssues = client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames").Result;
 
-            var newIssue = new NewIssue("a test issue") { Body = "A new unassigned issue" };
-            var observable = client.Issue.Create("SneakyTactician", "SomeCardGames", newIssue);
+            List<Issue> Issues = AllIssues.ToList<Issue>();
 
+            int i = 0;
+            int siz = AllIssues.Count;
 
-            return;
+            while (i != siz)
+            {
+                if (Issues.ElementAt(i).Title == ToReport.Title && Issues.ElementAt(i).Body == ToReport.Body)
+                {
+                    return;
+                }
+
+                i++;
+            }
+            var observable = client.Issue.Create("SneakyTactician", "SomeCardGames", ToReport);
         }
 
         /// <summary>
