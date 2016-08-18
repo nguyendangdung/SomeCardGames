@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Error Handler</Title>
+      <Shortcut>Er</Shortcut>
+      <Description>A code snippet to create a error handler, that auto reports to github issue tracker.</Description>
+      <Author>SneakyTactician</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>SomeCardGames.Error</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp">
+        <![CDATA[
+            try
+            {
+                
+            }
+            catch(Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+            ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
