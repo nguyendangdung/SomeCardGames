@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Card.cs" />
+    <Compile Include="Base\Deck.cs" />
     <Compile Include="Card Game Module\ICardGame.cs" />
     <Compile Include="Drawing\IDrawer.cs" />
     <Compile Include="Error\ErrorReporter.cs" />

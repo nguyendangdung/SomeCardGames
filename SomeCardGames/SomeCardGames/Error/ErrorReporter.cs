@@ -60,7 +60,8 @@ namespace SomeCardGames.Error
             try
             {
                 GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician"));
-                Credentials creds = new Credentials("SneakyTactician", "1d1a5321d3e944de7c603a0f27319ed31367a5b7");
+                //TODO: Insert a valid token.
+                Credentials creds = new Credentials("SneakyTactician", "TOKEN HERE");
                 ret.Credentials = creds;
                 return ret;
             }
