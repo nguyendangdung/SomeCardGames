@@ -15,6 +15,15 @@ namespace SomeCardGames.Base
     /// </summary>
     public class Card
     {
+        /// <summary>
+        /// Used to tell if the card is face up or face down graphically.
+        /// </summary>
+        bool IsFaceUp = false;
+
+        /// <summary>
+        /// Used to tell what card this card is.
+        /// </summary>
+        int WhatCard;
 
         /// <summary>
         /// The constructor for the Card class.
@@ -24,7 +33,7 @@ namespace SomeCardGames.Base
         {
             try
             {
-                if (TheCard > 51 | TheCard < 1)
+                if (TheCard > 53 | TheCard < 1)
                 {
                     throw new Exception(ErrorStorage.CardNotFoundException);
                 }
@@ -40,12 +49,6 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
-        /// Used to tell what card this card is.
-        /// </summary>
-        int WhatCard;
-
-
-        /// <summary>
         /// Used to compare all of the different cards in a deck of cards.
         /// </summary>
         public enum Cards
@@ -53,7 +56,8 @@ namespace SomeCardGames.Base
             TwoSpades, ThreeSpades, FourSpades, FiveSpades, SixSpades, SevenSpades, EightSpades, NineSpades, TenSpades, JackSpades, QueenSpades, KingSpades, AceSpades,
             TwoClubs, ThreeClubs, FourClubs, FiveClubs, SixClubs, SevenClubs, EightClubs, NineClubs, TenClubs, JackClubs, QueenClubs, KingClubs, AceClubs,
             TwoHearts, ThreeHearts, FourHearts, FiveHearts, SixHearts, SevenHearts, EightHearts, NineHearts, TenHearts, JackHearts, QueenHearts, KingHearts, AceHearts,
-            TwoDiamonds, ThreeDiamonds, FourDiamonds, FiveDiamonds, SixDiamonds, SevenDiamonds, EightDiamonds, NineDiamonds, TenDiamonds, JackDiamonds, QueenDiamonds, KingDiamonds, AceDiamonds
+            TwoDiamonds, ThreeDiamonds, FourDiamonds, FiveDiamonds, SixDiamonds, SevenDiamonds, EightDiamonds, NineDiamonds, TenDiamonds, JackDiamonds, QueenDiamonds, KingDiamonds, AceDiamonds,
+            RedJoker, BlackJoker
         }
     }
 }
