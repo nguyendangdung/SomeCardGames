@@ -23,7 +23,10 @@ namespace SomeCardGames.Error
         /// </summary>
         private static GitHubClient client = ConstructClient();
 
-
+        /// <summary>
+        /// Logs an issue to SneakyTactician's Github page.
+        /// </summary>
+        /// <param name="ex"></param>
         public static void Report(Exception ex)
         {
             string Report = GenerateReport(ex);
@@ -59,7 +62,7 @@ namespace SomeCardGames.Error
         {
             try
             {
-                GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician"));
+                GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician")); 
                 //TODO: Insert a valid token.
                 Credentials creds = new Credentials("SneakyTactician", "TOKEN HERE"); 
                 ret.Credentials = creds;
@@ -73,6 +76,11 @@ namespace SomeCardGames.Error
             return null;
         }
 
+        /// <summary>
+        /// Generates a report for the error reporter to send up to my git page.
+        /// </summary>
+        /// <param name="ex"></param>
+        /// <returns></returns>
         private static string GenerateReport(Exception ex)
         {
             string Report = "Exception:\r\n";
