@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SomeCardGames.Error;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,18 @@ namespace SomeCardGames.Base
         /// <param name="TheCard"></param>
         public Card(int TheCard)
         {
+            try
+            {
+                if (TheCard > 51 | TheCard < 1)
+                {
 
+                }
+                this.WhatCard = TheCard;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -35,7 +47,10 @@ namespace SomeCardGames.Base
         /// </summary>
         public enum Cards
         {
-
+            TwoSpades, ThreeSpades, FourSpades, FiveSpades, SixSpades, SevenSpades, EightSpades, NineSpades, TenSpades, JackSpades, QueenSpades, KingSpades, AceSpades,
+            TwoClubs, ThreeClubs, FourClubs, FiveClubs, SixClubs, SevenClubs, EightClubs, NineClubs, TenClubs, JackClubs, QueenClubs, KingClubs, AceClubs,
+            TwoHearts, ThreeHearts, FourHearts, FiveHearts, SixHearts, SevenHearts, EightHearts, NineHearts, TenHearts, JackHearts, QueenHearts, KingHearts, AceHearts,
+            TwoDiamonds, ThreeDiamonds, FourDiamonds, FiveDiamonds, SixDiamonds, SevenDiamonds, EightDiamonds, NineDiamonds, TenDiamonds, JackDiamonds, QueenDiamonds, KingDiamonds, AceDiamonds
         }
     }
 }
