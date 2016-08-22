@@ -26,7 +26,7 @@ namespace SomeCardGames.Error
         /// <summary>
         /// Logs an issue to SneakyTactician's Github page.
         /// </summary>
-        /// <param name="ex"></param>
+        /// <param name="ex"></param> 
         public static void Report(Exception ex)
         {
             string Report = GenerateReport(ex);
