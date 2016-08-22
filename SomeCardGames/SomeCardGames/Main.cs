@@ -67,7 +67,7 @@ namespace SomeCardGames
             try
             {
                 TheForm.TopMost = true;
-                TheForm.FormBorderStyle = FormBorderStyle.None;
+                TheForm.FormBorderStyle = FormBorderStyle.Fixed3D;
                 TheForm.WindowState = FormWindowState.Normal;
             }
             catch (Exception TheException)
