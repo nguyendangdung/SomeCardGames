@@ -15,6 +15,11 @@ namespace SomeCardGames
         private Form1 TheForm;
 
         /// <summary>
+        /// Represents the current card game logic that is running.
+        /// </summary>
+        public ICardGame Current;
+
+        /// <summary>
         /// Called by the form, to do some start up stuff.
         /// </summary>
         public void Startup(object Form)
@@ -94,7 +99,23 @@ namespace SomeCardGames
         /// <param name="game"></param>
         public void StartNewCardGame(ICardGame game)
         {
+            try
+            {
+                if (VariableStorage.IsCardGameAlreadyGoing)
+                {
+                    this.Current.Stop();
+                }
 
+                VariableStorage.IsCardGameAlreadyGoing = true;
+
+                this.Current = game;
+                game.Start();
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }

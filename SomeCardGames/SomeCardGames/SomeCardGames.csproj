@@ -101,6 +101,7 @@
   <ItemGroup>
     <Compile Include="Base\Card.cs" />
     <Compile Include="Base\Deck.cs" />
+    <Compile Include="Card Game Module\Golf\GolfLogic.cs" />
     <Compile Include="Card Game Module\ICardGame.cs" />
     <Compile Include="Drawing\IDrawer.cs" />
     <Compile Include="Error\ErrorReporter.cs" />
@@ -320,7 +321,6 @@
     <Folder Include="Card Game Module\Blackjack\" />
     <Folder Include="Card Game Module\Garbage\" />
     <Folder Include="Card Game Module\Go FIsh\" />
-    <Folder Include="Card Game Module\Golf\" />
     <Folder Include="Card Game Module\Hearts\" />
     <Folder Include="Card Game Module\Old Maid\" />
     <Folder Include="Card Game Module\Rummy 500\" />

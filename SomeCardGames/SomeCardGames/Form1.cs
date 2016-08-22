@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using SomeCardGames.Card_Game_Module;
+using SomeCardGames.Card_Game_Module.Golf;
 using SomeCardGames.Error;
 
 namespace SomeCardGames
@@ -119,7 +121,14 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void golfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                this.main.StartNewCardGame(new GolfLogic());
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }
