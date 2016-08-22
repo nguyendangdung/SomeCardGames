@@ -317,6 +317,18 @@
     <None Include="Error\Snippets\ErrorHandler.snippet" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Card Game Module\Blackjack\" />
+    <Folder Include="Card Game Module\Garbage\" />
+    <Folder Include="Card Game Module\Go FIsh\" />
+    <Folder Include="Card Game Module\Golf\" />
+    <Folder Include="Card Game Module\Hearts\" />
+    <Folder Include="Card Game Module\Old Maid\" />
+    <Folder Include="Card Game Module\Rummy 500\" />
+    <Folder Include="Card Game Module\Rummy\" />
+    <Folder Include="Card Game Module\Solitaire\" />
+    <Folder Include="Card Game Module\Spades\" />
+    <Folder Include="Card Game Module\War\" />
+    <Folder Include="Card Game Module\Whist\" />
     <Folder Include="Drawing\Drawers\" />
   </ItemGroup>
   <ItemGroup>
@@ -330,9 +342,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
