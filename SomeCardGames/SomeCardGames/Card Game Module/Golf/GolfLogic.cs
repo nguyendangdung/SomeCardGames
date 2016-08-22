@@ -17,7 +17,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         public void Start()
         {
             throw new NotImplementedException();
-        }
+        } 
 
         /// <summary>
         /// Called to stop this card game.
