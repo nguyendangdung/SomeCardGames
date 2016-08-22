@@ -26,18 +26,11 @@ namespace SomeCardGames.Error
 
         public static void Report(Exception ex)
         {
-            string Report;
-            Report = "Help link: " + ex.HelpLink + "\r\n";
-            Report += "Error code: " + ex.HResult + "\r\n";
-            Report += "Error message: " + ex.Message + "\r\n";
-            Report += "Source: " + ex.Source + "\r\n";
-            Report += "\r\n";
-            Report += "Stack trace: " + "\r\n" + ex.StackTrace + "\r\n";
-            Report += "Method: " + ex.TargetSite.Name + "\r\n";
-
+            string Report = GenerateReport(ex);
             string IssueTitle = "Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult;
 
             NewIssue ToReport = new NewIssue(IssueTitle) {Body = Report};
+            //ToReport.Labels.Add("bug");
 
             var AllIssues = client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames").Result;
 
@@ -64,8 +57,43 @@ namespace SomeCardGames.Error
         /// <returns></returns>
         private static GitHubClient ConstructClient()
         {
-            GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician"));
-            return ret;
+            try
+            {
+                GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician"));
+                Credentials creds = new Credentials("SneakyTactician", "1d1a5321d3e944de7c603a0f27319ed31367a5b7");
+                ret.Credentials = creds;
+                return ret;
+            }
+            catch (Exception e)
+            {
+
+            }
+
+            return null;
+        }
+
+        private static string GenerateReport(Exception ex)
+        {
+            string Report = "Exception:\r\n";
+            Report += "Error code: " + ex.HResult + "\r\n";
+            Report += "Error message: " + ex.Message + "\r\n";
+            Report += "Exception hash code: " + ex.GetHashCode() + "\r\n";
+            Report = "Help link: " + ex.HelpLink + "\r\n";
+            Report += "Method: " + ex.TargetSite.Name + "\r\n";
+            Report += "Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode() + "\r\n";
+            Report += "Source: " + ex.Source + "\r\n";
+            Report += "\r\n";
+            Report += "Stack trace: " + "\r\n" + ex.StackTrace + "\r\n";
+            Report += "\r\n";
+            Report += "Type: " + ex.GetType() + "\r\n";
+            if (ex.InnerException != null)
+            {
+                Report += "\r\n";
+                Report += "Inner Exceptions: " + GenerateReport(ex.InnerException);
+                Report += "\r\n";
+            }
+
+            return Report;
         }
     }
 }
