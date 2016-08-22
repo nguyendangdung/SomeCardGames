@@ -1,7 +1,9 @@
-﻿using SomeCardGames.Error;
-using SomeCardGames.Utility;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using SomeCardGames.Error;
+using SomeCardGames.Card_Game_Module;
+using SomeCardGames.Utility;
 
 namespace SomeCardGames
 {
@@ -84,6 +86,15 @@ namespace SomeCardGames
             {
                 ErrorReporter.Report(e);
             }
+        }
+
+        /// <summary>
+        /// Used to stop the old card game, and start the new one.
+        /// </summary>
+        /// <param name="game"></param>
+        public void StartNewCardGame(ICardGame game)
+        {
+
         }
     }
 }

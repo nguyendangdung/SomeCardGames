@@ -50,17 +50,12 @@
             this.saveToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.golfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenuStrip
             // 
-            this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem4,
-            this.loadToolStripMenuItem3,
-            this.optionsToolStripMenuItem3,
-            this.saveToolStripMenuItem3,
-            this.exitToolStripMenuItem3});
             this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip.Name = "MainMenuStrip";
             this.MainMenuStrip.Size = new System.Drawing.Size(292, 24);
@@ -199,6 +194,13 @@
             this.newToolStripMenuItem3.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem3.Text = "New";
             // 
+            // golfToolStripMenuItem
+            // 
+            this.golfToolStripMenuItem.Name = "golfToolStripMenuItem";
+            this.golfToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.golfToolStripMenuItem.Text = "Golf";
+            this.golfToolStripMenuItem.Click += new System.EventHandler(this.golfToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +210,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.MainMenuStrip.ResumeLayout(false);
             this.MainMenuStrip.PerformLayout();
@@ -240,5 +243,6 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem golfToolStripMenuItem;
     }
 }

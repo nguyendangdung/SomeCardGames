@@ -101,5 +101,25 @@ namespace SomeCardGames
         {
 
         }
+
+        /// <summary>
+        /// Called whenever the form is clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Called when the golf menu item is clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void golfToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -6,6 +6,11 @@
     public static class VariableStorage
     {
         /// <summary>
+        /// If true, then this program is currently running a card game.
+        /// </summary>
+        public static bool IsCardGameAlreadyGoing = false;
+
+        /// <summary>
         /// Represents how wide the screen is.
         /// </summary>
         public static int ScreenWidth = 0;
