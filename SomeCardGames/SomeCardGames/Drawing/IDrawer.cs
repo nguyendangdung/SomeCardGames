@@ -12,6 +12,10 @@ namespace SomeCardGames.Drawing
     /// </summary>
     public interface IDrawer
     {
+        /// <summary>
+        /// Called to tell a Drawer to draw the card game that they know how to draw.
+        /// </summary>
+        /// <param name="G"></param>
         void Draw(Graphics G);
     }
 }

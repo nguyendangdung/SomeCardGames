@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 using SomeCardGames.Error;
 
-/// <summary>
-/// This namespace is used to store various things that every card game uses.
-/// </summary>
 namespace SomeCardGames.Base
 {
     /// <summary>
