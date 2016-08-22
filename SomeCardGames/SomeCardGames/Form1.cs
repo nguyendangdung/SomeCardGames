@@ -37,34 +37,60 @@ namespace SomeCardGames
             main.Startup(this);
         }
 
+        /// <summary>
+        /// Called when a item is clicked on the menu strip.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
+
 
         private void newToolStripMenuItem4_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Called when the "load" button is clicked on the menu strip.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void loadToolStripMenuItem3_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Called when the "options" button is clicked on the menu strip.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void optionsToolStripMenuItem3_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Called when the "save" button is clicked on the menu strip.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem3_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Called when the "exit" button is clicked on the menu strip.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            this.main.Shutdown(0);
         }
     }
 }
