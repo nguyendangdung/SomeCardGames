@@ -26,9 +26,12 @@ namespace SomeCardGames.Base
             {
                 if (TheCard > 51 | TheCard < 1)
                 {
-
+                    throw new Exception(ErrorStorage.CardNotFoundException);
                 }
-                this.WhatCard = TheCard;
+                else
+                {
+                    this.WhatCard = TheCard;
+                }
             }
             catch (Exception TheException)
             {

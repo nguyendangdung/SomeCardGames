@@ -8,9 +8,6 @@ namespace SomeCardGames.Error
 {
     public static class ErrorStorage
     {
-        public static void ThrowCardNotFoundException()
-        {
-            throw new Exception("Card not found");
-        }
+        public static string CardNotFoundException = "A caller attempted to create a card that doesn't exist";
     }
 }
