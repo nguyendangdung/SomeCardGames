@@ -31,7 +31,7 @@ namespace SomeCardGames.Error
         {
             string Report = GenerateReport(ex);
             string IssueTitle = "Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult;
-
+             
             NewIssue ToReport = new NewIssue(IssueTitle) {Body = Report};
             //ToReport.Labels.Add("bug");
 
