@@ -13,7 +13,11 @@ namespace SomeCardGames.Base
     {
         private Random rng = new Random();
 
+        /// <summary>
+        /// All of the cards in the deck.
+        /// </summary>
         public List<Card> Cards;
+        
         /// <summary>
         /// The constructor for the Deck class. This automatically shuffles the deck.
         /// </summary>
@@ -45,6 +49,7 @@ namespace SomeCardGames.Base
             while (i != stop)
             {
                 Cards.Add(new Card(i));
+                i++;
             }
         }
 
