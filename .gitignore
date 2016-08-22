@@ -3,6 +3,7 @@
 
 #My specific files
 /ErrorReporter.cs
+/bfg.jar
 
 # User-specific files
 *.suo
