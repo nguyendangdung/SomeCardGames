@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using SomeCardGames.Error;
+﻿using SomeCardGames.Error;
 using SomeCardGames.Utility;
+using System;
+using System.Windows.Forms;
 
 namespace SomeCardGames
 {
@@ -86,7 +80,7 @@ namespace SomeCardGames
                 VariableStorage.ScreenWidth = Screen.FromControl(TheForm).WorkingArea.Width;
                 VariableStorage.ScreenHeight = Screen.FromControl(TheForm).WorkingArea.Height;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ErrorReporter.Report(e);
             }

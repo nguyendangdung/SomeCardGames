@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SomeCardGames.Utility
+﻿namespace SomeCardGames.Utility
 {
     /// <summary>
     /// A class used to store universal variables.

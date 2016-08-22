@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SomeCardGames.Error
+﻿namespace SomeCardGames.Error
 {
     /// <summary>
     /// This class is used to store error messages.

@@ -1,9 +1,6 @@
 ﻿using SomeCardGames.Error;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SomeCardGames.Base
 {
@@ -18,7 +15,7 @@ namespace SomeCardGames.Base
         /// All of the cards in the deck.
         /// </summary>
         public List<Card> Cards;
-        
+
         /// <summary>
         /// The constructor for the Deck class. This automatically shuffles the deck.
         /// </summary>
