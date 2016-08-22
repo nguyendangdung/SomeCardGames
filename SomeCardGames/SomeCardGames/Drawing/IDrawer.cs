@@ -12,6 +12,6 @@ namespace SomeCardGames.Drawing
     /// </summary>
     public interface IDrawer
     {
-
+        void Draw(Graphics G);
     }
 }

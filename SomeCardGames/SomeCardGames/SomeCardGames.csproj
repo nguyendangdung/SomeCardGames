@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\Card.cs" />
     <Compile Include="Card Game Module\ICardGame.cs" />
     <Compile Include="Drawing\IDrawer.cs" />
     <Compile Include="Error\ErrorReporter.cs" />
@@ -265,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Error\Snippets\ErrorHandler.snippet" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Drawing\Drawers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
