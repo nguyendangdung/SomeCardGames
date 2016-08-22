@@ -65,8 +65,6 @@ namespace SomeCardGames.Error
         private static GitHubClient ConstructClient()
         {
             GitHubClient ret = new GitHubClient(new ProductHeaderValue("SneakyTactician"));
-            Credentials creds = new Credentials("SneakyTactician", "SneakyTactician_101");
-            ret.Credentials = creds;
             return ret;
         }
     }

@@ -68,7 +68,7 @@ namespace SomeCardGames
             {
                 TheForm.TopMost = true;
                 TheForm.FormBorderStyle = FormBorderStyle.None;
-                TheForm.WindowState = FormWindowState.Normal;
+                TheForm.WindowState = FormWindowState.Maximized;
             }
             catch (Exception TheException)
             {
