@@ -34,59 +34,37 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                this.BackButton.Visible = false;
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-
             main.Startup(this);
         }
 
-        /// <summary>
-        /// Called when the play button is clicked.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PlayButton_Click(object sender, EventArgs e)
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            try
-            {
-                this.ExitButton.Visible = false;
-                this.PlayButton.Visible = false;
-                this.BackButton.Visible = true;
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
+
         }
 
-        /// <summary>
-        /// Called when the exit button is clicked.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ExitButton_Click(object sender, EventArgs e)
+        private void newToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            main.Shutdown(0);
+
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void loadToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.ExitButton.Visible = true;
-                this.PlayButton.Visible = true;
-                this.BackButton.Visible = false;
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
+
+        }
+
+        private void optionsToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
