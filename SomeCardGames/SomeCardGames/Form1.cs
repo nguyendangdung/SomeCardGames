@@ -91,5 +91,15 @@ namespace SomeCardGames
         {
             this.main.Shutdown(0);
         }
+
+        /// <summary>
+        /// This is called when the form needs to redraw.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
