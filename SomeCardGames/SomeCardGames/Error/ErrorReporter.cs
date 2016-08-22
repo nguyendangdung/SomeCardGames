@@ -37,7 +37,7 @@ namespace SomeCardGames.Error
 
             var AllIssues = client.Issue.GetAllForRepository("SneakyTactician", "SomeCardGames").Result;
 
-            List<Issue> Issues = AllIssues.ToList<Issue>();
+            List<Issue> Issues = AllIssues.ToList<Issue>(); 
 
             int i = 0;
             int siz = AllIssues.Count;
