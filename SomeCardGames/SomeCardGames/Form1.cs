@@ -80,7 +80,17 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void saveToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                string a = "easdklfjalskdfj;ejæE8K↔";
+                Button b = new Button();
+                object c = a;
+                b = (Button)c;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
