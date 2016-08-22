@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SomeCardGames.Error;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +24,16 @@ namespace SomeCardGames.Base
         /// </summary>
         public Deck(bool WithJokers)
         {
-            Cards = new List<Card>();
-            this.AddCards(WithJokers);
-            this.Shuffle();
+            try
+            {
+                Cards = new List<Card>();
+                this.AddCards(WithJokers);
+                this.Shuffle();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -34,22 +42,29 @@ namespace SomeCardGames.Base
         /// <param name="WithJokers"></param>
         public void AddCards(bool WithJokers)
         {
-            int i = 0;
-            int stop;
+            try
+            {
+                int i = 0;
+                int stop;
 
-            if (WithJokers)
-            {
-                stop = 53;
-            }
-            else
-            {
-                stop = 51;
-            }
+                if (WithJokers)
+                {
+                    stop = 53;
+                }
+                else
+                {
+                    stop = 51;
+                }
 
-            while (i != stop)
+                while (i != stop)
+                {
+                    Cards.Add(new Card(i));
+                    i++;
+                }
+            }
+            catch (Exception TheException)
             {
-                Cards.Add(new Card(i));
-                i++;
+                ErrorReporter.Report(TheException);
             }
         }
 
@@ -58,15 +73,22 @@ namespace SomeCardGames.Base
         /// </summary>
         public void Shuffle()
         {
-            int n = this.Cards.Count;
-            int k;
-            while (n > 1)
+            try
             {
-                n--;
-                k = rng.Next(n + 1);
-                Card value = this.Cards[k];
-                this.Cards[k] = this.Cards[n];
-                this.Cards[n] = value;
+                int n = this.Cards.Count;
+                int k;
+                while (n > 1)
+                {
+                    n--;
+                    k = rng.Next(n + 1);
+                    Card value = this.Cards[k];
+                    this.Cards[k] = this.Cards[n];
+                    this.Cards[n] = value;
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
             }
         }
     }
