@@ -8,13 +8,10 @@ using System.Threading.Tasks;
 namespace SomeCardGames.Drawing
 {
     /// <summary>
-    /// This class does the drawing for this game.
+    /// A interface for classes that read all sorts of information out of classes that implement ICardGame, and draw what is happening.
     /// </summary>
-    public class Graphics
+    public interface IDrawer
     {
-        public void DrawBitmap(Bitmap image, Point location)
-        {
-            
-        }
+
     }
 }
