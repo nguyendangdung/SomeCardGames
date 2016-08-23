@@ -101,8 +101,10 @@
   <ItemGroup>
     <Compile Include="Base\Card.cs" />
     <Compile Include="Base\Deck.cs" />
+    <Compile Include="Card Game Module\Golf\GolfEventHandler.cs" />
     <Compile Include="Card Game Module\Golf\GolfLogic.cs" />
     <Compile Include="Card Game Module\ICardGame.cs" />
+    <Compile Include="Drawing\Drawers\GolfDrawer.cs" />
     <Compile Include="Drawing\IDrawer.cs" />
     <Compile Include="Error\ErrorReporter.cs" />
     <Compile Include="Error\ErrorStorage.cs" />
@@ -329,7 +331,6 @@
     <Folder Include="Card Game Module\Spades\" />
     <Folder Include="Card Game Module\War\" />
     <Folder Include="Card Game Module\Whist\" />
-    <Folder Include="Drawing\Drawers\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
