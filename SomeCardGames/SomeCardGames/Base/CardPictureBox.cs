@@ -25,18 +25,26 @@ namespace SomeCardGames.Base
         private Bitmap Back;
 
         /// <summary>
-        /// The constructor for the CardPictureBox class.
+        /// Used if you want to draw something besides a card with this.
         /// </summary>
-        public CardPictureBox(int Card)
+        /// <param name="Card"></param>
+        /// <param name="Width"></param>
+        /// <param name="Height"></param>
+        public CardPictureBox(int Card, int Width, int Height)
         {
             this.LoadCardImage(Card);
             this.LoadBack();
+            Image = this.TrimBitmap(Image, Height, Width);
+            Back = this.TrimBitmap(Back, Height, Width);
         }
+
         /// <summary>
         /// Used if you want to draw something besides a card with this.
         /// </summary>
         /// <param name="image"></param>
-        public CardPictureBox(Bitmap image)
+        /// <param name="Width"></param>
+        /// <param name="Height"></param>
+        public CardPictureBox(Bitmap image, int Width, int Height)
         {
             try
             {
@@ -55,9 +63,27 @@ namespace SomeCardGames.Base
         /// <param name="g"></param>
         /// <param name="TopLeft"></param>
         /// <param name="BottomRight"></param>
-        public void Draw(bool FaceUp, Graphics g, Point TopLeft, Point BottomRight)
+        public void Draw(bool FaceUp, Graphics g, Point Location)
         {
-            
+            if (FaceUp)
+            {
+                g.DrawImage()
+            }
+            else
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// Shrinks a bitmap to the specified size.
+        /// </summary>
+        /// <param name="bits"></param>
+        /// <param name="Height"></param>
+        /// <param name="Width"></param>
+        public Bitmap TrimBitmap(Bitmap bits, int Height, int Width)
+        {
+            return new Bitmap(bits, new Size(Width, Height));
         }
 
         /// <summary>
