@@ -49,6 +49,18 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
+        /// When this is called, it draws this card as specified.
+        /// </summary>
+        /// <param name="FaceUp"></param>
+        /// <param name="g"></param>
+        /// <param name="TopLeft"></param>
+        /// <param name="BottomRight"></param>
+        public void Draw(bool FaceUp, Graphics g, Point TopLeft, Point BottomRight)
+        {
+            
+        }
+
+        /// <summary>
         /// Loads what the back side of the card looks like into a bitmap.
         /// </summary>
         public void LoadBack()
