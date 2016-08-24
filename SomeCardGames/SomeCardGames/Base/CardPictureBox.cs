@@ -25,7 +25,7 @@ namespace SomeCardGames.Base
         private Bitmap Back;
 
         /// <summary>
-        /// Used if you want to draw something besides a card with this.
+        /// Used if you want to draw something besides a card with this. This also resizes the bitmap to the specified size.
         /// </summary>
         /// <param name="Card"></param>
         /// <param name="Width"></param>
@@ -39,7 +39,7 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
-        /// Used if you want to draw something besides a card with this.
+        /// Used if you want to draw something besides a card with this. This also resizes the bitmap to the specified size.
         /// </summary>
         /// <param name="image"></param>
         /// <param name="Width"></param>
@@ -49,6 +49,7 @@ namespace SomeCardGames.Base
             try
             {
                 Image = image;
+                Image = this.TrimBitmap(Image, Height, Width);
             }
             catch (Exception TheException)
             {
@@ -67,7 +68,7 @@ namespace SomeCardGames.Base
         {
             if (FaceUp)
             {
-                g.DrawImage()
+                g.DrawImage(this.Image, Location);
             }
             else
             {
