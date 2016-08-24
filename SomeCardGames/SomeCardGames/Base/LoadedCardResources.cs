@@ -15,7 +15,7 @@ namespace SomeCardGames.Base
     /// </summary>
     public static class LoadedCardResources
     {
-        private static List<Bitmap> CardResources;
+        private static List<Bitmap> CardResources = new List<Bitmap>();
 
         /// <summary>
         /// Loads a bunch of resources into memory.
