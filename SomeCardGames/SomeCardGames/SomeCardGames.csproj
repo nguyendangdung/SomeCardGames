@@ -102,6 +102,7 @@
     <Compile Include="Base\Card.cs" />
     <Compile Include="Base\CardPictureBox.cs" />
     <Compile Include="Base\Deck.cs" />
+    <Compile Include="Base\LoadedCardResources.cs" />
     <Compile Include="Card Game Module\Golf\GolfEventHandler.cs" />
     <Compile Include="Card Game Module\Golf\GolfLogic.cs" />
     <Compile Include="Card Game Module\Golf\GolfPlayer.cs" />
