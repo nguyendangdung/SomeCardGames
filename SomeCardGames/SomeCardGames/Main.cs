@@ -101,6 +101,9 @@ namespace SomeCardGames
         {
             try
             {
+                int a = 0;
+                object b = a;
+                string c = (string)b;
                 if (VariableStorage.IsCardGameAlreadyGoing)
                 {
                     this.Current.Stop();
