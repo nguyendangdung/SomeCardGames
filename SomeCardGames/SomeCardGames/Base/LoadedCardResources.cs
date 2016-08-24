@@ -24,20 +24,28 @@ namespace SomeCardGames.Base
         /// <returns></returns>
         public static Bitmap GetResource(int Card)
         {
-            if (CardResources.Count < 1)
+            try
             {
-                CardResources.Clear();
-
-                int i = 0;
-
-                while (i != 55)
+                if (CardResources.Count < 1)
                 {
-                    i++;
-                    CardResources.Add(Util.LoadResource(i.ToString() + ".png"));
-                }
-            }
+                    CardResources.Clear();
 
-            return CardResources.ElementAt(Card);
+                    int i = 0;
+
+                    while (i != 55)
+                    {
+                        i++;
+                        CardResources.Add(Util.LoadResource(i.ToString() + ".png"));
+                    }
+                }
+
+                return CardResources.ElementAt(Card);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return null;
+            }
         }
 
         /// <summary>
