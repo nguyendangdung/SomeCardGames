@@ -41,7 +41,7 @@ namespace SomeCardGames.Base
         {
             try
             {
-                int i = 0;
+                int i = 1;
                 int stop;
 
                 if (WithJokers)

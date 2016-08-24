@@ -39,7 +39,7 @@ namespace SomeCardGames.Base
             {
                 ErrorReporter.Report(TheException);
             }
-        }
+         }
 
         /// <summary>
         /// Used to compare all of the different cards in a deck of cards.
