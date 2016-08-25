@@ -22,5 +22,17 @@ namespace SomeCardGames.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int AIPlayersInGolf {
+            get {
+                return ((int)(this["AIPlayersInGolf"]));
+            }
+            set {
+                this["AIPlayersInGolf"] = value;
+            }
+        }
     }
 }
