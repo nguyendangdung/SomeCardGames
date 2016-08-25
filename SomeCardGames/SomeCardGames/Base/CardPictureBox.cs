@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 using SomeCardGames.Error;
 using SomeCardGames.Utility;
@@ -15,12 +16,12 @@ namespace SomeCardGames.Base
     /// <summary>
     /// This is used to render a card, and to interpret different input events.
     /// </summary>
-    public class CardPictureBox
+    public class CardPictureBox : PictureBox
     {
         /// <summary>
         /// The image of this picture box.
         /// </summary>
-        private Bitmap Image;
+        private Bitmap TheImage;
 
         /// <summary>
         /// For cards only, this is the back of the card.
@@ -37,7 +38,7 @@ namespace SomeCardGames.Base
         {
             this.LoadCardImage(Card);
             this.LoadBack();
-            Image = this.TrimBitmap(Image, Height, Width);
+            TheImage = this.TrimBitmap(TheImage, Height, Width);
             Back = this.TrimBitmap(Back, Height, Width);
         }
 
@@ -51,8 +52,8 @@ namespace SomeCardGames.Base
         {
             try
             {
-                Image = image;
-                Image = this.TrimBitmap(Image, Height, Width);
+                TheImage = image;
+                TheImage = this.TrimBitmap(TheImage, Height, Width);
             }
             catch (Exception TheException)
             {
@@ -72,7 +73,7 @@ namespace SomeCardGames.Base
             {
                 if (FaceUp)
                 {
-                    g.DrawImage(this.Image, Location);
+                    g.DrawImage(this.TheImage, Location);
                 }
                 else
                 {
@@ -112,7 +113,7 @@ namespace SomeCardGames.Base
         {
             try
             {
-                this.Image = LoadedCardResources.GetResource(Card);
+                this.TheImage = LoadedCardResources.GetResource(Card);
             }
             catch (Exception TheException)
             {
