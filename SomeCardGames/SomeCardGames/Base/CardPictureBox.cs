@@ -46,7 +46,7 @@ namespace SomeCardGames.Base
         /// <param name="e"></param>
         private void CardPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         /// <summary>
