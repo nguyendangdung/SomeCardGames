@@ -18,10 +18,6 @@ namespace SomeCardGames.Base
     /// </summary>
     public class CardPictureBox : PictureBox
     {
-        /// <summary>
-        /// The image of this picture box.
-        /// </summary>
-        private Bitmap TheImage;
 
         /// <summary>
         /// For cards only, this is the back of the card.
@@ -38,8 +34,19 @@ namespace SomeCardGames.Base
         {
             this.LoadCardImage(Card);
             this.LoadBack();
-            TheImage = this.TrimBitmap(TheImage, Height, Width);
+            Image = this.TrimBitmap((Bitmap)Image, Height, Width);
             Back = this.TrimBitmap(Back, Height, Width);
+            this.MouseClick += CardPictureBox_MouseClick;
+        }
+
+        /// <summary>
+        /// Called when this picture box is clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CardPictureBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -52,8 +59,8 @@ namespace SomeCardGames.Base
         {
             try
             {
-                TheImage = image;
-                TheImage = this.TrimBitmap(TheImage, Height, Width);
+                Image = image;
+                Image = this.TrimBitmap((Bitmap)Image, Height, Width);
             }
             catch (Exception TheException)
             {
@@ -73,7 +80,7 @@ namespace SomeCardGames.Base
             {
                 if (FaceUp)
                 {
-                    g.DrawImage(this.TheImage, Location);
+                    g.DrawImage(this.Image, Location);
                 }
                 else
                 {
@@ -113,7 +120,7 @@ namespace SomeCardGames.Base
         {
             try
             {
-                this.TheImage = LoadedCardResources.GetResource(Card);
+                this.Image = LoadedCardResources.GetResource(Card);
             }
             catch (Exception TheException)
             {
