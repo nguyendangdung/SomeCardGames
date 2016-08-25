@@ -34,6 +34,41 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
+        /// Returns how many cards are remaining in the deck.
+        /// </summary>
+        /// <returns></returns>
+        public int GetSize()
+        {
+            return Cards.Count;
+        }
+
+        /// <summary>
+        /// Returns the top card if there is one availible. Returns null if no card availible.
+        /// </summary>
+        /// <returns></returns>
+        public Card GetTop()
+        {
+            try
+            {
+                if (this.Cards.Count < 1)
+                {
+                    return null;
+                }
+                else
+                {
+                    Card ret = this.Cards[0];
+                    this.Cards.RemoveAt(0);
+                    return ret;
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Adds all of the cards into the deck.
         /// </summary>
         /// <param name="WithJokers"></param>

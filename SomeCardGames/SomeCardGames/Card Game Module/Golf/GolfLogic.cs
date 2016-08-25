@@ -19,6 +19,34 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         Deck TheDeck = new Deck(false);
 
+        GolfPlayer[] Players;
+
+        /// <summary>
+        /// Creates and deals in all of the players for this game.
+        /// </summary>
+        public void DealInPlayers()
+        {
+            try
+            {
+                GolfPlayer Human;
+                Card[] Cards = new Card[6];
+
+                int i = 0;
+
+                while (i != 6)
+                {
+                    Cards[i] = this.TheDeck.GetTop();
+                    i++;
+                }
+
+                Human = new GolfPlayer(Cards, true);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
         /// <summary>
         /// Called to start running this card game.
         /// </summary>
@@ -32,7 +60,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void Stop()
         {
-            throw new NotImplementedException();
+
         }
     }
 }
