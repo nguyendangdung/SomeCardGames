@@ -99,17 +99,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Card.cs" />
-    <Compile Include="Base\CardPictureBox.cs">
+    <Compile Include="Base\API\Card.cs" />
+    <Compile Include="Base\Controls\CardPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Base\Deck.cs" />
-    <Compile Include="Base\IEventHandler.cs" />
+    <Compile Include="Base\API\Deck.cs" />
+    <Compile Include="Base\API\IEventHandler.cs" />
     <Compile Include="Base\LoadedCardResources.cs" />
     <Compile Include="Card Game Module\Golf\GolfEventHandler.cs" />
     <Compile Include="Card Game Module\Golf\GolfLogic.cs" />
     <Compile Include="Card Game Module\Golf\GolfPlayer.cs" />
-    <Compile Include="Base\ICardGame.cs" />
+    <Compile Include="Base\API\ICardGame.cs" />
     <Compile Include="Drawing\Drawers\GolfDrawer.cs" />
     <Compile Include="Drawing\IDrawer.cs" />
     <Compile Include="Error\ErrorReporter.cs" />
