@@ -26,12 +26,12 @@ namespace SomeCardGames.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public int AIPlayersInGolf {
+        public int GolfAIPlayers {
             get {
-                return ((int)(this["AIPlayersInGolf"]));
+                return ((int)(this["GolfAIPlayers"]));
             }
             set {
-                this["AIPlayersInGolf"] = value;
+                this["GolfAIPlayers"] = value;
             }
         }
     }
