@@ -22,6 +22,9 @@ namespace SomeCardGames.Base
         /// </summary>
         private Bitmap Image;
 
+        /// <summary>
+        /// For cards only, this is the back of the card.
+        /// </summary>
         private Bitmap Back;
 
         /// <summary>
@@ -65,13 +68,20 @@ namespace SomeCardGames.Base
         /// <param name="Location"></param>
         public void Draw(bool FaceUp, Graphics g, Point Location)
         {
-            if (FaceUp)
+            try
             {
-                g.DrawImage(this.Image, Location);
+                if (FaceUp)
+                {
+                    g.DrawImage(this.Image, Location);
+                }
+                else
+                {
+                    g.DrawImage(this.Back, Location);
+                }
             }
-            else
+            catch (Exception TheException)
             {
-
+                ErrorReporter.Report(TheException);
             }
         }
 
