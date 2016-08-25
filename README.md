@@ -17,6 +17,6 @@ Octokit is provided under the MIT License (https://en.wikipedia.org/wiki/MIT_Lic
 
 I could always use help with this project. If you have programming skills, know how to create sound effects, are a graphics artist/can create textures, can translate this project into a language different than English, are good at designing things, or can make some sort of other contribution to this project, please apply to help. 
 
-###**How to apply:**
+###**How to apply**
 
 Create a issue on this Github page, with why you want to help this project and your skillset, and then label it with the tag "Resume". I will get back to you as soon as I can.
