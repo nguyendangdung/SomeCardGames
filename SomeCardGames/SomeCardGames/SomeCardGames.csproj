@@ -114,6 +114,7 @@
     <Compile Include="Drawing\IDrawer.cs" />
     <Compile Include="Error\ErrorReporter.cs" />
     <Compile Include="Error\ErrorStorage.cs" />
+    <Compile Include="Error\Secure.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
