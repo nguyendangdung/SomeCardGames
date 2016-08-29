@@ -166,6 +166,7 @@
     <Folder Include="Card Game Module\Go FIsh\" />
     <Folder Include="Card Game Module\Hearts\" />
     <Folder Include="Card Game Module\Old Maid\" />
+    <Folder Include="Card Game Module\Poker\" />
     <Folder Include="Card Game Module\Rummy 500\" />
     <Folder Include="Card Game Module\Rummy\" />
     <Folder Include="Card Game Module\Solitaire\" />

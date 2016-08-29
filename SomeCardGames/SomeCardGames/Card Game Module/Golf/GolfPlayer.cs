@@ -50,5 +50,13 @@ namespace SomeCardGames.Card_Game_Module.Golf
                 ErrorReporter.Report(TheException);
             }
         }
+
+        /// <summary>
+        /// Is called every time it is the AI's turn.
+        /// </summary>
+        public void AITurn()
+        {
+
+        }
     }
 }
