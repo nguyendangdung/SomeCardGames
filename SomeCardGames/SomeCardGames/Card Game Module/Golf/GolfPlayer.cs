@@ -56,7 +56,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void AITurn()
         {
-
+            
         }
     }
 }

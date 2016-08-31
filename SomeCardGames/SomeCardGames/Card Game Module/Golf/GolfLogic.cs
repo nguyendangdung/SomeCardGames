@@ -19,7 +19,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         Deck TheDeck = new Deck(false);
 
-        GolfPlayer[] Players;
+        List<GolfPlayer> Players;
 
         /// <summary>
         /// Creates and deals in all of the players for this game.
@@ -28,7 +28,33 @@ namespace SomeCardGames.Card_Game_Module.Golf
         {
             try
             {
-                GolfPlayer Human;
+                int i = 0;
+                int PlayersToDealIn = SomeCardGames.Properties.Settings.Default.GolfAIPlayers - 1;
+
+                Players.Add(this.DealInPlayer(false));
+
+                while (i != PlayersToDealIn)
+                {
+                    Players.Add(this.DealInPlayer(false));
+                    i++;
+                }
+                
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// Creates a GolfPlayer object, and returns it.
+        /// </summary>
+        /// <param name="IsAI"></param>
+        public GolfPlayer DealInPlayer(bool IsAI)
+        {
+            try
+            {
+                GolfPlayer Player;
                 Card[] Cards = new Card[6];
 
                 int i = 0;
@@ -39,11 +65,14 @@ namespace SomeCardGames.Card_Game_Module.Golf
                     i++;
                 }
 
-                Human = new GolfPlayer(Cards, true);
+                Player = new GolfPlayer(Cards, IsAI);
+
+                return Player;
             }
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
+                return null;
             }
         }
 

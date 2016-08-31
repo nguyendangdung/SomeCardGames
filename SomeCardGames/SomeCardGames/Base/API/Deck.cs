@@ -43,12 +43,12 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
-        /// Returns the top card if there is one availible. Returns null if no card availible.
+        /// Returns the top card if there is one availible, and removes it from the deck. Returns null if no card availible.
         /// </summary>
         /// <returns></returns>
         public Card GetTop()
         {
-            try
+            try 
             {
                 if (this.Cards.Count < 1)
                 {
