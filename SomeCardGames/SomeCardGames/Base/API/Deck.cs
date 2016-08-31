@@ -17,14 +17,28 @@ namespace SomeCardGames.Base
         public List<Card> Cards;
 
         /// <summary>
-        /// The constructor for the Deck class. This automatically shuffles the deck.
+        /// The constructor for the Deck class. This automatically shuffles the deck. Also adds multiple decks if DecksToAdd is greater than 1.
         /// </summary>
-        public Deck(bool WithJokers)
+        public Deck(bool WithJokers, int DecksToAdd)
         {
             try
             {
                 Cards = new List<Card>();
-                this.AddCards(WithJokers);
+
+                if (DecksToAdd > 1)
+                {
+                    int i = 0;
+
+                    while (i != DecksToAdd)
+                    {
+                        this.AddCards(WithJokers);
+                        i++;
+                    }
+                }
+                else
+                {
+                    this.AddCards(WithJokers);
+                }
                 this.Shuffle();
             }
             catch (Exception TheException)

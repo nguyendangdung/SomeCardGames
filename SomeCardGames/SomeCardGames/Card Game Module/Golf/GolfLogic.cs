@@ -17,7 +17,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// <summary>
         /// This is the deck of cards in the middle of the table.
         /// </summary>
-        Deck TheDeck = new Deck(false);
+        Deck TheDeck;
 
         List<GolfPlayer> Players;
 
@@ -77,11 +77,22 @@ namespace SomeCardGames.Card_Game_Module.Golf
         }
 
         /// <summary>
+        /// This method adds as many cards to the "deck" as needed to support as many AIs as are in the game.
+        /// </summary>
+        public void CreateGolfDeck()
+        {
+            
+        }
+
+        /// <summary>
         /// Called to start running this card game.
         /// </summary>
         public void Start()
         {
-            TheDeck.Shuffle();
+            int Decks;
+
+            int Players = SomeCardGames.Properties.Settings.Default.GolfAIPlayers + 1;
+            Decks = Math.Round()
         }
 
         /// <summary>
