@@ -81,7 +81,33 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void CreateGolfDeck()
         {
-            
+            try
+            {
+                int Decks;
+                int Players = SomeCardGames.Properties.Settings.Default.GolfAIPlayers + 1;
+
+                double Dec = Players / 3;
+
+                Decks = (int)Math.Round(Dec, 0);
+
+                if (Decks < 1)
+                {
+                    throw new Exception(ErrorStorage.InvalidDeckCreationException);
+                }
+                else
+                {
+                    int i = 0;
+                    while (i != Decks)
+                    {
+                        this.TheDeck.AddCards(false);
+                        i++;
+                    }
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -89,10 +115,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void Start()
         {
-            int Decks;
 
-            int Players = SomeCardGames.Properties.Settings.Default.GolfAIPlayers + 1;
-            Decks = Math.Round()
         }
 
         /// <summary>
