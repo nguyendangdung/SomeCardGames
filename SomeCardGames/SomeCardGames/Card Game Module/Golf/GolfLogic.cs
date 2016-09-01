@@ -29,7 +29,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
             try
             {
                 int i = 0;
-                int PlayersToDealIn = SomeCardGames.Properties.Settings.Default.GolfAIPlayers - 1;
+                int PlayersToDealIn = SomeCardGames.Properties.Settings.Default.GolfAIPlayers;
 
                 Players.Add(this.DealInPlayer(false));
 
@@ -115,7 +115,8 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void Start()
         {
-
+            this.CreateGolfDeck();
+            this.DealInPlayers();
         }
 
         /// <summary>
