@@ -94,15 +94,8 @@ namespace SomeCardGames.Card_Game_Module.Golf
                 {
                     throw new Exception(ErrorStorage.InvalidDeckCreationException);
                 }
-                else
-                {
-                    int i = 0;
-                    while (i != Decks)
-                    {
-                        this.TheDeck.AddCards(false);
-                        i++;
-                    }
-                }
+
+                this.TheDeck = new Deck(false, Decks);
             }
             catch (Exception TheException)
             {
