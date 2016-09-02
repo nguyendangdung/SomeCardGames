@@ -173,6 +173,7 @@
     <Folder Include="Card Game Module\Spades\" />
     <Folder Include="Card Game Module\War\" />
     <Folder Include="Card Game Module\Whist\" />
+    <Folder Include="Performance Reports\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

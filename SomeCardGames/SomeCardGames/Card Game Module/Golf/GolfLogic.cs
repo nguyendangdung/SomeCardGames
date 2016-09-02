@@ -17,14 +17,14 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// <summary>
         /// This is the deck of cards in the middle of the table.
         /// </summary>
-        Deck TheDeck;
+        private Deck TheDeck;
 
-        List<GolfPlayer> Players;
+        private List<GolfPlayer> Players;
 
         /// <summary>
         /// Creates and deals in all of the players for this game.
         /// </summary>
-        public void DealInPlayers()
+        private void DealInPlayers()
         {
             try
             {
@@ -51,7 +51,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// Creates a GolfPlayer object, and returns it.
         /// </summary>
         /// <param name="IsAI"></param>
-        public GolfPlayer DealInPlayer(bool IsAI)
+        private GolfPlayer DealInPlayer(bool IsAI)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// <summary>
         /// This method adds as many cards to the "deck" as needed to support as many AIs as are in the game.
         /// </summary>
-        public void CreateGolfDeck()
+        private void CreateGolfDeck()
         {
             try
             {
