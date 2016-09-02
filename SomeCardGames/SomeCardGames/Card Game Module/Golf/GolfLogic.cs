@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SomeCardGames.Base;
+using SomeCardGames.Drawing.Drawers;
 using SomeCardGames.Error;
 
 namespace SomeCardGames.Card_Game_Module.Golf
@@ -14,15 +15,18 @@ namespace SomeCardGames.Card_Game_Module.Golf
     /// </summary>
     public class GolfLogic : ICardGame
     {
-        /// <summary>
-        /// This is the deck of cards in the middle of the table.
-        /// </summary>
-        public Deck TheDeck;
 
         /// <summary>
         /// A list of all of the players currently in the golf game.
         /// </summary>
         public List<GolfPlayer> Players;
+
+        public GolfDrawer Drawer;
+
+        /// <summary>
+        /// This is the deck of cards in the middle of the table.
+        /// </summary>
+        public Deck TheDeck;
 
         /// <summary>
         /// Creates and deals in all of the players for this game.
@@ -112,8 +116,17 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void Start()
         {
-            this.CreateGolfDeck();
-            this.DealInPlayers();
+            try
+            {
+                this.Drawer = new GolfDrawer();
+                this.Drawer.StartUp(this);
+                this.CreateGolfDeck();
+                this.DealInPlayers();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>

@@ -18,11 +18,6 @@ namespace SomeCardGames.Drawing.Drawers
     public class GolfDrawer : IDrawer
     {
         /// <summary>
-        /// Tells us if we have done startup logic yet.
-        /// </summary>
-        bool HasStartedUp = false;
-
-        /// <summary>
         /// The width to make all cards to.
         /// </summary>
         public int CardWidth = Convert.ToInt32(LoadedCardResources.GetBack().Width * VariableStorage.CardScaleFactor);
@@ -47,16 +42,11 @@ namespace SomeCardGames.Drawing.Drawers
         /// </summary>
         /// <param name="G"></param>
         /// <param name="Game"></param>
-        public void Draw(Graphics G, object Game)
+        public void Draw(Graphics G)
         {
             try
             {
                 Current = G;
-
-                if (!this.HasStartedUp)
-                {
-                    this.StartUp();
-                }
 
                 this.DrawStackInTheMiddle();
             }
@@ -81,11 +71,14 @@ namespace SomeCardGames.Drawing.Drawers
             }
         }
 
-        private void StartUp()
+        /// <summary>
+        /// Does some startup logic.
+        /// </summary>
+        /// <param name="Game"></param>
+        public void StartUp(object Game)
         {
             try
             {
-                this.HasStartedUp = true;
                 this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), CardWidth, CardHeight);
             }
             catch (Exception TheException)
