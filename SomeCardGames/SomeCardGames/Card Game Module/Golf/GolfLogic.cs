@@ -17,9 +17,12 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// <summary>
         /// This is the deck of cards in the middle of the table.
         /// </summary>
-        private Deck TheDeck;
+        public Deck TheDeck;
 
-        private List<GolfPlayer> Players;
+        /// <summary>
+        /// A list of all of the players currently in the golf game.
+        /// </summary>
+        public List<GolfPlayer> Players;
 
         /// <summary>
         /// Creates and deals in all of the players for this game.

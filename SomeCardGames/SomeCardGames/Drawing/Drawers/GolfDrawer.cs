@@ -15,12 +15,26 @@ namespace SomeCardGames.Drawing.Drawers
     public class GolfDrawer : IDrawer
     {
         /// <summary>
+        /// Gives us a handle to the current graphics object, used to draw.
+        /// </summary>
+        Graphics Current;
+
+        /// <summary>
         /// Called by the paint event on the form. Draws the current status of the golf card game.
         /// </summary>
         /// <param name="G"></param>
         public void Draw(Graphics G)
         {
-            throw new NotImplementedException();
+            Current = G;
+            this.DrawStackInTheMiddle();
+        }
+
+        /// <summary>
+        /// Draws the stack of cards in the middle of the screen.
+        /// </summary>
+        public void DrawStackInTheMiddle()
+        {
+
         }
     }
 }
