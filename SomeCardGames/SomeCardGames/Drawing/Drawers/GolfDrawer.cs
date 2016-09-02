@@ -35,7 +35,12 @@ namespace SomeCardGames.Drawing.Drawers
         /// <summary>
         /// Gives us a handle to the current graphics object, used to draw.
         /// </summary>
-        Graphics Current;
+        public Graphics Current;
+
+        /// <summary>
+        /// The logic for the game is accessible through this object.
+        /// </summary>
+        public GolfLogic Game;
 
         /// <summary>
         /// Called by the paint event on the form. Draws the current status of the golf card game.
@@ -63,7 +68,15 @@ namespace SomeCardGames.Drawing.Drawers
         {
             try
             {
-
+                if (this.Game.TheDeck.Cards.Count > 0)
+                {
+                    this.CenterDeck.Location = new Point(VariableStorage.ScreenWidth / 4, VariableStorage.ScreenHeight / 4);
+                    this.CenterDeck.Visible = true;
+                }
+                else
+                {
+                    this.CenterDeck.Visible = false;
+                }
             }
             catch (Exception TheException)
             {
@@ -79,6 +92,7 @@ namespace SomeCardGames.Drawing.Drawers
         {
             try
             {
+                this.Game = (GolfLogic)Game;
                 this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), CardWidth, CardHeight);
             }
             catch (Exception TheException)
