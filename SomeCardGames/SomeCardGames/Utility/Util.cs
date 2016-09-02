@@ -6,6 +6,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
+using SomeCardGames.Error;
 
 namespace SomeCardGames.Utility
 {
@@ -25,6 +28,43 @@ namespace SomeCardGames.Utility
             string resourceName = asm.GetName().Name + ".Properties.Resources";
             var rm = new System.Resources.ResourceManager(resourceName, asm);
             return (Bitmap)rm.GetObject(FileName);
+        }
+
+        /// <summary>
+        /// Does some calculations for rendering purposes.
+        /// </summary>
+        public static Size GetScreenSize(Form1 TheForm)
+        {
+            try
+            {
+                Size a = new Size(Screen.FromControl(TheForm).WorkingArea.Width, Screen.FromControl(TheForm).WorkingArea.Height);
+                return a;
+            }
+            catch (Exception e)
+            {
+                ErrorReporter.Report(e);
+                return new Size();
+            }
+        }
+
+        /// <summary>
+        /// Returns the scale that we should use when drawing the height of objects.
+        /// </summary>
+        /// <param name="TheForm"></param>
+        /// <returns></returns>
+        public static double HeightScale(Form1 TheForm)
+        {
+            return GetScreenSize(TheForm).Height / VariableStorage.HeightProgrammedFor;
+        }
+
+        /// <summary>
+        /// Returns the scale that we should use when drawing the width of objects.
+        /// </summary>
+        /// <param name="TheForm"></param>
+        /// <returns></returns>
+        public static double WidthScale(Form1 TheForm)
+        {
+            return GetScreenSize(TheForm).Width / VariableStorage.WidthProgrammedFor;
         }
     }
 }

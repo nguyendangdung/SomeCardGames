@@ -25,7 +25,7 @@ namespace SomeCardGames
         public void Startup(object Form)
         {
             this.CaptureTheForm(Form);
-            this.GetScreenSize();
+            VariableStorage.TheForm = TheForm;
             this.SetupForm();
         }
 
@@ -74,24 +74,6 @@ namespace SomeCardGames
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
-        /// Gets the size of the moniter.
-        /// </summary>
-        private void GetScreenSize()
-        {
-            try
-            {
-                VariableStorage.ScreenWidth = Screen.FromControl(TheForm).WorkingArea.Width;
-                VariableStorage.ScreenHeight = Screen.FromControl(TheForm).WorkingArea.Height;
-                VariableStorage.HeightScale = VariableStorage.ScreenHeight / VariableStorage.HeightProgrammedFor;
-                VariableStorage.WidthScale = VariableStorage.ScreenWidth / VariableStorage.WidthProgrammedFor;
-            }
-            catch (Exception e)
-            {
-                ErrorReporter.Report(e);
             }
         }
 

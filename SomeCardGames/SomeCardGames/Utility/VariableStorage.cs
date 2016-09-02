@@ -6,6 +6,11 @@
     public static class VariableStorage
     {
         /// <summary>
+        /// The main form.
+        /// </summary>
+        public static Form1 TheForm;
+
+        /// <summary>
         /// If true, then this program is currently running a card game.
         /// </summary>
         public static bool IsCardGameAlreadyGoing = false;
@@ -23,12 +28,24 @@
         /// <summary>
         /// The height to scale all operations by when it comes to rendering.
         /// </summary>
-        public static double HeightScale = 1;
+        public static double HeightScale
+        {
+            get
+            {
+                return Util.HeightScale(TheForm);
+            }
+        }
 
         /// <summary>
         /// The width to scale all operations by when it comes to rendering.
         /// </summary>
-        public static double WidthScale = 1;
+        public static double WidthScale
+        {
+            get
+            {
+                return Util.WidthScale(TheForm);
+            }
+        }
 
         /// <summary>
         /// Represents the screen width of the moniter this game is designed for.
