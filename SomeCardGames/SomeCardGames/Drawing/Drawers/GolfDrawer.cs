@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using SomeCardGames.Base;
 using SomeCardGames.Error;
+using SomeCardGames.Utility;
 
 namespace SomeCardGames.Drawing.Drawers
 {
@@ -15,7 +16,19 @@ namespace SomeCardGames.Drawing.Drawers
     /// </summary>
     public class GolfDrawer : IDrawer
     {
-        
+        /// <summary>
+        /// The width to make all cards to.
+        /// </summary>
+        public int CardWidth = Convert.ToInt32(LoadedCardResources.GetBack().Width * VariableStorage.CardScaleFactor);
+
+        /// <summary>
+        /// The width to make all cards to.
+        /// </summary>
+        public int CardHeight = Convert.ToInt32(LoadedCardResources.GetBack().Height * VariableStorage.CardScaleFactor);
+
+        public CardPictureBox CenterDeck;
+
+        bool HasStartedUp = false;
 
         /// <summary>
         /// Gives us a handle to the current graphics object, used to draw.
@@ -45,6 +58,11 @@ namespace SomeCardGames.Drawing.Drawers
         public void DrawStackInTheMiddle()
         {
             
+        }
+
+        private void StartUp()
+        {
+            this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), CardWidth, CardHeight);
         }
     }
 }

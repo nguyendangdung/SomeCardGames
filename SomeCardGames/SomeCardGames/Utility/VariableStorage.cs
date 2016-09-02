@@ -56,5 +56,10 @@
         /// Represents the screen height of the moniter this game is designed for.
         /// </summary>
         public static int HeightProgrammedFor = 1410;
+
+        /// <summary>
+        /// Represents how much we downscale the cards before rendering.
+        /// </summary>
+        public static double CardScaleFactor = .3;
     }
 }
