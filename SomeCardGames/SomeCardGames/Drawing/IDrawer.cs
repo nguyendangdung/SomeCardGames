@@ -11,6 +11,6 @@ namespace SomeCardGames.Drawing
         /// Called to tell a Drawer to draw the card game that they know how to draw.
         /// </summary>
         /// <param name="G"></param>
-        void Draw(Graphics G);
+        void Draw(Graphics G, object Game);
     }
 }

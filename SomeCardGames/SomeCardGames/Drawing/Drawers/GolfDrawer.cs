@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SomeCardGames.Base;
+using SomeCardGames.Card_Game_Module.Golf;
 using SomeCardGames.Error;
 using SomeCardGames.Utility;
 
@@ -16,6 +17,11 @@ namespace SomeCardGames.Drawing.Drawers
     /// </summary>
     public class GolfDrawer : IDrawer
     {
+        /// <summary>
+        /// Tells us if we have done startup logic yet.
+        /// </summary>
+        bool HasStartedUp = false;
+
         /// <summary>
         /// The width to make all cards to.
         /// </summary>
@@ -32,11 +38,6 @@ namespace SomeCardGames.Drawing.Drawers
         public CardPictureBox CenterDeck;
 
         /// <summary>
-        /// Tells us if we have done startup logic yet.
-        /// </summary>
-        bool HasStartedUp = false;
-
-        /// <summary>
         /// Gives us a handle to the current graphics object, used to draw.
         /// </summary>
         Graphics Current;
@@ -45,7 +46,8 @@ namespace SomeCardGames.Drawing.Drawers
         /// Called by the paint event on the form. Draws the current status of the golf card game.
         /// </summary>
         /// <param name="G"></param>
-        public void Draw(Graphics G)
+        /// <param name="Game"></param>
+        public void Draw(Graphics G, object Game)
         {
             try
             {
@@ -69,7 +71,14 @@ namespace SomeCardGames.Drawing.Drawers
         /// </summary>
         public void DrawStackInTheMiddle()
         {
-            
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         private void StartUp()
