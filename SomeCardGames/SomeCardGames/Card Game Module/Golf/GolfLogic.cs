@@ -28,6 +28,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
         {
             try
             {
+                Players = new List<GolfPlayer>();
                 int i = 0;
                 int PlayersToDealIn = SomeCardGames.Properties.Settings.Default.GolfAIPlayers;
 
