@@ -25,8 +25,15 @@ namespace SomeCardGames.Drawing.Drawers
         /// <param name="G"></param>
         public void Draw(Graphics G)
         {
-            Current = G;
-            this.DrawStackInTheMiddle();
+            try
+            {
+                Current = G;
+                this.DrawStackInTheMiddle();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>

@@ -86,6 +86,8 @@ namespace SomeCardGames
             {
                 VariableStorage.ScreenWidth = Screen.FromControl(TheForm).WorkingArea.Width;
                 VariableStorage.ScreenHeight = Screen.FromControl(TheForm).WorkingArea.Height;
+                VariableStorage.HeightScale = VariableStorage.ScreenHeight / VariableStorage.HeightProgrammedFor;
+                VariableStorage.WidthScale = VariableStorage.ScreenWidth / VariableStorage.WidthProgrammedFor;
             }
             catch (Exception e)
             {

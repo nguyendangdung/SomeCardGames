@@ -19,5 +19,25 @@
         /// Represents how tall the screen is.
         /// </summary>
         public static int ScreenHeight = 0;
+
+        /// <summary>
+        /// The height to scale all operations by when it comes to rendering.
+        /// </summary>
+        public static double HeightScale = 1;
+
+        /// <summary>
+        /// The width to scale all operations by when it comes to rendering.
+        /// </summary>
+        public static double WidthScale = 1;
+
+        /// <summary>
+        /// Represents the screen width of the moniter this game is designed for.
+        /// </summary>
+        public static int WidthProgrammedFor = 2560;
+
+        /// <summary>
+        /// Represents the screen height of the moniter this game is designed for.
+        /// </summary>
+        public static int HeightProgrammedFor = 1410;
     }
 }
