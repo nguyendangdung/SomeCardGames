@@ -26,8 +26,14 @@ namespace SomeCardGames.Drawing.Drawers
         /// </summary>
         public int CardHeight = Convert.ToInt32(LoadedCardResources.GetBack().Height * VariableStorage.CardScaleFactor);
 
+        /// <summary>
+        /// Represents the stack of cards in the middle of the screen.
+        /// </summary>
         public CardPictureBox CenterDeck;
 
+        /// <summary>
+        /// Tells us if we have done startup logic yet.
+        /// </summary>
         bool HasStartedUp = false;
 
         /// <summary>
@@ -44,6 +50,12 @@ namespace SomeCardGames.Drawing.Drawers
             try
             {
                 Current = G;
+
+                if (!this.HasStartedUp)
+                {
+                    this.StartUp();
+                }
+
                 this.DrawStackInTheMiddle();
             }
             catch (Exception TheException)
@@ -62,7 +74,15 @@ namespace SomeCardGames.Drawing.Drawers
 
         private void StartUp()
         {
-            this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), CardWidth, CardHeight);
+            try
+            {
+                this.HasStartedUp = true;
+                this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), CardWidth, CardHeight);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }
