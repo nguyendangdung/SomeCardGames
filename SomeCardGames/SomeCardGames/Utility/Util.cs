@@ -48,23 +48,39 @@ namespace SomeCardGames.Utility
         }
 
         /// <summary>
-        /// Returns the scale that we should use when drawing the height of objects.
+        /// Returns the scale that we should use when drawing the height of objects. Returns 1 if an error occured.
         /// </summary>
         /// <param name="TheForm"></param>
         /// <returns></returns>
         public static double HeightScale(Form1 TheForm)
         {
-            return GetScreenSize(TheForm).Height / VariableStorage.HeightProgrammedFor;
+            try
+            {
+                return GetScreenSize(TheForm).Height / VariableStorage.HeightProgrammedFor;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return 1;
+            }
         }
 
         /// <summary>
-        /// Returns the scale that we should use when drawing the width of objects.
+        /// Returns the scale that we should use when drawing the width of objects. Returns 1 if an error occured.
         /// </summary>
         /// <param name="TheForm"></param>
         /// <returns></returns>
         public static double WidthScale(Form1 TheForm)
         {
-            return GetScreenSize(TheForm).Width / VariableStorage.WidthProgrammedFor;
+            try
+            {
+                return GetScreenSize(TheForm).Width / VariableStorage.WidthProgrammedFor;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return 1;
+            }
         }
     }
 }

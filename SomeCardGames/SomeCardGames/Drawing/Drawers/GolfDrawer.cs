@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using SomeCardGames.Base;
 using SomeCardGames.Error;
 
 namespace SomeCardGames.Drawing.Drawers
@@ -14,6 +15,8 @@ namespace SomeCardGames.Drawing.Drawers
     /// </summary>
     public class GolfDrawer : IDrawer
     {
+        
+
         /// <summary>
         /// Gives us a handle to the current graphics object, used to draw.
         /// </summary>
@@ -41,7 +44,7 @@ namespace SomeCardGames.Drawing.Drawers
         /// </summary>
         public void DrawStackInTheMiddle()
         {
-
+            
         }
     }
 }
