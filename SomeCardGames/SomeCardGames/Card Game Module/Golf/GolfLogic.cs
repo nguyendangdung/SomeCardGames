@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SomeCardGames.Base;
 using SomeCardGames.Drawing.Drawers;
 using SomeCardGames.Error;
+using System.Drawing;
 
 namespace SomeCardGames.Card_Game_Module.Golf
 {
@@ -135,6 +136,22 @@ namespace SomeCardGames.Card_Game_Module.Golf
         public void Stop()
         {
 
+        }
+
+        /// <summary>
+        /// Passes a call onto the drawer for this game.
+        /// </summary>
+        /// <param name="G"></param>
+        public void Draw(Graphics G)
+        {
+            try
+            {
+                this.Drawer.Draw(G);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }

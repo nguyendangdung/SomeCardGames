@@ -19,14 +19,24 @@ namespace SomeCardGames
     /// </summary>
     public partial class Form1 : Form
     {
-        Main main = new Main();
+        /// <summary>
+        ///Kicks off various functions.
+        /// </summary>
+        private Main main = new Main();
 
         /// <summary>
         /// The inital call to this program.
         /// </summary>
         public Form1()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -46,7 +56,14 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-
+            try
+            {
+                main.Current.Draw(e.Graphics);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -73,7 +90,14 @@ namespace SomeCardGames
 
         private void loadToolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            this.main.Shutdown(0);
+            try
+            {
+                this.main.Shutdown(0);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }
