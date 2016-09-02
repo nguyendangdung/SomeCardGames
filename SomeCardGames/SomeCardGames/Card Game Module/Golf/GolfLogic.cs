@@ -97,7 +97,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
 
                 double Dec = Players / 3;
 
-                Decks = (int)Math.Round(Dec, 0);
+                Decks = (int)Math.Round(Dec, 0); 
 
                 if (Decks < 1)
                 {
