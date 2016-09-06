@@ -20,7 +20,7 @@ namespace SomeCardGames.Utility
     {
         private static Assembly _assembly = Assembly.GetExecutingAssembly();
         private static Stream _imageStream;
-
+        private static string BasePath;
 
         /// <summary>
         /// Loads a bitmap from the resources file.
@@ -31,13 +31,51 @@ namespace SomeCardGames.Utility
         {
             try
             {
-                _imageStream = _assembly.GetManifestResourceStream("SomeCardGames." + FileName);
-                return new Bitmap(_imageStream);
+                BasePath = TrimFileName(_assembly.Location);
+                return new Bitmap(BasePath + "Resources\\" + FileName);
             }
+            //catch (FileNotFoundException)
+            //{
+
+            //}
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// Trims everything after the final "\\" in a path.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string TrimFileName(string path)
+        {
+            try
+            {
+                string ret = path;
+                int i = 0;
+                int last = 0;
+                int size = ret.Count();
+
+                while (i != size)
+                {
+                    if (ret[i].ToString() == "\\")
+                    {
+                        last = i;
+                    }
+                    i++;
+                }
+
+                ret.Remove(last, size);
+
+                return ret;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return path;
             }
         }
 
