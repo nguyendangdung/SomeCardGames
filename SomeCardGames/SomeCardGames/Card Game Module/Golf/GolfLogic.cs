@@ -97,7 +97,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
 
                 double Dec = Players / 3;
 
-                Decks = Convert.ToInt32(Math.Round(Dec, 0)); 
+                Decks = Convert.ToInt32(Dec); 
 
                 if (Decks < 1)
                 {
