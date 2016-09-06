@@ -49,7 +49,7 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
-        /// Gets what the back of the cards looks like.
+        /// Gets what the back of the cards looks like. 
         /// </summary>
         /// <returns></returns>
         public static Bitmap GetBack()
