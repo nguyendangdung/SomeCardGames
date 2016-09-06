@@ -1,0 +1,20 @@
+#Privacy Agreement
+
+##What Information Do We Collect
+
+1. Directory path to SomeCardGames.exe
+2. If the OS is 64 bit
+3. OS version
+4. Processor count
+5. System page size
+6. CLR version (Common Language Runtime version)
+7. Handles
+8. Non Paged system memory
+9. Paged memory size
+10. Max memory usage
+11. If Some Card Games is responding
+12. Number of threads running
+
+##Who can see this
+
+Anybody, if they go this Git repository, into the issues section. However, this information does NOT make it easy for anybody to identity personal information, such as your location, identity, or the data on your computer.
