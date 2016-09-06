@@ -76,9 +76,8 @@ namespace SomeCardGames.Error
 #pragma warning restore CS0168 // Variable is declared but never used
             {
                 //Eat it
+                return null;
             }
-
-            return null;
         }
 
         /// <summary>
