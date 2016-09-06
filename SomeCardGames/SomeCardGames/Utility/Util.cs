@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using SomeCardGames.Error;
+using System.Reflection;
 
 namespace SomeCardGames.Utility
 {
@@ -17,6 +18,10 @@ namespace SomeCardGames.Utility
     /// </summary>
     public static class Util
     {
+        private static Assembly _assembly = Assembly.GetExecutingAssembly();
+        private static Stream _imageStream;
+
+
         /// <summary>
         /// Loads a bitmap from the resources file.
         /// </summary>
@@ -24,10 +29,16 @@ namespace SomeCardGames.Utility
         /// <returns></returns>
         public static Bitmap LoadResource(string FileName)
         {
-            System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
-            string resourceName = asm.GetName().Name + ".Properties.Resources";
-            var rm = new System.Resources.ResourceManager(resourceName, asm);
-            return (Bitmap)rm.GetObject(FileName);
+            try
+            {
+                _imageStream = _assembly.GetManifestResourceStream("SomeCardGames." + FileName);
+                return new Bitmap(_imageStream);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return null;
+            }
         }
 
         /// <summary>
