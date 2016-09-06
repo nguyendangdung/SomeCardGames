@@ -58,7 +58,10 @@ namespace SomeCardGames
         {
             try
             {
-                main.Current.Draw(e.Graphics);
+                if (main.Current != null)
+                {
+                    main.Current.Draw(e.Graphics);
+                }
             }
             catch (Exception TheException)
             {
