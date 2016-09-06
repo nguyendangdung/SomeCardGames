@@ -46,7 +46,6 @@ namespace SomeCardGames.Drawing.Drawers
         /// Called by the paint event on the form. Draws the current status of the golf card game.
         /// </summary>
         /// <param name="G"></param>
-        /// <param name="Game"></param>
         public void Draw(Graphics G)
         {
             try
