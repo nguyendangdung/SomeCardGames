@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using SomeCardGames.Error;
+using SomeCardGames.Base;
 using SomeCardGames.Card_Game_Module;
+using SomeCardGames.Error;
 using SomeCardGames.Utility;
 
 namespace SomeCardGames
@@ -12,6 +13,9 @@ namespace SomeCardGames
     /// </summary>
     public class Main
     {
+        /// <summary>
+        /// The main form.
+        /// </summary>
         private Form1 TheForm;
 
         /// <summary>
@@ -26,6 +30,7 @@ namespace SomeCardGames
         {
             this.CaptureTheForm(Form);
             VariableStorage.TheForm = TheForm;
+            LoadedCardResources.LoadResources();
             this.SetupForm();
         }
 

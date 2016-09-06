@@ -17,6 +17,8 @@ namespace SomeCardGames.Base
     {
         private static List<Bitmap> CardResources = new List<Bitmap>();
 
+        private static Bitmap Back;
+
         /// <summary>
         /// Loads a bunch of resources into memory.
         /// </summary>
@@ -26,19 +28,6 @@ namespace SomeCardGames.Base
         {
             try
             {
-                if (CardResources.Count < 1)
-                {
-                    CardResources.Clear();
-
-                    int i = 0;
-
-                    while (i != 55)
-                    {
-                        i++;
-                        CardResources.Add(Util.LoadResource(i.ToString() + ".png"));
-                    }
-                }
-
                 return CardResources.ElementAt(Card);
             }
             catch (Exception TheException)
@@ -56,13 +45,29 @@ namespace SomeCardGames.Base
         {
             try
             {
-                return Util.LoadResource("back.png");
+                return Back;
             }
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Kicks off the necessary steps to load all resources needed. 
+        /// </summary>
+        public static void LoadResources()
+        {
+            int i = 0;
+
+            while (i != 55)
+            {
+                i++;
+                CardResources.Add(Util.LoadResource(i.ToString() + ".png"));
+            }
+
+            Back = Util.LoadResource("back.png");
         }
     }
 }

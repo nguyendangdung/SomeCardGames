@@ -15,6 +15,7 @@ namespace SomeCardGames.Drawing.Drawers
     /// <summary>
     /// Draws the graphics for the Golf card game.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     public class GolfDrawer : IDrawer
     {
         /// <summary>

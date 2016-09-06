@@ -22,6 +22,9 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public List<GolfPlayer> Players;
 
+        /// <summary>
+        /// Used to draw the currently running golf game to the main form.
+        /// </summary>
         public GolfDrawer Drawer;
 
         /// <summary>
