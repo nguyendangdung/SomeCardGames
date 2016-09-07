@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Linq;
 
 using SomeCardGames.Error;
+using SomeCardGames.Utility;
+using System.Drawing.Drawing2D;
 
 namespace SomeCardGames.Base
 {
