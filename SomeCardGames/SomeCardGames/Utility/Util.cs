@@ -18,67 +18,6 @@ namespace SomeCardGames.Utility
     /// </summary>
     public static class Util
     {
-        private static Assembly _assembly = Assembly.GetExecutingAssembly();
-        private static Stream _imageStream;
-        private static string BasePath;
-
-        /// <summary>
-        /// Loads a bitmap from the resources file.
-        /// </summary>
-        /// <param name="FileName"></param>
-        /// <returns></returns>
-        public static Bitmap LoadResource(string FileName)
-        {
-            try
-            {
-                BasePath = TrimFileName(_assembly.Location);
-                return new Bitmap(BasePath + "Resources\\" + FileName);
-            }
-            //catch (FileNotFoundException)
-            //{
-
-            //}
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Trims everything after the final "\\" in a path.
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        public static string TrimFileName(string path)
-        {
-            try
-            {
-                string ret = path;
-                int i = 0;
-                int last = 0;
-                int size = ret.Count();
-
-                while (i != size)
-                {
-                    if (ret[i].ToString() == "\\")
-                    {
-                        last = i;
-                    }
-                    i++;
-                }
-
-                ret.Remove(last, size);
-
-                return ret;
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-                return path;
-            }
-        }
-
         /// <summary>
         /// Does some calculations for rendering purposes.
         /// </summary>
