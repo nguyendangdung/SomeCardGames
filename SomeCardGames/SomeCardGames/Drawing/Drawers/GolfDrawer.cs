@@ -19,16 +19,6 @@ namespace SomeCardGames.Drawing.Drawers
     public class GolfDrawer : IDrawer
     {
         /// <summary>
-        /// The width to make all cards to.
-        /// </summary>
-        public int CardWidth = Convert.ToInt32(LoadedCardResources.GetBack().Width * VariableStorage.CardScaleFactor);
-
-        /// <summary>
-        /// The width to make all cards to.
-        /// </summary>
-        public int CardHeight = Convert.ToInt32(LoadedCardResources.GetBack().Height * VariableStorage.CardScaleFactor);
-
-        /// <summary>
         /// Represents the stack of cards in the middle of the screen.
         /// </summary>
         public CardPictureBox CenterDeck;
@@ -93,7 +83,7 @@ namespace SomeCardGames.Drawing.Drawers
             try
             {
                 this.Game = (GolfLogic)Game;
-                this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), CardWidth, CardHeight);
+                this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), VariableStorage.CardWidth, VariableStorage.CardHeight);
             }
             catch (Exception TheException)
             {

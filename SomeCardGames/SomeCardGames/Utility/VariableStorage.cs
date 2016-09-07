@@ -1,4 +1,7 @@
-﻿namespace SomeCardGames.Utility
+﻿using SomeCardGames.Base;
+using System;
+
+namespace SomeCardGames.Utility
 {
     /// <summary>
     /// A class used to store universal variables.
@@ -61,5 +64,15 @@
         /// Represents how much we downscale the cards before rendering.
         /// </summary>
         public static double CardScaleFactor = .3;
+
+        /// <summary>
+        /// The width to make all cards to.
+        /// </summary>
+        public static int CardWidth = Convert.ToInt32(LoadedCardResources.GetBack().Width * VariableStorage.CardScaleFactor);
+
+        /// <summary>
+        /// The width to make all cards to.
+        /// </summary>
+        public static int CardHeight = Convert.ToInt32(LoadedCardResources.GetBack().Height * VariableStorage.CardScaleFactor);
     }
 }
