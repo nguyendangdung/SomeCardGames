@@ -1,4 +1,5 @@
 ﻿using SomeCardGames.Base;
+using SomeCardGames.Error;
 using System;
 
 namespace SomeCardGames.Utility
@@ -74,5 +75,21 @@ namespace SomeCardGames.Utility
         /// The width to make all cards to.
         /// </summary>
         public static int CardHeight = Convert.ToInt32(LoadedCardResources.GetBack().Height * VariableStorage.CardScaleFactor);
+
+        /// <summary>
+        /// A way to move the form around, where it would otherwise cause an exception.
+        /// </summary>
+        /// <param name="Form"></param>
+        public static void CollectForm(object Form)
+        {
+            try
+            {
+                TheForm = (Form1)Form;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
     }
 }

@@ -46,7 +46,14 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            main.Startup(this);
+            try
+            {
+                main.Startup(this);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>

@@ -14,11 +14,6 @@ namespace SomeCardGames
     public class Main
     {
         /// <summary>
-        /// The main form.
-        /// </summary>
-        private Form1 TheForm;
-
-        /// <summary>
         /// Represents the current card game logic that is running.
         /// </summary>
         public ICardGame Current;
@@ -28,10 +23,16 @@ namespace SomeCardGames
         /// </summary>
         public void Startup(object Form)
         {
-            this.CaptureTheForm(Form);
-            VariableStorage.TheForm = TheForm;
-            LoadedCardResources.LoadResources();
-            this.SetupForm();
+            try
+            {
+                VariableStorage.CollectForm(Form);
+                LoadedCardResources.LoadResources();
+                this.SetupForm();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
 
         /// <summary>
@@ -50,31 +51,15 @@ namespace SomeCardGames
         }
 
         /// <summary>
-        /// Saves the form to this class.
-        /// </summary>
-        /// <param name="Form"></param>
-        private void CaptureTheForm(object Form)
-        {
-            try
-            {
-                TheForm = (Form1)Form;
-            }
-            catch (Exception e)
-            {
-                ErrorReporter.Report(e);
-            }
-        }
-
-        /// <summary>
         /// Sets up the form.
         /// </summary>
         private void SetupForm()
         {
             try
             {
-                TheForm.TopMost = true;
-                TheForm.FormBorderStyle = FormBorderStyle.Fixed3D;
-                TheForm.WindowState = FormWindowState.Normal;
+                VariableStorage.TheForm.TopMost = true;
+                VariableStorage.TheForm.FormBorderStyle = FormBorderStyle.Fixed3D;
+                VariableStorage.TheForm.WindowState = FormWindowState.Normal;
             }
             catch (Exception TheException)
             {
