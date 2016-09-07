@@ -69,12 +69,12 @@ namespace SomeCardGames.Utility
         /// <summary>
         /// The width to make all cards to.
         /// </summary>
-        public static int CardWidth = Convert.ToInt32(LoadedCardResources.GetBack().Width * VariableStorage.CardScaleFactor);
+        public static int CardWidth = Convert.ToInt32(3000 * VariableStorage.CardScaleFactor);
 
         /// <summary>
         /// The width to make all cards to.
         /// </summary>
-        public static int CardHeight = Convert.ToInt32(LoadedCardResources.GetBack().Height * VariableStorage.CardScaleFactor);
+        public static int CardHeight = Convert.ToInt32(4200 * VariableStorage.CardScaleFactor);
 
         /// <summary>
         /// A way to move the form around, where it would otherwise cause an exception.
