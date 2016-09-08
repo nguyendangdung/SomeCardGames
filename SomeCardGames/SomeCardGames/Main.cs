@@ -1,9 +1,11 @@
-﻿using SomeCardGames.Base;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+using SomeCardGames.Base;
 using SomeCardGames.Card_Game_Module;
 using SomeCardGames.Error;
 using SomeCardGames.Utility;
-using System;
-using System.Windows.Forms;
 
 namespace SomeCardGames
 {
@@ -25,7 +27,7 @@ namespace SomeCardGames
             try
             {
                 VariableStorage.CollectForm(Form);
-                LoadedCardResources.LoadResourcesHighestRes();
+                LoadedCardResources.LoadResources();
                 this.SetupForm();
             }
             catch (Exception TheException)

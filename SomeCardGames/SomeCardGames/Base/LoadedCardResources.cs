@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 
 using SomeCardGames.Error;
+using SomeCardGames.Utility;
 
 namespace SomeCardGames.Base
 {//Job for next time: split the base stuff we need into a dll, so i can split the Golf code into a dll.
@@ -48,6 +49,37 @@ namespace SomeCardGames.Base
             {
                 ErrorReporter.Report(TheException);
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// Determins which resources to load based on the size of everything.
+        /// </summary>
+        /// <param name="ScreenSize"></param>
+        public static void LoadResources()
+        {
+            try
+            {
+                Size ScreenSize = Util.GetScreenSize(VariableStorage.TheForm);
+                if (ScreenSize.Height > 2560)
+                {
+                    LoadResourcesHighestRes();
+                    return;
+                }
+                if (ScreenSize.Height > 1920)
+                {
+                    LoadResources2560Res();
+                    return;
+                }
+                if (ScreenSize.Height <= 1920)
+                {
+                    LoadResources1920Res();
+                    return;
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
             }
         }
 
