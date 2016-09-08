@@ -198,6 +198,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MainResources870x1200\MainResources870x1200.csproj">
+      <Project>{b2a1a93b-fd63-4b5d-93a4-64410c2fccda}</Project>
+      <Name>MainResources870x1200</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MainResources960x1440\MainResources960x1440.csproj">
+      <Project>{621d511a-a7d6-4ddd-bf8b-8ace52b89f60}</Project>
+      <Name>MainResources960x1440</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MainResources\MainResources%28HighestResolution%29.csproj">
       <Project>{d7871ae5-e69b-4d92-bb0a-e8beb8ea35b0}</Project>
       <Name>MainResources%28HighestResolution%29</Name>
