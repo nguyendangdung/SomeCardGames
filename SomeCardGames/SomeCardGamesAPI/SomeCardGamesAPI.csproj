@@ -31,8 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Octokit">
+      <HintPath>..\SomeCardGames\bin\Debug\Octokit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\Card.cs" />
-    <Compile Include="API\Controls\CardPictureBox.cs" />
+    <Compile Include="API\Controls\CardPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="API\Deck.cs" />
     <Compile Include="API\ICardGame.cs" />
     <Compile Include="API\IDrawer.cs" />
@@ -57,6 +64,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Error\Snippets\ErrorHandler.snippet" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MainResources870x1200\MainResources870x1200.csproj">
+      <Project>{b2a1a93b-fd63-4b5d-93a4-64410c2fccda}</Project>
+      <Name>MainResources870x1200</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MainResources960x1440\MainResources960x1440.csproj">
+      <Project>{621d511a-a7d6-4ddd-bf8b-8ace52b89f60}</Project>
+      <Name>MainResources960x1440</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MainResources\MainResources%28HighestResolution%29.csproj">
+      <Project>{d7871ae5-e69b-4d92-bb0a-e8beb8ea35b0}</Project>
+      <Name>MainResources%28HighestResolution%29</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

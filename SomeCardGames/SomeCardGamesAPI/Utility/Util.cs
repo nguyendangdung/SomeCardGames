@@ -1,7 +1,8 @@
-﻿using SomeCardGames.Error;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+
+using SomeCardGames.Error;
 
 namespace SomeCardGames.Utility
 {
@@ -13,7 +14,7 @@ namespace SomeCardGames.Utility
         /// <summary>
         /// Does some calculations for rendering purposes.
         /// </summary>
-        public static Size GetScreenSize(Form1 TheForm)
+        public static Size GetScreenSize(Form TheForm)
         {
             try
             {
@@ -32,7 +33,7 @@ namespace SomeCardGames.Utility
         /// </summary>
         /// <param name="TheForm"></param>
         /// <returns></returns>
-        public static double HeightScale(Form1 TheForm)
+        public static double HeightScale(Form TheForm)
         {
             try
             {
@@ -50,7 +51,7 @@ namespace SomeCardGames.Utility
         /// </summary>
         /// <param name="TheForm"></param>
         /// <returns></returns>
-        public static double WidthScale(Form1 TheForm)
+        public static double WidthScale(Form TheForm)
         {
             try
             {

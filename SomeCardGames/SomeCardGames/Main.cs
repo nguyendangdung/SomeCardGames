@@ -28,10 +28,6 @@ namespace SomeCardGames
             {
                 VariableStorage.CollectForm(Form);
                 LoadedCardResources.LoadResources();
-                var a = "a";
-                int b = 0;
-                object c = a;
-                b = (int)c;
                 this.SetupForm();
             }
             catch (Exception TheException)

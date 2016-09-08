@@ -1,5 +1,7 @@
-﻿using SomeCardGames.Error;
-using System;
+﻿using System;
+using System.Windows.Forms;
+
+using SomeCardGames.Error;
 
 namespace SomeCardGames.Utility
 {
@@ -11,7 +13,7 @@ namespace SomeCardGames.Utility
         /// <summary>
         /// The main form.
         /// </summary>
-        public static Form1 TheForm;
+        public static Form TheForm;
 
         /// <summary>
         /// If true, then this program is currently running a card game.
@@ -83,7 +85,7 @@ namespace SomeCardGames.Utility
         {
             try
             {
-                TheForm = (Form1)Form;
+                TheForm = (Form)Form;
             }
             catch (Exception TheException)
             {
