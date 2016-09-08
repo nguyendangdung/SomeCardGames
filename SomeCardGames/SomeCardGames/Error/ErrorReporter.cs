@@ -139,7 +139,9 @@ namespace SomeCardGames.Error
                 {
                     Report.Add("Screen Size: " + Utility.Util.GetScreenSize(Utility.VariableStorage.TheForm).ToString());
                 }
+#pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception e)
+#pragma warning restore CS0168 // Variable is declared but never used
                 {
                     //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too currupt, this would fail.
                 }
