@@ -40,11 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Card.cs" />
+    <Compile Include="API\Controls\CardPictureBox.cs" />
+    <Compile Include="API\Deck.cs" />
+    <Compile Include="API\ICardGame.cs" />
+    <Compile Include="API\IEventHandler.cs" />
+    <Compile Include="API\LoadedCardResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="API\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
