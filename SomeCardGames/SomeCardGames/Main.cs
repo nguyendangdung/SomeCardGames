@@ -1,10 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-
-using SomeCardGames.Base;
+﻿using SomeCardGames.Base;
 using SomeCardGames.Card_Game_Module;
 using SomeCardGames.Error;
 using SomeCardGames.Utility;
+using System;
+using System.Windows.Forms;
 
 namespace SomeCardGames
 {
@@ -84,7 +83,6 @@ namespace SomeCardGames
 
                 this.Current = game;
                 game.Start();
-
             }
             catch (Exception TheException)
             {

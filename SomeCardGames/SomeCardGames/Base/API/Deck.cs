@@ -62,7 +62,7 @@ namespace SomeCardGames.Base
         /// <returns></returns>
         public Card GetTop()
         {
-            try 
+            try
             {
                 if (this.Cards.Count < 1)
                 {

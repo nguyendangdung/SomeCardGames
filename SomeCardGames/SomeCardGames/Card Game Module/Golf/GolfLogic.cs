@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using SomeCardGames.Base;
+﻿using SomeCardGames.Base;
 using SomeCardGames.Drawing.Drawers;
 using SomeCardGames.Error;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace SomeCardGames.Card_Game_Module.Golf
@@ -16,7 +12,6 @@ namespace SomeCardGames.Card_Game_Module.Golf
     /// </summary>
     public class GolfLogic : ICardGame
     {
-
         /// <summary>
         /// A list of all of the players currently in the golf game.
         /// </summary>
@@ -50,7 +45,6 @@ namespace SomeCardGames.Card_Game_Module.Golf
                     Players.Add(this.DealInPlayer(false));
                     i++;
                 }
-                
             }
             catch (Exception TheException)
             {
@@ -100,7 +94,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
 
                 double Dec = Players / 3;
 
-                Decks = Convert.ToInt32(Dec); 
+                Decks = Convert.ToInt32(Dec);
 
                 if (Decks < 1)
                 {
@@ -138,7 +132,6 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void Stop()
         {
-
         }
 
         /// <summary>

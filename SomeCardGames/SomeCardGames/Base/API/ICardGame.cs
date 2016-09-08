@@ -13,7 +13,7 @@ namespace SomeCardGames.Card_Game_Module
         void Start();
 
         /// <summary>
-        /// Called by the main form when the new card game button is clicked, and this card game was running previously. 
+        /// Called by the main form when the new card game button is clicked, and this card game was running previously.
         /// </summary>
         void Stop();
 

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using SomeCardGames.Base;
+﻿using SomeCardGames.Base;
 using SomeCardGames.Error;
+using System;
 
 namespace SomeCardGames.Card_Game_Module.Golf
 {
@@ -56,7 +51,6 @@ namespace SomeCardGames.Card_Game_Module.Golf
         /// </summary>
         public void AITurn()
         {
-            
         }
     }
 }

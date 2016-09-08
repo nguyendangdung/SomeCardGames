@@ -1,11 +1,8 @@
-﻿using System;
+﻿using SomeCardGames.Error;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-
-using SomeCardGames.Error;
-using SomeCardGames.Utility;
-using System.Drawing.Drawing2D;
 
 namespace SomeCardGames.Base
 {//Job for next time: split the base stuff we need into a dll, so i can split the Golf code into a dll.
@@ -37,7 +34,7 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
-        /// Gets what the back of the cards looks like. 
+        /// Gets what the back of the cards looks like.
         /// </summary>
         /// <returns></returns>
         public static Bitmap GetBack()
@@ -54,7 +51,7 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
-        /// Kicks off the necessary steps to load all resources needed. 
+        /// Kicks off the necessary steps to load all resources needed.
         /// </summary>
         public static void LoadResources()
         {

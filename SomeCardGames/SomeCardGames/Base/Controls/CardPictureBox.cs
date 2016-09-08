@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SomeCardGames.Error;
+using System;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using SomeCardGames.Error;
-using SomeCardGames.Utility;
 
 namespace SomeCardGames.Base
 {
@@ -18,7 +10,6 @@ namespace SomeCardGames.Base
     /// </summary>
     public class CardPictureBox : PictureBox
     {
-
         /// <summary>
         /// For cards only, this is the back of the card.
         /// </summary>
@@ -46,7 +37,6 @@ namespace SomeCardGames.Base
         /// <param name="e"></param>
         private void CardPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-
         }
 
         /// <summary>

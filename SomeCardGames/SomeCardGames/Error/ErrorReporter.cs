@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Management;
 using System.Reflection;
 
 namespace SomeCardGames.Error
@@ -16,7 +15,7 @@ namespace SomeCardGames.Error
         /// <summary>
         /// Used to interact with github.
         /// </summary>
-        private static GitHubClient client = ConstructClient(); 
+        private static GitHubClient client = ConstructClient();
 
         /// <summary>
         /// Auto reports an error to my Github issues section.
@@ -91,22 +90,22 @@ namespace SomeCardGames.Error
             {
                 List<string> Report = new List<string>();
                 Report.Add("Exception:");
-                Report.Add( "Error code: " + ex.HResult);
-                Report.Add( "Error message: " + ex.Message);
-                Report.Add( "Exception hash code: " + ex.GetHashCode());
-                Report.Add( "Help link: " + ex.HelpLink);
-                Report.Add( "Method: " + ex.TargetSite.Name);
-                Report.Add( "Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode());
-                Report.Add( "Source: " + ex.Source);
+                Report.Add("Error code: " + ex.HResult);
+                Report.Add("Error message: " + ex.Message);
+                Report.Add("Exception hash code: " + ex.GetHashCode());
+                Report.Add("Help link: " + ex.HelpLink);
+                Report.Add("Method: " + ex.TargetSite.Name);
+                Report.Add("Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode());
+                Report.Add("Source: " + ex.Source);
                 Report.Add("\r\n");
                 Report.Add("Stack trace: ");
                 Report.Add(ex.StackTrace);
                 Report.Add("\r\n");
-                Report.Add( "Type: " + ex.GetType());
+                Report.Add("Type: " + ex.GetType());
                 if (ex.InnerException != null)
                 {
                     Report.Add("\r\n");
-                    Report.Add( "Inner Exceptions: " + GenerateReport(ex.InnerException));
+                    Report.Add("Inner Exceptions: " + GenerateReport(ex.InnerException));
                     Report.Add("\r\n");
                 }
 
@@ -114,10 +113,9 @@ namespace SomeCardGames.Error
                 Report.Add("Is 64 bit OS: " + Environment.Is64BitOperatingSystem.ToString());
                 Report.Add("Is 64 bit process: " + Environment.Is64BitProcess.ToString());
                 Report.Add("OS version: " + Environment.OSVersion.VersionString);
-                Report.Add("Processor count: " + Environment.ProcessorCount.ToString()); 
+                Report.Add("Processor count: " + Environment.ProcessorCount.ToString());
                 Report.Add("System page size: " + Environment.SystemPageSize.ToString());
                 Report.Add("Common Language Runtime version: " + Environment.Version.ToString());
-
 
                 Process current = Process.GetCurrentProcess();
 
@@ -172,9 +170,9 @@ namespace SomeCardGames.Error
 
                 return Rep;
             }
-            #pragma warning disable CS0168 // Variable is declared but never used
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception e)
-            #pragma warning restore CS0168 // Variable is declared but never used
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 return "Report generation failed";
             }

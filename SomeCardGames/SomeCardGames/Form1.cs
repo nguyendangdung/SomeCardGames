@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using SomeCardGames.Card_Game_Module;
-using SomeCardGames.Card_Game_Module.Golf;
+﻿using SomeCardGames.Card_Game_Module.Golf;
 using SomeCardGames.Error;
+using System;
+using System.Windows.Forms;
 
 namespace SomeCardGames
 {
@@ -83,7 +74,6 @@ namespace SomeCardGames
         /// <param name="e"></param>
         private void Form1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void golfToolStripMenuItem2_Click(object sender, EventArgs e)

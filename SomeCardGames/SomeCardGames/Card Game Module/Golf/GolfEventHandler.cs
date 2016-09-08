@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SomeCardGames.Base;
+using System;
 using System.Windows.Forms;
-using SomeCardGames.Base;
-using SomeCardGames.Error;
 
 namespace SomeCardGames.Card_Game_Module.Golf
 {

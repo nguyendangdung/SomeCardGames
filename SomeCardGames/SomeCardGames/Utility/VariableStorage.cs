@@ -1,5 +1,4 @@
-﻿using SomeCardGames.Base;
-using SomeCardGames.Error;
+﻿using SomeCardGames.Error;
 using System;
 
 namespace SomeCardGames.Utility
