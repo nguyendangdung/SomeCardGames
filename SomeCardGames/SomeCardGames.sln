@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainResources960x1440", "Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainResources870x1200", "MainResources870x1200\MainResources870x1200.csproj", "{B2A1A93B-FD63-4B5D-93A4-64410C2FCCDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeCardGamesAPI", "SomeCardGamesAPI\SomeCardGamesAPI.csproj", "{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,14 +51,6 @@ Global
 		{B2A1A93B-FD63-4B5D-93A4-64410C2FCCDA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B2A1A93B-FD63-4B5D-93A4-64410C2FCCDA}.Release|x64.ActiveCfg = Release|Any CPU
 		{B2A1A93B-FD63-4B5D-93A4-64410C2FCCDA}.Release|x64.Build.0 = Release|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Debug|x64.Build.0 = Debug|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Release|x64.ActiveCfg = Release|Any CPU
-		{96FC98C3-844D-4CC8-BAD5-24355D49CFB0}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
