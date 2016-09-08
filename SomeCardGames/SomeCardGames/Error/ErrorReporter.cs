@@ -1,4 +1,5 @@
 ﻿using Octokit;
+using SomeCardGames.Error;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -89,6 +90,8 @@ namespace SomeCardGames.Error
             try
             {
                 List<string> Report = new List<string>();
+
+                #region Exception
                 Report.Add("Exception:");
                 Report.Add("Error code: " + ex.HResult);
                 Report.Add("Error message: " + ex.Message);
@@ -102,13 +105,18 @@ namespace SomeCardGames.Error
                 Report.Add(ex.StackTrace);
                 Report.Add("\r\n");
                 Report.Add("Type: " + ex.GetType());
+                #endregion
+
+                #region InnerExceptions
                 if (ex.InnerException != null)
                 {
                     Report.Add("\r\n");
-                    Report.Add("Inner Exceptions: " + GenerateReport(ex.InnerException));
+                    Report.Add("Inner Exceptions: " + GenerateReportForException(ex.InnerException, 1));
                     Report.Add("\r\n");
                 }
+                #endregion
 
+                #region OtherInformation
                 Report.Add("System information:");
                 Report.Add("Is 64 bit OS: " + Environment.Is64BitOperatingSystem.ToString());
                 Report.Add("Is 64 bit process: " + Environment.Is64BitProcess.ToString());
@@ -127,6 +135,7 @@ namespace SomeCardGames.Error
                 Report.Add("Max memory usage: " + current.PeakWorkingSet64.ToString());
                 Report.Add("Is responding: " + current.Responding.ToString());
                 Report.Add("Threads running: " + current.Threads.Count.ToString());
+                #endregion
 
                 return ConvertListToString(Report);
             }
@@ -136,6 +145,47 @@ namespace SomeCardGames.Error
             {
                 //Eat it
                 return "Report Generation Failed";
+            }
+        }
+
+        /// <summary>
+        /// Generates data about the inner exception in the exception.
+        /// </summary>
+        /// <param name="ex"></param>
+        /// <param name="InnerException"></param>
+        /// <returns></returns>
+        public static string GenerateReportForException(Exception ex, int InnerException)
+        {
+            try
+            {
+                List<string> Report = new List<string>();
+                int ExceptionCount = InnerException;
+                    Report.Add("\r\n");
+                    Report.Add("Inner Exception # " + InnerException.ToString() + ":");
+                    Report.Add("Error code: " + ex.HResult);
+                    Report.Add("Error message: " + ex.Message);
+                    Report.Add("Exception hash code: " + ex.GetHashCode());
+                    Report.Add("Help link: " + ex.HelpLink);
+                    Report.Add("Method: " + ex.TargetSite.Name);
+                    Report.Add("Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode());
+                    Report.Add("Source: " + ex.Source);
+                    Report.Add("\r\n");
+                    Report.Add("Stack trace: ");
+                    Report.Add(ex.StackTrace);
+                    Report.Add("\r\n");
+                    Report.Add("Type: " + ex.GetType());
+                    ExceptionCount++;
+                if (ex.InnerException != null)
+                {
+                    Report.Add(GenerateReportForException(ex, ExceptionCount));
+                }
+
+                return ConvertListToString(Report);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return "Error while generating inner exception data";
             }
         }
 
