@@ -169,7 +169,9 @@ namespace SomeCardGames.Error
             try
             {
                 List<string> Report = new List<string>();
+
                 int ExceptionCount = InnerException;
+
                     Report.Add("\r\n");
                     Report.Add("Inner Exception # " + InnerException.ToString() + ":");
                     Report.Add("Error code: " + ex.HResult);
@@ -184,7 +186,9 @@ namespace SomeCardGames.Error
                     Report.Add(ex.StackTrace);
                     Report.Add("\r\n");
                     Report.Add("Type: " + ex.GetType());
+
                     ExceptionCount++;
+
                 if (ex.InnerException != null)
                 {
                     Report.Add(GenerateReportForException(ex, ExceptionCount));
