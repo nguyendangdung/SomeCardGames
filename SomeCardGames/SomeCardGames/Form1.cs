@@ -1,7 +1,8 @@
-﻿using SomeCardGames.Card_Game_Module.Golf;
-using SomeCardGames.Error;
-using System;
+﻿using System;
 using System.Windows.Forms;
+
+using Golf.Code;
+using SomeCardGamesAPI.Error;
 
 namespace SomeCardGames
 {

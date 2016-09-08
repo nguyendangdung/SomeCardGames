@@ -1,8 +1,9 @@
-﻿using SomeCardGames.Base;
-using SomeCardGames.Error;
-using System;
+﻿using System;
 
-namespace SomeCardGames.Card_Game_Module.Golf
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Error;
+
+namespace Golf.Code
 {
     /// <summary>
     /// Holds the logic for AI, and the collections to store a human players cards.

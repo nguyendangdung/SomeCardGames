@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GolfDrawer.cs" />
-    <Compile Include="GolfEventHandler.cs" />
-    <Compile Include="GolfLogic.cs" />
-    <Compile Include="GolfPlayer.cs" />
+    <Compile Include="Code\GolfDrawer.cs" />
+    <Compile Include="Code\GolfEventHandler.cs" />
+    <Compile Include="Code\GolfLogic.cs" />
+    <Compile Include="Code\GolfPlayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

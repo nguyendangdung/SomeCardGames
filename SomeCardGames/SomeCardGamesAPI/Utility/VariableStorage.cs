@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using SomeCardGames.Error;
+using SomeCardGamesAPI.Error;
 
-namespace SomeCardGames.Utility
+namespace SomeCardGamesAPI.Utility
 {
     /// <summary>
     /// A class used to store universal variables.

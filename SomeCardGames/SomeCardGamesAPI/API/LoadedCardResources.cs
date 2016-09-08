@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-using SomeCardGames.Error;
-using SomeCardGames.Utility;
+using SomeCardGamesAPI.Error;
+using SomeCardGamesAPI.Utility;
 
-namespace SomeCardGames.Base
+namespace SomeCardGamesAPI.API
 {//Job for next time: split the base stuff we need into a dll, so i can split the Golf code into a dll.
     /// <summary>
     /// This class is used to store bitmaps for cards.

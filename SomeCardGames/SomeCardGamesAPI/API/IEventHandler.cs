@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace SomeCardGames.Base
+namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// The interface for all card game event handlers.

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Drawing;
 
-using SomeCardGames.Error;
-using SomeCardGames.Utility;
-using SomeCardGames.Card_Game_Module.Golf;
-using SomeCardGames.Base;
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Utility;
+using SomeCardGamesAPI.Error;
 
-namespace SomeCardGames.Drawing.Drawers
+namespace Golf.Code
 {
     /// <summary>
     /// Draws the graphics for the Golf card game.

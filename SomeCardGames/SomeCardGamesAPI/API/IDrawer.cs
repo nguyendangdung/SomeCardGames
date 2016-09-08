@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace SomeCardGames.Drawing
+namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// A interface for classes that read all sorts of information out of classes that implement ICardGame, and draw what is happening.

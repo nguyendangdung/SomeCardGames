@@ -1,9 +1,10 @@
-﻿using SomeCardGames.Error;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SomeCardGames.Base
+using SomeCardGamesAPI.Error;
+
+namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// This is used to render a card, and to interpret different input events.

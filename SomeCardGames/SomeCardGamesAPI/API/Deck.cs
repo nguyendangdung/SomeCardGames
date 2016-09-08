@@ -1,8 +1,9 @@
-﻿using SomeCardGames.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace SomeCardGames.Base
+using SomeCardGamesAPI.Error;
+
+namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// Represents a deck of cards in the game.

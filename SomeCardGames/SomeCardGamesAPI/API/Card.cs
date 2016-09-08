@@ -1,7 +1,8 @@
-﻿using SomeCardGames.Error;
-using System;
+﻿using System;
 
-namespace SomeCardGames.Base
+using SomeCardGamesAPI.Error;
+
+namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// Used to represent a card in the game.

@@ -1,4 +1,4 @@
-﻿namespace SomeCardGames.Error
+﻿namespace SomeCardGamesAPI.Error
 {
     /// <summary>
     /// This class is used to store error messages.

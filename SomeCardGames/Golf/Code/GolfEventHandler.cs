@@ -1,8 +1,9 @@
-﻿using SomeCardGames.Base;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
-namespace SomeCardGames.Card_Game_Module.Golf
+using SomeCardGamesAPI.API;
+
+namespace Golf.Code
 {
     /// <summary>
     /// This is used to recieve and process mouse and keyboard events.

@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace SomeCardGames.Card_Game_Module
+namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// Things that implement this interface are card games

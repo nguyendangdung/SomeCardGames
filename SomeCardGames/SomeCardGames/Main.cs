@@ -2,10 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-using SomeCardGames.Base;
-using SomeCardGames.Card_Game_Module;
-using SomeCardGames.Error;
-using SomeCardGames.Utility;
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Utility;
+using SomeCardGamesAPI.Error;
 
 namespace SomeCardGames
 {

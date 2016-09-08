@@ -2,9 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-using SomeCardGames.Error;
+using SomeCardGamesAPI.Error;
 
-namespace SomeCardGames.Utility
+namespace SomeCardGamesAPI.Utility
 {
     /// <summary>
     /// Holds some various random utility functions.

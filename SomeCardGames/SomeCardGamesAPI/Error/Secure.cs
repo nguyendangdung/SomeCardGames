@@ -1,4 +1,4 @@
-﻿namespace SomeCardGames.Error
+﻿namespace SomeCardGamesAPI.Error
 {
     /// <summary>
     /// The stuff in this class isn't just given out.

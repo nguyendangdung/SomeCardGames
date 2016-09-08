@@ -1,11 +1,11 @@
-﻿using SomeCardGames.Base;
-using SomeCardGames.Drawing.Drawers;
-using SomeCardGames.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SomeCardGames.Card_Game_Module.Golf
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Error;
+
+namespace Golf.Code
 {
     /// <summary>
     /// This class is the main source and entrance for the card game "Golf".
