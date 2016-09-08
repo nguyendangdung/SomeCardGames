@@ -1,8 +1,9 @@
-﻿using SomeCardGames.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+
+using SomeCardGames.Error;
 
 namespace SomeCardGames.Base
 {//Job for next time: split the base stuff we need into a dll, so i can split the Golf code into a dll.
@@ -51,9 +52,78 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
+        /// Loads resources of the 2560 res.
+        /// </summary>
+        public static void LoadResources2560Res()
+        {
+            try
+            {
+                Back = MainResources_2560x1829_.Resources.back;
+                CardResources.Add(MainResources_2560x1829_.Resources._1);
+                CardResources.Add(MainResources_2560x1829_.Resources._2);
+                CardResources.Add(MainResources_2560x1829_.Resources._3);
+                CardResources.Add(MainResources_2560x1829_.Resources._4);
+                CardResources.Add(MainResources_2560x1829_.Resources._5);
+                CardResources.Add(MainResources_2560x1829_.Resources._6);
+                CardResources.Add(MainResources_2560x1829_.Resources._7);
+                CardResources.Add(MainResources_2560x1829_.Resources._8);
+                CardResources.Add(MainResources_2560x1829_.Resources._9);
+                CardResources.Add(MainResources_2560x1829_.Resources._10);
+                CardResources.Add(MainResources_2560x1829_.Resources._11);
+                CardResources.Add(MainResources_2560x1829_.Resources._12);
+                CardResources.Add(MainResources_2560x1829_.Resources._13);
+                CardResources.Add(MainResources_2560x1829_.Resources._14);
+                CardResources.Add(MainResources_2560x1829_.Resources._15);
+                CardResources.Add(MainResources_2560x1829_.Resources._16);
+                CardResources.Add(MainResources_2560x1829_.Resources._17);
+                CardResources.Add(MainResources_2560x1829_.Resources._18);
+                CardResources.Add(MainResources_2560x1829_.Resources._19);
+                CardResources.Add(MainResources_2560x1829_.Resources._20);
+                CardResources.Add(MainResources_2560x1829_.Resources._21);
+                CardResources.Add(MainResources_2560x1829_.Resources._22);
+                CardResources.Add(MainResources_2560x1829_.Resources._23);
+                CardResources.Add(MainResources_2560x1829_.Resources._24);
+                CardResources.Add(MainResources_2560x1829_.Resources._25);
+                CardResources.Add(MainResources_2560x1829_.Resources._26);
+                CardResources.Add(MainResources_2560x1829_.Resources._27);
+                CardResources.Add(MainResources_2560x1829_.Resources._28);
+                CardResources.Add(MainResources_2560x1829_.Resources._29);
+                CardResources.Add(MainResources_2560x1829_.Resources._30);
+                CardResources.Add(MainResources_2560x1829_.Resources._31);
+                CardResources.Add(MainResources_2560x1829_.Resources._32);
+                CardResources.Add(MainResources_2560x1829_.Resources._33);
+                CardResources.Add(MainResources_2560x1829_.Resources._34);
+                CardResources.Add(MainResources_2560x1829_.Resources._35);
+                CardResources.Add(MainResources_2560x1829_.Resources._36);
+                CardResources.Add(MainResources_2560x1829_.Resources._37);
+                CardResources.Add(MainResources_2560x1829_.Resources._38);
+                CardResources.Add(MainResources_2560x1829_.Resources._39);
+                CardResources.Add(MainResources_2560x1829_.Resources._40);
+                CardResources.Add(MainResources_2560x1829_.Resources._41);
+                CardResources.Add(MainResources_2560x1829_.Resources._42);
+                CardResources.Add(MainResources_2560x1829_.Resources._43);
+                CardResources.Add(MainResources_2560x1829_.Resources._44);
+                CardResources.Add(MainResources_2560x1829_.Resources._45);
+                CardResources.Add(MainResources_2560x1829_.Resources._46);
+                CardResources.Add(MainResources_2560x1829_.Resources._47);
+                CardResources.Add(MainResources_2560x1829_.Resources._48);
+                CardResources.Add(MainResources_2560x1829_.Resources._49);
+                CardResources.Add(MainResources_2560x1829_.Resources._50);
+                CardResources.Add(MainResources_2560x1829_.Resources._51);
+                CardResources.Add(MainResources_2560x1829_.Resources._52);
+                CardResources.Add(MainResources_2560x1829_.Resources._53);
+                CardResources.Add(MainResources_2560x1829_.Resources._54);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
         /// Kicks off the necessary steps to load all resources needed.
         /// </summary>
-        public static void LoadResources()
+        public static void LoadResourcesHighestRes()
         {
             try
             {

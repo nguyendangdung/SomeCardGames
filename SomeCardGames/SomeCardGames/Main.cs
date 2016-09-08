@@ -25,7 +25,7 @@ namespace SomeCardGames
             try
             {
                 VariableStorage.CollectForm(Form);
-                LoadedCardResources.LoadResources();
+                LoadedCardResources.LoadResourcesHighestRes();
                 this.SetupForm();
             }
             catch (Exception TheException)
