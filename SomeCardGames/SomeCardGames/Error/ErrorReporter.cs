@@ -135,6 +135,14 @@ namespace SomeCardGames.Error
                 Report.Add("Max memory usage: " + current.PeakWorkingSet64.ToString());
                 Report.Add("Is responding: " + current.Responding.ToString());
                 Report.Add("Threads running: " + current.Threads.Count.ToString());
+                try
+                {
+                    Report.Add("Screen Size: " + Utility.Util.GetScreenSize(Utility.VariableStorage.TheForm).ToString());
+                }
+                catch (Exception e)
+                {
+                    //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too currupt, this would fail.
+                }
                 #endregion
 
                 return ConvertListToString(Report);
