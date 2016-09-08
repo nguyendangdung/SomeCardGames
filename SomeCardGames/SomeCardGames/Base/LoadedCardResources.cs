@@ -52,6 +52,75 @@ namespace SomeCardGames.Base
         }
 
         /// <summary>
+        /// Loads resources for the 1920x resolution.
+        /// </summary>
+        public static void LoadResources1920Res()
+        {
+            try
+            {
+                Back = MainResources_1920x1380_.Resources.back;
+                CardResources.Add(MainResources_1920x1380_.Resources._1);
+                CardResources.Add(MainResources_1920x1380_.Resources._2);
+                CardResources.Add(MainResources_1920x1380_.Resources._3);
+                CardResources.Add(MainResources_1920x1380_.Resources._4);
+                CardResources.Add(MainResources_1920x1380_.Resources._5);
+                CardResources.Add(MainResources_1920x1380_.Resources._6);
+                CardResources.Add(MainResources_1920x1380_.Resources._7);
+                CardResources.Add(MainResources_1920x1380_.Resources._8);
+                CardResources.Add(MainResources_1920x1380_.Resources._9);
+                CardResources.Add(MainResources_1920x1380_.Resources._10);
+                CardResources.Add(MainResources_1920x1380_.Resources._11);
+                CardResources.Add(MainResources_1920x1380_.Resources._12);
+                CardResources.Add(MainResources_1920x1380_.Resources._13);
+                CardResources.Add(MainResources_1920x1380_.Resources._14);
+                CardResources.Add(MainResources_1920x1380_.Resources._15);
+                CardResources.Add(MainResources_1920x1380_.Resources._16);
+                CardResources.Add(MainResources_1920x1380_.Resources._17);
+                CardResources.Add(MainResources_1920x1380_.Resources._18);
+                CardResources.Add(MainResources_1920x1380_.Resources._19);
+                CardResources.Add(MainResources_1920x1380_.Resources._20);
+                CardResources.Add(MainResources_1920x1380_.Resources._21);
+                CardResources.Add(MainResources_1920x1380_.Resources._22);
+                CardResources.Add(MainResources_1920x1380_.Resources._23);
+                CardResources.Add(MainResources_1920x1380_.Resources._24);
+                CardResources.Add(MainResources_1920x1380_.Resources._25);
+                CardResources.Add(MainResources_1920x1380_.Resources._26);
+                CardResources.Add(MainResources_1920x1380_.Resources._27);
+                CardResources.Add(MainResources_1920x1380_.Resources._28);
+                CardResources.Add(MainResources_1920x1380_.Resources._29);
+                CardResources.Add(MainResources_1920x1380_.Resources._30);
+                CardResources.Add(MainResources_1920x1380_.Resources._31);
+                CardResources.Add(MainResources_1920x1380_.Resources._32);
+                CardResources.Add(MainResources_1920x1380_.Resources._33);
+                CardResources.Add(MainResources_1920x1380_.Resources._34);
+                CardResources.Add(MainResources_1920x1380_.Resources._35);
+                CardResources.Add(MainResources_1920x1380_.Resources._36);
+                CardResources.Add(MainResources_1920x1380_.Resources._37);
+                CardResources.Add(MainResources_1920x1380_.Resources._38);
+                CardResources.Add(MainResources_1920x1380_.Resources._39);
+                CardResources.Add(MainResources_1920x1380_.Resources._40);
+                CardResources.Add(MainResources_1920x1380_.Resources._41);
+                CardResources.Add(MainResources_1920x1380_.Resources._42);
+                CardResources.Add(MainResources_1920x1380_.Resources._43);
+                CardResources.Add(MainResources_1920x1380_.Resources._44);
+                CardResources.Add(MainResources_1920x1380_.Resources._45);
+                CardResources.Add(MainResources_1920x1380_.Resources._46);
+                CardResources.Add(MainResources_1920x1380_.Resources._47);
+                CardResources.Add(MainResources_1920x1380_.Resources._48);
+                CardResources.Add(MainResources_1920x1380_.Resources._49);
+                CardResources.Add(MainResources_1920x1380_.Resources._50);
+                CardResources.Add(MainResources_1920x1380_.Resources._51);
+                CardResources.Add(MainResources_1920x1380_.Resources._52);
+                CardResources.Add(MainResources_1920x1380_.Resources._53);
+                CardResources.Add(MainResources_1920x1380_.Resources._54);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
         /// Loads resources of the 2560 res.
         /// </summary>
         public static void LoadResources2560Res()
