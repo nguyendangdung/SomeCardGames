@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeCardGames", "SomeCardGa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainResources(HighestResolution)", "MainResources\MainResources(HighestResolution).csproj", "{D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainResources(2560x1829)", "MainResources(2560x1829)\MainResources(2560x1829).csproj", "{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainResources(1920x1380)", "MainResources(1920x1380)\MainResources(1920x1380).csproj", "{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,22 +31,6 @@ Global
 		{D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0}.Release|x64.ActiveCfg = Release|x64
 		{D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0}.Release|x64.Build.0 = Release|x64
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Debug|x64.Build.0 = Debug|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Release|x64.ActiveCfg = Release|Any CPU
-		{27D0123C-DD0C-43FF-8EFA-135BFCB28F7C}.Release|x64.Build.0 = Release|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Debug|x64.Build.0 = Debug|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Release|x64.ActiveCfg = Release|Any CPU
-		{44FD814A-62BE-4DA3-9BE4-4F3A9E766F47}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
