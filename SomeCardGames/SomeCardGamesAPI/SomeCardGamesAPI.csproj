@@ -45,11 +45,19 @@
     <Compile Include="API\Controls\CardPictureBox.cs" />
     <Compile Include="API\Deck.cs" />
     <Compile Include="API\ICardGame.cs" />
+    <Compile Include="API\IDrawer.cs" />
     <Compile Include="API\IEventHandler.cs" />
     <Compile Include="API\LoadedCardResources.cs" />
+    <Compile Include="Error\ErrorReporter.cs" />
+    <Compile Include="Error\ErrorStorage.cs" />
+    <Compile Include="Error\Secure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Util.cs" />
+    <Compile Include="Utility\VariableStorage.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Error\Snippets\ErrorHandler.snippet" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

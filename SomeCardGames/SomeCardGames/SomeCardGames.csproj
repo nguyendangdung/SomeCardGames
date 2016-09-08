@@ -126,10 +126,6 @@
     <Compile Include="Card Game Module\Golf\GolfLogic.cs" />
     <Compile Include="Card Game Module\Golf\GolfPlayer.cs" />
     <Compile Include="Drawing\Drawers\GolfDrawer.cs" />
-    <Compile Include="Drawing\IDrawer.cs" />
-    <Compile Include="Error\ErrorReporter.cs" />
-    <Compile Include="Error\ErrorStorage.cs" />
-    <Compile Include="Error\Secure.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,8 +136,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Utility\Util.cs" />
-    <Compile Include="Utility\VariableStorage.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,9 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Error\Snippets\ErrorHandler.snippet" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Card Game Module\Blackjack\" />
