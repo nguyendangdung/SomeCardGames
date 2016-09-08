@@ -36,7 +36,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
             {
                 Players = new List<GolfPlayer>();
                 int i = 0;
-                int PlayersToDealIn = SomeCardGames.Properties.Settings.Default.GolfAIPlayers;
+                int PlayersToDealIn = SomeCardGamesAPI.Properties.Settings.Default.GolfAIPlayers;
 
                 Players.Add(this.DealInPlayer(false));
 
@@ -90,7 +90,7 @@ namespace SomeCardGames.Card_Game_Module.Golf
             try
             {
                 int Decks;
-                int Players = SomeCardGames.Properties.Settings.Default.GolfAIPlayers + 1;
+                int Players = SomeCardGamesAPI.Properties.Settings.Default.GolfAIPlayers + 1;
 
                 double Dec = Players / 3;
 

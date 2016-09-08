@@ -1,9 +1,10 @@
-﻿using SomeCardGames.Base;
-using SomeCardGames.Card_Game_Module.Golf;
+﻿using System;
+using System.Drawing;
+
 using SomeCardGames.Error;
 using SomeCardGames.Utility;
-using System;
-using System.Drawing;
+using SomeCardGames.Card_Game_Module.Golf;
+using SomeCardGames.Base;
 
 namespace SomeCardGames.Drawing.Drawers
 {
