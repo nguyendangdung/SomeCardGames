@@ -198,9 +198,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MainResources\MainResources.csproj">
+    <ProjectReference Include="..\MainResources\MainResources%28HighestResolution%29.csproj">
       <Project>{d7871ae5-e69b-4d92-bb0a-e8beb8ea35b0}</Project>
-      <Name>MainResources</Name>
+      <Name>MainResources%28HighestResolution%29</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

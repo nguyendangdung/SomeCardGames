@@ -8,7 +8,7 @@ using SomeCardGames.Utility;
 using System.Drawing.Drawing2D;
 
 namespace SomeCardGames.Base
-{
+{//Job for next time: split the base stuff we need into a dll, so i can split the Golf code into a dll.
     /// <summary>
     /// This class is used to store bitmaps for cards.
     /// </summary>
