@@ -47,9 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\Card.cs" />
-    <Compile Include="API\Controls\CardPictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="API\Deck.cs" />
     <Compile Include="API\ICardGame.cs" />
     <Compile Include="API\IDrawer.cs" />
@@ -96,6 +93,9 @@
       <Project>{d7871ae5-e69b-4d92-bb0a-e8beb8ea35b0}</Project>
       <Name>MainResources%28HighestResolution%29</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

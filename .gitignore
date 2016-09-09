@@ -240,3 +240,4 @@ _Pvt_Extensions
 .fake/
 
 /SomeCardGames/SomeCardGames/Error/Secure.cs
+/SomeCardGames/SomeCardGamesAPI/Error/Secure.cs
