@@ -13,10 +13,6 @@ namespace Golf.Code
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     public class GolfDrawer : IDrawer
     {
-        /// <summary>
-        /// Represents the stack of cards in the middle of the screen.
-        /// </summary>
-        public CardPictureBox CenterDeck;
 
         /// <summary>
         /// Gives us a handle to the current graphics object, used to draw.
@@ -53,15 +49,7 @@ namespace Golf.Code
         {
             try
             {
-                if (this.Game.TheDeck.Cards.Count > 0)
-                {
-                    this.CenterDeck.Location = new Point(VariableStorage.ScreenWidth / 4, VariableStorage.ScreenHeight / 4);
-                    this.CenterDeck.Visible = true;
-                }
-                else
-                {
-                    this.CenterDeck.Visible = false;
-                }
+
             }
             catch (Exception TheException)
             {
@@ -78,7 +66,6 @@ namespace Golf.Code
             try
             {
                 this.Game = (GolfLogic)Game;
-                this.CenterDeck = new CardPictureBox(LoadedCardResources.GetBack(), VariableStorage.CardWidth, VariableStorage.CardHeight);
             }
             catch (Exception TheException)
             {
