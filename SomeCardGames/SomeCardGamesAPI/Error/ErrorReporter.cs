@@ -214,7 +214,7 @@ namespace SomeCardGamesAPI.Error
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>
-        public static string ConvertListToString(List<string> list)
+        public static string ConvertListToString(List<string> list) //gota roll out my own picture box
         {
             try
             {
