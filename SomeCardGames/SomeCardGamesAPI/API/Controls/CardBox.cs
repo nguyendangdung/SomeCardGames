@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SomeCardGamesAPI.Error;
-using SomeCardGames.Error;
 
 namespace SomeCardGamesAPI.API.Controls
 {

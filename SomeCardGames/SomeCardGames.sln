@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeCardGames", "SomeCardGames\SomeCardGames.csproj", "{2BA0BDC5-72DA-4CA2-9548-E383A7794B2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{621D511A-A7D6-4DDD-BF8B-8ACE52B89F60} = {621D511A-A7D6-4DDD-BF8B-8ACE52B89F60}
+		{B2A1A93B-FD63-4B5D-93A4-64410C2FCCDA} = {B2A1A93B-FD63-4B5D-93A4-64410C2FCCDA}
+		{D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0} = {D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainResources(HighestResolution)", "MainResources\MainResources(HighestResolution).csproj", "{D7871AE5-E69B-4D92-BB0A-E8BEB8EA35B0}"
 EndProject
