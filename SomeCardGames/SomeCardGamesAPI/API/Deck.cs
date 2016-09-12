@@ -1,7 +1,6 @@
-﻿using System;
+﻿using SomeCardGamesAPI.Error;
+using System;
 using System.Collections.Generic;
-
-using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.API
 {

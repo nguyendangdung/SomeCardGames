@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Octokit;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-
-using Octokit;
-
-using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.Error
 {
@@ -96,6 +93,7 @@ namespace SomeCardGamesAPI.Error
                 List<string> Report = new List<string>();
 
                 #region Exception
+
                 Report.Add("Exception:");
                 Report.Add("Error code: " + ex.HResult);
                 Report.Add("Error message: " + ex.Message);
@@ -109,18 +107,22 @@ namespace SomeCardGamesAPI.Error
                 Report.Add(ex.StackTrace);
                 Report.Add("\r\n");
                 Report.Add("Type: " + ex.GetType());
-                #endregion
+
+                #endregion Exception
 
                 #region InnerExceptions
+
                 if (ex.InnerException != null)
                 {
                     Report.Add("\r\n");
                     Report.Add("Inner Exceptions: " + GenerateReportForException(ex.InnerException, 1));
                     Report.Add("\r\n");
                 }
-                #endregion
+
+                #endregion InnerExceptions
 
                 #region OtherInformation
+
                 Report.Add("System information:");
                 Report.Add("Is 64 bit OS: " + Environment.Is64BitOperatingSystem.ToString());
                 Report.Add("Is 64 bit process: " + Environment.Is64BitProcess.ToString());
@@ -149,7 +151,8 @@ namespace SomeCardGamesAPI.Error
                 {
                     //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too currupt, this would fail.
                 }
-                #endregion
+
+                #endregion OtherInformation
 
                 return ConvertListToString(Report);
             }
@@ -177,22 +180,22 @@ namespace SomeCardGamesAPI.Error
 
                 int ExceptionCount = InnerException;
 
-                    Report.Add("\r\n");
-                    Report.Add("Inner Exception # " + InnerException.ToString() + ":");
-                    Report.Add("Error code: " + ex.HResult);
-                    Report.Add("Error message: " + ex.Message);
-                    Report.Add("Exception hash code: " + ex.GetHashCode());
-                    Report.Add("Help link: " + ex.HelpLink);
-                    Report.Add("Method: " + ex.TargetSite.Name);
-                    Report.Add("Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode());
-                    Report.Add("Source: " + ex.Source);
-                    Report.Add("\r\n");
-                    Report.Add("Stack trace: ");
-                    Report.Add(ex.StackTrace);
-                    Report.Add("\r\n");
-                    Report.Add("Type: " + ex.GetType());
+                Report.Add("\r\n");
+                Report.Add("Inner Exception # " + InnerException.ToString() + ":");
+                Report.Add("Error code: " + ex.HResult);
+                Report.Add("Error message: " + ex.Message);
+                Report.Add("Exception hash code: " + ex.GetHashCode());
+                Report.Add("Help link: " + ex.HelpLink);
+                Report.Add("Method: " + ex.TargetSite.Name);
+                Report.Add("Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode());
+                Report.Add("Source: " + ex.Source);
+                Report.Add("\r\n");
+                Report.Add("Stack trace: ");
+                Report.Add(ex.StackTrace);
+                Report.Add("\r\n");
+                Report.Add("Type: " + ex.GetType());
 
-                    ExceptionCount++;
+                ExceptionCount++;
 
                 if (ex.InnerException != null)
                 {

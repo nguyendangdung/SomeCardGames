@@ -1,9 +1,8 @@
-﻿using System;
+﻿using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Error;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
-
-using SomeCardGamesAPI.API;
-using SomeCardGamesAPI.Error;
 
 namespace Golf.Code
 {

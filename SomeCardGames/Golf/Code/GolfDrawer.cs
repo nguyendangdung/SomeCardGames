@@ -1,9 +1,8 @@
-﻿using System;
-using System.Drawing;
-
-using SomeCardGamesAPI.API;
-using SomeCardGamesAPI.Utility;
+﻿using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Golf.Code
 {
@@ -13,7 +12,6 @@ namespace Golf.Code
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable")]
     public class GolfDrawer : IDrawer
     {
-
         /// <summary>
         /// Gives us a handle to the current graphics object, used to draw.
         /// </summary>
@@ -23,6 +21,8 @@ namespace Golf.Code
         /// The logic for the game is accessible through this object.
         /// </summary>
         public GolfLogic Game;
+
+        public PictureBox MiddleStack;
 
         /// <summary>
         /// Called by the paint event on the form. Draws the current status of the golf card game.
@@ -49,7 +49,14 @@ namespace Golf.Code
         {
             try
             {
-
+                if (Game.TheDeck.GetSize() > 0)
+                {
+                    this.MiddleStack.Visible = true;
+                }
+                else
+                {
+                    this.MiddleStack.Visible = false;
+                }
             }
             catch (Exception TheException)
             {
@@ -66,6 +73,17 @@ namespace Golf.Code
             try
             {
                 this.Game = (GolfLogic)Game;
+
+                #region MiddleStack
+
+                this.MiddleStack = new PictureBox();
+                this.MiddleStack.Location = new System.Drawing.Point(1000, 1000);
+                this.MiddleStack.Name = "Pile";
+                this.MiddleStack.Size = new System.Drawing.Size(2000, 2000);
+                this.MiddleStack.TabStop = false;
+                this.MiddleStack.Image = LoadedCardResources.GetBack();
+
+                #endregion MiddleStack
             }
             catch (Exception TheException)
             {

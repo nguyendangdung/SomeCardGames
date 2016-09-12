@@ -1,7 +1,6 @@
-﻿using System;
+﻿using SomeCardGamesAPI.Error;
+using System;
 using System.Windows.Forms;
-
-using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.Utility
 {

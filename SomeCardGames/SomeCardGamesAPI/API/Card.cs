@@ -1,6 +1,5 @@
-﻿using System;
-
-using SomeCardGamesAPI.Error;
+﻿using SomeCardGamesAPI.Error;
+using System;
 
 namespace SomeCardGamesAPI.API
 {

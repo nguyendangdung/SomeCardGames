@@ -1,10 +1,8 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
-using SomeCardGamesAPI.API;
-using SomeCardGamesAPI.Utility;
+﻿using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
+using SomeCardGamesAPI.Utility;
+using System;
+using System.Windows.Forms;
 
 namespace SomeCardGames
 {

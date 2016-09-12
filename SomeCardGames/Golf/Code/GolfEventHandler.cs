@@ -1,7 +1,6 @@
-﻿using System;
+﻿using SomeCardGamesAPI.API;
+using System;
 using System.Windows.Forms;
-
-using SomeCardGamesAPI.API;
 
 namespace Golf.Code
 {

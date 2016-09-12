@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.newToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.golfToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,12 +63,6 @@
             this.optionsToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.golfToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,46 @@
             this.MainMenuStrip.Name = "MainMenuStrip";
             this.MainMenuStrip.Size = new System.Drawing.Size(292, 24);
             this.MainMenuStrip.TabIndex = 0;
+            // 
+            // newToolStripMenuItem6
+            // 
+            this.newToolStripMenuItem6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.golfToolStripMenuItem2});
+            this.newToolStripMenuItem6.Name = "newToolStripMenuItem6";
+            this.newToolStripMenuItem6.Size = new System.Drawing.Size(43, 20);
+            this.newToolStripMenuItem6.Text = "New";
+            // 
+            // golfToolStripMenuItem2
+            // 
+            this.golfToolStripMenuItem2.Name = "golfToolStripMenuItem2";
+            this.golfToolStripMenuItem2.Size = new System.Drawing.Size(96, 22);
+            this.golfToolStripMenuItem2.Text = "Golf";
+            this.golfToolStripMenuItem2.Click += new System.EventHandler(this.golfToolStripMenuItem2_Click);
+            // 
+            // loadToolStripMenuItem5
+            // 
+            this.loadToolStripMenuItem5.Name = "loadToolStripMenuItem5";
+            this.loadToolStripMenuItem5.Size = new System.Drawing.Size(45, 20);
+            this.loadToolStripMenuItem5.Text = "Load";
+            // 
+            // optionsToolStripMenuItem5
+            // 
+            this.optionsToolStripMenuItem5.Name = "optionsToolStripMenuItem5";
+            this.optionsToolStripMenuItem5.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem5.Text = "Options";
+            // 
+            // saveToolStripMenuItem5
+            // 
+            this.saveToolStripMenuItem5.Name = "saveToolStripMenuItem5";
+            this.saveToolStripMenuItem5.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem5.Text = "Save";
+            // 
+            // loadToolStripMenuItem6
+            // 
+            this.loadToolStripMenuItem6.Name = "loadToolStripMenuItem6";
+            this.loadToolStripMenuItem6.Size = new System.Drawing.Size(37, 20);
+            this.loadToolStripMenuItem6.Text = "Exit";
+            this.loadToolStripMenuItem6.Click += new System.EventHandler(this.loadToolStripMenuItem6_Click);
             // 
             // newToolStripMenuItem4
             // 
@@ -218,46 +258,6 @@
             // 
             this.exitToolStripMenuItem4.Name = "exitToolStripMenuItem4";
             this.exitToolStripMenuItem4.Size = new System.Drawing.Size(32, 19);
-            // 
-            // newToolStripMenuItem6
-            // 
-            this.newToolStripMenuItem6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.golfToolStripMenuItem2});
-            this.newToolStripMenuItem6.Name = "newToolStripMenuItem6";
-            this.newToolStripMenuItem6.Size = new System.Drawing.Size(43, 20);
-            this.newToolStripMenuItem6.Text = "New";
-            // 
-            // golfToolStripMenuItem2
-            // 
-            this.golfToolStripMenuItem2.Name = "golfToolStripMenuItem2";
-            this.golfToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.golfToolStripMenuItem2.Text = "Golf";
-            this.golfToolStripMenuItem2.Click += new System.EventHandler(this.golfToolStripMenuItem2_Click);
-            // 
-            // loadToolStripMenuItem5
-            // 
-            this.loadToolStripMenuItem5.Name = "loadToolStripMenuItem5";
-            this.loadToolStripMenuItem5.Size = new System.Drawing.Size(45, 20);
-            this.loadToolStripMenuItem5.Text = "Load";
-            // 
-            // optionsToolStripMenuItem5
-            // 
-            this.optionsToolStripMenuItem5.Name = "optionsToolStripMenuItem5";
-            this.optionsToolStripMenuItem5.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem5.Text = "Options";
-            // 
-            // saveToolStripMenuItem5
-            // 
-            this.saveToolStripMenuItem5.Name = "saveToolStripMenuItem5";
-            this.saveToolStripMenuItem5.Size = new System.Drawing.Size(43, 20);
-            this.saveToolStripMenuItem5.Text = "Save";
-            // 
-            // loadToolStripMenuItem6
-            // 
-            this.loadToolStripMenuItem6.Name = "loadToolStripMenuItem6";
-            this.loadToolStripMenuItem6.Size = new System.Drawing.Size(37, 20);
-            this.loadToolStripMenuItem6.Text = "Exit";
-            this.loadToolStripMenuItem6.Click += new System.EventHandler(this.loadToolStripMenuItem6_Click);
             // 
             // Form1
             // 
