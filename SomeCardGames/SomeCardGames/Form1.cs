@@ -61,6 +61,7 @@ namespace SomeCardGames
                 {
                     main.Current.Draw(e.Graphics);
                 }
+                e.Graphics.DrawImage(SomeCardGamesAPI.API.LoadedCardResources.GetResource(23), new System.Drawing.PointF(55, 50));
             }
             catch (Exception TheException)
             {
