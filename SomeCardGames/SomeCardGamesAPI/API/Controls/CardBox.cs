@@ -1,6 +1,8 @@
-﻿using SomeCardGamesAPI.Error;
-using System;
+﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
+
+using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.API.Controls
 {
@@ -15,9 +17,9 @@ namespace SomeCardGamesAPI.API.Controls
         public Bitmap Image;
 
         /// <summary>
-        /// If true, the draw method will try to draw the Image.
+        /// The event called when this card box is clicked on.
         /// </summary>
-        public bool Visible = true;
+        public event EventHandler<Point> EventClick;
 
         /// <summary>
         /// How wide and tall this is.
@@ -30,18 +32,63 @@ namespace SomeCardGamesAPI.API.Controls
         public Point Location;
 
         /// <summary>
+        /// If true, the draw method will try to draw the Image.
+        /// </summary>
+        public bool Visible = true;
+
+//Methods
+
+        /// <summary>
         /// The constructor for the CardBox class.
         /// </summary>
         /// <param name="image"></param>
         /// <param name="size"></param>
         /// <param name="TopLeft"></param>
-        public CardBox(Bitmap image, Size size, Point TopLeft)
+        /// <param name="TheForm">The form to draw on.</param>
+        public CardBox(Bitmap image, Size size, Point TopLeft, object TheForm)
         {
             try
             {
                 this.Image = image;
                 size = Size;
                 Location = TopLeft;
+                Form form = (Form)TheForm;
+                form.Paint += Form_Paint;
+                form.Click += Form_Click;
+                
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void Form_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Point CursorLocation = new Point(Cursor.Position.X, Cursor.Position.Y);
+                if (this.WasIClicked(CursorLocation))
+                {
+                    this.OnClick(CursorLocation);
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// Calls this class's draw method.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            try
+            {
+                this.Draw(e.Graphics);
             }
             catch (Exception TheException)
             {
@@ -53,7 +100,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// Draws.
         /// </summary>
         /// <param name="g">The graphics object everyone is passing around.</param>
-        public void Draw(Graphics g)
+        private void Draw(Graphics g)
         {
             try
             {
@@ -73,7 +120,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// </summary>
         /// <param name="Click"></param>
         /// <returns></returns>
-        public bool WasIClicked(Point Click)
+        private bool WasIClicked(Point Click)
         {
             try
             {
@@ -90,6 +137,23 @@ namespace SomeCardGamesAPI.API.Controls
             {
                 ErrorReporter.Report(TheException);
                 return true;
+            }
+        }
+
+        /// <summary>
+        /// Used by this class to handle the click event.
+        /// </summary>
+        /// <param name="Click"></param>
+        private void OnClick(Point Click)
+        {
+            try
+            {
+                EventHandler<Point> handler = EventClick;
+                handler(this, Click);
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
             }
         }
     }
