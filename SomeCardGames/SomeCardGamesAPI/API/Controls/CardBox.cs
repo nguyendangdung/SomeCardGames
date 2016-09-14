@@ -37,13 +37,6 @@ namespace SomeCardGamesAPI.API.Controls
         /// <summary>
         /// The constructor for the CardBox class.
         /// </summary>
-        public CardBox()
-        {
-
-        }
-        /// <summary>
-        /// The constructor for the CardBox class.
-        /// </summary>
         /// <param name="image"></param>
         /// <param name="size"></param>
         /// <param name="TopLeft"></param>
