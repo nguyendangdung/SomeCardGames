@@ -72,5 +72,30 @@ namespace SomeCardGamesAPI.API.Controls
                 ErrorReporter.Report(TheException);
             }
         }
+
+        /// <summary>
+        /// Determines if this card box was clicked on. 
+        /// </summary>
+        /// <param name="Click"></param>
+        /// <returns></returns>
+        public bool WasIClicked(Point Click)
+        {
+            try
+            {
+                if (Click.X >= this.Location.X && Click.X <= this.Location.X + this.Size.Width)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return true;
+            }
+        }
     }
 }
