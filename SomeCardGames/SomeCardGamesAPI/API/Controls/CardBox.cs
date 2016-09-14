@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SomeCardGamesAPI.Error;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.API.Controls
 {
@@ -74,7 +69,7 @@ namespace SomeCardGamesAPI.API.Controls
         }
 
         /// <summary>
-        /// Determines if this card box was clicked on. 
+        /// Determines if this card box was clicked on.
         /// </summary>
         /// <param name="Click"></param>
         /// <returns></returns>
