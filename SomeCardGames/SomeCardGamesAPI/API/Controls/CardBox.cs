@@ -36,6 +36,11 @@ namespace SomeCardGamesAPI.API.Controls
         /// </summary>
         public bool Visible = true;
 
+        /// <summary>
+        /// This determines when this card box should be drawn in relations to other card boxes.
+        /// </summary>
+        public int DrawOrder = 0;
+
 //Methods
 
         /// <summary>
