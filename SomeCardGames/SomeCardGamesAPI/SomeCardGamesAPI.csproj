@@ -55,7 +55,8 @@
   <ItemGroup>
     <Compile Include="API\Card.cs" />
     <Compile Include="API\Controls\CardBox.cs" />
-    <Compile Include="API\Controls\UI.cs" />
+    <Compile Include="API\Controls\UI\Comparators\CardBoxComparator.cs" />
+    <Compile Include="API\Controls\UI\UI.cs" />
     <Compile Include="API\Deck.cs" />
     <Compile Include="API\ICardGame.cs" />
     <Compile Include="API\IDrawer.cs" />
