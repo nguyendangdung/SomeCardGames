@@ -92,7 +92,7 @@ namespace Golf.Code
             try
             {
                 int Decks;
-                int Players = SomeCardGamesAPI.Properties.Settings.Default.GolfAIPlayers + 1;
+                int Players = Golf.Properties.Settings.Default.GolfAIPlayers + 1;
 
                 double Dec = Players / 3;
 
