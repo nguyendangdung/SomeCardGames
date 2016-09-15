@@ -2,7 +2,7 @@
 
 #**Short Description**
 
-Built with Visual Studio, Some Card Games is a C# application with the power of the .net framework behind it, that allows you to play a few card games.
+Built with [Visual Studio](https://www.visualstudio.com/), Some Card Games is a [C#](https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx) application with the power of the .net framework behind it, that allows you to play a few card games.
 
 #**Development Versions**
 
@@ -10,11 +10,11 @@ Release versions are not availible currently, but if you desperately want to see
 
 #**Libraries**
 
-This application uses Octokit (http://octokit.github.io/) to auto report program errors.
-For information about what this program reports, please refer to the Privacy Information file in this repository. (https://github.com/SneakyTactician/SomeCardGames/blob/master/Privacy%20Information)
+This application uses [Octokit](http://octokit.github.io/) to auto report program errors.
+For information about what this program reports, please refer to the [Privacy Information File](https://github.com/SneakyTactician/SomeCardGames/blob/master/Privacy%20Information) in this repository.
 
 
-Octokit is provided under the MIT License (https://en.wikipedia.org/wiki/MIT_License).
+Octokit is provided under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
 
 #**Help Always Wanted**
 
@@ -22,4 +22,4 @@ I could always use help with this project. If you have programming skills, know 
 
 ###**How to apply**
 
-Create a issue on this Github page, with why you want to help this project and your skillset, and then label it with the tag "Resume". I will get back to you as soon as I can.
+Create a issue on this [Github](https://github.com/) page, with why you want to help this project and your skillset, and then label it with the tag "Resume". I will get back to you as soon as I can.
