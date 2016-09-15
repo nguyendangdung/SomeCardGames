@@ -1,8 +1,10 @@
-﻿using SomeCardGamesAPI.API.Controls.UI.Comparators;
-using SomeCardGamesAPI.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
+
+using SomeCardGamesAPI.API.Controls.UI.Comparators;
+using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.API.Controls.UI
 {
@@ -63,10 +65,51 @@ namespace SomeCardGamesAPI.API.Controls.UI
             try
             {
                 this.form = (Form)TheForm;
+                this.form.Paint += Form_Paint;
 
                 foreach (CardBox item in controls)
                 {
                     this.AddCardBox(item);
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+        
+        /// <summary>
+        /// Called when the main form paints.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This should be called after we intercept a draw event. This attempts to draw all controls in this UI.
+        /// </summary>
+        /// <param name="g"></param>
+        public void DrawAll(Graphics g)
+        {
+            try
+            {
+                foreach (CardBox item in this.Controls)
+                {
+                    if (item.Visible)
+                    {
+                        item.Draw(g);
+                    }
                 }
             }
             catch (Exception TheException)

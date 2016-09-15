@@ -103,7 +103,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// Draws.
         /// </summary>
         /// <param name="g">The graphics object everyone is passing around.</param>
-        private void Draw(Graphics g)
+        public void Draw(Graphics g)
         {
             try
             {
