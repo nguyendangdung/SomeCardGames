@@ -87,7 +87,7 @@ namespace SomeCardGamesAPI.API.Controls.UI
         {
             try
             {
-
+                this.DrawAll(e.Graphics);
             }
             catch (Exception TheException)
             {
@@ -121,7 +121,7 @@ namespace SomeCardGamesAPI.API.Controls.UI
         /// <summary>
         /// Makes all of the controls in this UI visible.
         /// </summary>
-        public void MakeUIVisible()
+        private void MakeUIVisible()
         {
             try
             {
@@ -141,7 +141,7 @@ namespace SomeCardGamesAPI.API.Controls.UI
         /// <summary>
         /// Makes all of the controls in this UI invisible.
         /// </summary>
-        public void MakeUIInvisible()
+        private void MakeUIInvisible()
         {
             try
             {
