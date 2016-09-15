@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using SomeCardGamesAPI.API.Controls.UI;
-using SomeCardGamesAPI.API.Controls.UI.Comparators;
+﻿using SomeCardGamesAPI.API.Controls.UI.Comparators;
 using SomeCardGamesAPI.Error;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace SomeCardGamesAPI.API.Controls.UI
 {
@@ -26,7 +20,7 @@ namespace SomeCardGamesAPI.API.Controls.UI
         /// All of the card boxes that we have here.
         /// </summary>
         public List<CardBox> Controls;
-        
+
         /// <summary>
         /// Used to order objects into the Controls list properly.
         /// </summary>

@@ -17,6 +17,7 @@ namespace SomeCardGamesAPI.API
         /// Used to tell what card this card is.
         /// </summary>
         public int WhatCard;
+
         /// <summary>
         /// The constructor for the Card class.
         /// </summary>

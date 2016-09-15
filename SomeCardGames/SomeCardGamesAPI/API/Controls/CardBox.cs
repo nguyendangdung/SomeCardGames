@@ -1,8 +1,7 @@
-﻿using System;
+﻿using SomeCardGamesAPI.Error;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-
-using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.API.Controls
 {
@@ -41,7 +40,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// </summary>
         public int DrawOrder = 0;
 
-//Methods
+        //Methods
 
         /// <summary>
         /// The constructor for the CardBox class.
@@ -60,7 +59,6 @@ namespace SomeCardGamesAPI.API.Controls
                 Form form = (Form)TheForm;
                 form.Paint += Form_Paint;
                 form.Click += Form_Click;
-                
             }
             catch (Exception TheException)
             {
