@@ -11,7 +11,8 @@ Release versions are not availible currently, but if you desperately want to see
 #**Libraries**
 
 This application uses Octokit (http://octokit.github.io/) to auto report program errors.
-For information about what this program reports, please refer to the Privacy Information file in this repository.
+For information about what this program reports, please refer to the Privacy Information file in this repository. (https://github.com/SneakyTactician/SomeCardGames/blob/master/Privacy%20Information)
+
 
 Octokit is provided under the MIT License (https://en.wikipedia.org/wiki/MIT_License).
 
