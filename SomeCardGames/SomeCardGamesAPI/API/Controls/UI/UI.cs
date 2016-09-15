@@ -32,7 +32,31 @@ namespace SomeCardGamesAPI.API.Controls.UI
         /// </summary>
         public CardBoxComparator Comparator = new CardBoxComparator();
 
-        bool Visible = true;
+        private bool AreWeVisible = true;
+
+        /// <summary>
+        /// Tells us if this UI is visible or not.
+        /// </summary>
+        public bool Visible
+        {
+            get
+            {
+                return AreWeVisible;
+            }
+            set
+            {
+                this.AreWeVisible = value;
+
+                if (value)
+                {
+                    this.MakeUIVisible();
+                }
+                else
+                {
+                    this.MakeUIInvisible();
+                }
+            }
+        }
 
         /// <summary>
         /// The constructor for the UI class.
@@ -45,11 +69,50 @@ namespace SomeCardGamesAPI.API.Controls.UI
             try
             {
                 this.form = (Form)TheForm;
-                this.Visible = Visibility;
 
                 foreach (CardBox item in controls)
                 {
                     this.AddCardBox(item);
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// Makes all of the controls in this UI visible.
+        /// </summary>
+        public void MakeUIVisible()
+        {
+            try
+            {
+                this.AreWeVisible = true;
+
+                foreach (CardBox item in this.Controls)
+                {
+                    item.Visible = true;
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// Makes all of the controls in this UI invisible.
+        /// </summary>
+        public void MakeUIInvisible()
+        {
+            try
+            {
+                this.AreWeVisible = false;
+
+                foreach (CardBox item in this.Controls)
+                {
+                    item.Visible = false;
                 }
             }
             catch (Exception TheException)
