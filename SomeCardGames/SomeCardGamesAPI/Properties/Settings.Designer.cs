@@ -22,17 +22,5 @@ namespace SomeCardGamesAPI.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public int GolfAIPlayers {
-            get {
-                return ((int)(this["GolfAIPlayers"]));
-            }
-            set {
-                this["GolfAIPlayers"] = value;
-            }
-        }
     }
 }

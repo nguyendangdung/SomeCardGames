@@ -3,6 +3,9 @@ using SomeCardGamesAPI.Error;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Configuration;
+
+using Golf.Properties;
 
 namespace Golf.Code
 {
@@ -35,7 +38,7 @@ namespace Golf.Code
             {
                 Players = new List<GolfPlayer>();
                 int i = 0;
-                int PlayersToDealIn = SomeCardGamesAPI.Properties.Settings.Default.GolfAIPlayers;
+                int PlayersToDealIn = Golf.Properties.Settings.Default.GolfAIPlayers;
 
                 Players.Add(this.DealInPlayer(false));
 
@@ -147,6 +150,15 @@ namespace Golf.Code
             {
                 ErrorReporter.Report(TheException);
             }
+        }
+
+        /// <summary>
+        /// Returns the settings file for the current golf game.
+        /// </summary>
+        /// <returns></returns>
+        public SettingsBase GetSettings()
+        {
+            return new Settings();
         }
     }
 }

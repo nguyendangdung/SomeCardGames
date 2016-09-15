@@ -1,4 +1,7 @@
-﻿using System.Drawing;
+﻿using System.Configuration;
+using System.Drawing;
+
+using SomeCardGamesAPI.Properties;
 
 namespace SomeCardGamesAPI.API
 {
@@ -22,5 +25,11 @@ namespace SomeCardGamesAPI.API
         /// </summary>
         /// <param name="G"></param>
         void Draw(Graphics G);
+
+        /// <summary>
+        /// Returns the settings file for the current card game.
+        /// </summary>
+        /// <returns></returns>
+        SettingsBase GetSettings();
     }
 }
