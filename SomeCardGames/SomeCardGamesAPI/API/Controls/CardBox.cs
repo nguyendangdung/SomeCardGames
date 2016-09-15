@@ -56,42 +56,6 @@ namespace SomeCardGamesAPI.API.Controls
                 this.Image = image;
                 size = Size;
                 Location = TopLeft;
-                Form form = (Form)TheForm;
-                form.Paint += Form_Paint;
-                form.Click += Form_Click;
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-        }
-
-        private void Form_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Point CursorLocation = new Point(Cursor.Position.X, Cursor.Position.Y);
-                if (this.WasIClicked(CursorLocation))
-                {
-                    this.OnClick(CursorLocation);
-                }
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
-        /// Calls this class's draw method.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Form_Paint(object sender, PaintEventArgs e)
-        {
-            try
-            {
-                this.Draw(e.Graphics);
             }
             catch (Exception TheException)
             {
@@ -123,13 +87,20 @@ namespace SomeCardGamesAPI.API.Controls
         /// </summary>
         /// <param name="Click"></param>
         /// <returns></returns>
-        private bool WasIClicked(Point Click)
+        public bool WasIClicked(Point Click)
         {
             try
             {
-                if (Click.X >= this.Location.X && Click.X <= this.Location.X + this.Size.Width)
+                if (this.Visible)
                 {
-                    return true;
+                    if (Click.X >= this.Location.X && Click.X <= this.Location.X + this.Size.Width)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
@@ -147,7 +118,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// Used by this class to handle the click event.
         /// </summary>
         /// <param name="Click"></param>
-        private void OnClick(Point Click)
+        public void OnClick(Point Click)
         {
             try
             {

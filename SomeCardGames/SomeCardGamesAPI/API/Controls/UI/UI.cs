@@ -66,6 +66,7 @@ namespace SomeCardGamesAPI.API.Controls.UI
             {
                 this.form = (Form)TheForm;
                 this.form.Paint += Form_Paint;
+                this.form.Click += Form_Click;
 
                 foreach (CardBox item in controls)
                 {
@@ -77,7 +78,33 @@ namespace SomeCardGamesAPI.API.Controls.UI
                 ErrorReporter.Report(TheException);
             }
         }
-        
+
+        /// <summary>
+        /// Called by the form whenever there is a click.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Point Location = new Point(Cursor.Position.X, Cursor.Position.Y);
+
+                foreach (CardBox item in this.Controls)
+                {
+                    if (item.WasIClicked(Location))
+                    {
+                        item.OnClick(Location);
+                        break;
+                    }
+                }
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
         /// <summary>
         /// Called when the main form paints.
         /// </summary>
@@ -93,14 +120,13 @@ namespace SomeCardGamesAPI.API.Controls.UI
             {
                 ErrorReporter.Report(TheException);
             }
-            throw new NotImplementedException();
         }
 
         /// <summary>
         /// This should be called after we intercept a draw event. This attempts to draw all controls in this UI.
         /// </summary>
         /// <param name="g"></param>
-        public void DrawAll(Graphics g)
+        private void DrawAll(Graphics g)
         {
             try
             {
