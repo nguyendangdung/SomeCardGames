@@ -34,5 +34,17 @@ namespace Golf.Properties {
                 this["GolfAIPlayers"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int SkillLevel {
+            get {
+                return ((int)(this["SkillLevel"]));
+            }
+            set {
+                this["SkillLevel"] = value;
+            }
+        }
     }
 }
