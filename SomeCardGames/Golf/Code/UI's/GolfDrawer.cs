@@ -1,8 +1,10 @@
-﻿using SomeCardGamesAPI.API;
-using SomeCardGamesAPI.Error;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+
+using Golf.Code.UIs;
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Error;
 
 namespace Golf.Code
 {
@@ -22,7 +24,10 @@ namespace Golf.Code
         /// </summary>
         public GolfLogic Game;
 
-        public PictureBox MiddleStack;
+        /// <summary>
+        /// The main UI for when the player is playing golf.
+        /// </summary>
+        public MainUI MainGolfUI = new MainUI(true);
 
         /// <summary>
         /// Called by the paint event on the form. Draws the current status of the golf card game.
@@ -51,11 +56,11 @@ namespace Golf.Code
             {
                 if (Game.TheDeck.GetSize() > 0)
                 {
-                    this.MiddleStack.Visible = true;
+                    this.MainGolfUI.MiddleStack.Visible = true;
                 }
                 else
                 {
-                    this.MiddleStack.Visible = false;
+                    this.MainGolfUI.MiddleStack.Visible = false;
                 }
             }
             catch (Exception TheException)
@@ -73,17 +78,6 @@ namespace Golf.Code
             try
             {
                 this.Game = (GolfLogic)Game;
-
-                #region MiddleStack
-
-                this.MiddleStack = new PictureBox();
-                this.MiddleStack.Location = new System.Drawing.Point(1000, 1000);
-                this.MiddleStack.Name = "Pile";
-                this.MiddleStack.Size = new System.Drawing.Size(2000, 2000);
-                this.MiddleStack.TabStop = false;
-                this.MiddleStack.Image = LoadedCardResources.GetBack();
-
-                #endregion MiddleStack
             }
             catch (Exception TheException)
             {

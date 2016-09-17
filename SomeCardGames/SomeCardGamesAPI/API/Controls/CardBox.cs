@@ -43,6 +43,24 @@ namespace SomeCardGamesAPI.API.Controls
         //Methods
 
         /// <summary>
+        /// A constructor for the CardBox class.
+        /// </summary>
+        /// <param name="old"></param>
+        public CardBox(CardBox old)
+        { 
+            try
+            {
+                this.Image = old.Image;
+                this.Size = old.Size;
+                this.Location = old.Location;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
         /// The constructor for the CardBox class.
         /// </summary>
         /// <param name="image"></param>

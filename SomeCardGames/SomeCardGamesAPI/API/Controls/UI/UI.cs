@@ -57,10 +57,18 @@ namespace SomeCardGamesAPI.API.Controls.UI
         /// <summary>
         /// The constructor for the UI class.
         /// </summary>
+        public UI()
+        {
+
+        }
+
+        /// <summary>
+        /// The constructor for the UI class.
+        /// </summary>
         /// <param name="TheForm"></param>
         /// <param name="controls"></param>
         /// <param name="Visibility"></param>
-        public UI(object TheForm, CardBox[] controls, bool Visibility)
+        public void ConstructMe(object TheForm, CardBox[] controls, bool Visibility)
         {
             try
             {
