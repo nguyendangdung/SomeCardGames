@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\UI%27s\Controls\MiddleStack.cs" />
     <Compile Include="Code\UI%27s\GolfDrawer.cs" />
     <Compile Include="Code\GolfEventHandler.cs" />
     <Compile Include="Code\GolfLogic.cs" />

@@ -43,6 +43,13 @@ namespace SomeCardGamesAPI.API.Controls
         //Methods
 
         /// <summary>
+        /// You should call ConstructMe() if you use this constructor. Unless you want to do what that constructor method does all over again.
+        /// </summary>
+        public CardBox()
+        {
+        }
+
+        /// <summary>
         /// A constructor for the CardBox class.
         /// </summary>
         /// <param name="old"></param>
@@ -66,8 +73,28 @@ namespace SomeCardGamesAPI.API.Controls
         /// <param name="image"></param>
         /// <param name="size"></param>
         /// <param name="TopLeft"></param>
-        /// <param name="TheForm">The form to draw on.</param>
-        public CardBox(Bitmap image, Size size, Point TopLeft, object TheForm)
+        public CardBox(Bitmap image, Size size, Point TopLeft)
+        {
+            try
+            {
+                this.Image = image;
+                size = Size;
+                Location = TopLeft;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// A constructor that doesn't involve messy inheritance.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="size"></param>
+        /// <param name="TopLeft"></param>
+        /// <param name="TheForm"></param>
+        public void ConstructMe(Bitmap image, Size size, Point TopLeft)
         {
             try
             {

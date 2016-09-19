@@ -6,7 +6,7 @@ using Golf.Code.UIs;
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
 
-namespace Golf.Code
+namespace Golf.Code.UI_s
 {
     /// <summary>
     /// Draws the graphics for the Golf card game.

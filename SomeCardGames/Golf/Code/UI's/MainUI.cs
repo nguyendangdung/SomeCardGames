@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Golf.Code.UI_s.Controls;
+
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.API.Controls;
 using SomeCardGamesAPI.API.Controls.UI;
@@ -18,23 +20,10 @@ namespace Golf.Code.UIs
     /// </summary>
     public class MainUI : UI
     {
-        public Size GetMiddleStackSize
-        {
-            get
-            {
-                return new Size(0, 0);
-            }
-        }
-
-        public Point GetTopLeft
-        {
-            get
-            {
-                return new Point(0, 0);
-            }
-        }
-
-        public CardBox MiddleStack = new CardBox(CreateMiddleStack());
+        /// <summary>
+        /// Represents the stack of cards in the middle of the table.
+        /// </summary>
+        public CardBox MiddleStack;
 
         /// <summary>
         /// The constructor for the MainUI class.
@@ -47,6 +36,7 @@ namespace Golf.Code.UIs
             try
             {
                 CardBox[] controls = new CardBox[1];
+                MiddleStack = new CardBox(this.CreateMiddleStack());
 
                 controls[0] = MiddleStack;
 
@@ -58,11 +48,21 @@ namespace Golf.Code.UIs
             }
         }
 
-        public static CardBox CreateMiddleStack()
+        /// <summary>
+        /// Creates the CardBox for the middle stack of cards.
+        /// </summary>
+        /// <returns></returns>
+        private CardBox CreateMiddleStack()
         {
-            return new CardBox(LoadedCardResources.GetBack(), GetMiddleStackSize, GetTopLeft, VariableStorage.TheForm);
+            try
+            {
+                return new MiddleStack();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return null;
+            }
         }
-
-        public static void
     }
 }
