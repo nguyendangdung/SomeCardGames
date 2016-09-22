@@ -10,7 +10,7 @@ Release versions are not availible currently, but if you desperately want to see
 
 #**Libraries**
 
-This application uses [Octokit](http://octokit.github.io/) to auto report program errors.
+This application uses [Octokit](http://octokit.github.io/) to auto report program errors to this Github repository.
 For information about what this program reports, please refer to the [Privacy Information File](https://github.com/SneakyTactician/SomeCardGames/blob/master/Privacy%20Information) in this repository.
 
 
