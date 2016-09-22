@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
 
-using Golf.Code.UIs;
+using Golf.Code.UI_s.Main;
+
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.API.Controls.UI;
 using SomeCardGamesAPI.Error;

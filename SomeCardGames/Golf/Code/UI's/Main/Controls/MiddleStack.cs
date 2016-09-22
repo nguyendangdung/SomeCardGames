@@ -10,7 +10,7 @@ using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Utility;
 using SomeCardGamesAPI.Error;
 
-namespace Golf.Code.UI_s.Controls
+namespace Golf.Code.UI_s.Main.Controls
 {
     /// <summary>
     /// Represents the stack of cards in the middle of the screen.

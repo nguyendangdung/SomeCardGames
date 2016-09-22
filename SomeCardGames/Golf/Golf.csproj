@@ -52,12 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\UI%27s\Controls\MiddleStack.cs" />
+    <Compile Include="Code\UI%27s\Main\Controls\MiddleStack.cs" />
     <Compile Include="Code\UI%27s\GolfDrawer.cs" />
     <Compile Include="Code\GolfEventHandler.cs" />
     <Compile Include="Code\GolfLogic.cs" />
     <Compile Include="Code\GolfPlayer.cs" />
-    <Compile Include="Code\UI%27s\MainUI.cs" />
+    <Compile Include="Code\UI%27s\Main\MainUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <DependentUpon>Settings.settings</DependentUpon>
@@ -79,6 +79,7 @@
     </None>
     <None Include="Signing.pfx" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
