@@ -1,9 +1,11 @@
-﻿using SomeCardGamesAPI.Error;
-using SomeCardGamesAPI.Utility;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+
+
+using SomeCardGamesAPI.Error;
+using SomeCardGamesAPI.Utility;
 
 namespace SomeCardGamesAPI.API
 {
@@ -190,7 +192,7 @@ namespace SomeCardGamesAPI.API
         }
 
         /// <summary>
-        /// Determins which resources to load based on the size of everything.
+        /// Determines which resources to load based on the size of everything.
         /// </summary>
         public static void LoadResources()
         {
