@@ -93,7 +93,6 @@ namespace SomeCardGamesAPI.API.Controls
         /// <param name="image"></param>
         /// <param name="size"></param>
         /// <param name="TopLeft"></param>
-        /// <param name="TheForm"></param>
         public void ConstructMe(Bitmap image, Size size, Point TopLeft)
         {
             try
@@ -116,6 +115,7 @@ namespace SomeCardGamesAPI.API.Controls
         {
             try
             {
+                this.PreDraw();
                 if (Visible)
                 {
                     g.DrawImage(this.Image, this.Location.X, this.Location.Y, this.Size.Width, this.Size.Height);
@@ -174,6 +174,13 @@ namespace SomeCardGamesAPI.API.Controls
             {
                 ErrorReporter.Report(TheException);
             }
+        }
+
+        /// <summary>
+        /// This method allows classes inheriting from this class to do logic before the draw.
+        /// </summary>
+        public virtual void PreDraw()
+        {
         }
     }
 }
