@@ -73,7 +73,6 @@ namespace SomeCardGamesAPI.API.Controls.UI
             try
             {
                 this.form = (Form)TheForm;
-                this.form.Paint += Form_Paint;
                 this.form.Click += Form_Click;
 
                 foreach (CardBox item in controls)
@@ -114,27 +113,10 @@ namespace SomeCardGamesAPI.API.Controls.UI
         }
 
         /// <summary>
-        /// Called when the main form paints.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Form_Paint(object sender, PaintEventArgs e)
-        {
-            try
-            {
-                this.DrawAll(e.Graphics);
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
         /// This should be called after we intercept a draw event. This attempts to draw all controls in this UI.
         /// </summary>
         /// <param name="g"></param>
-        private void DrawAll(Graphics g)
+        public void DrawAll(Graphics g)
         {
             try
             {

@@ -18,13 +18,41 @@ namespace Golf.Code.UI_s.Controls
     public class MiddleStack : CardBox
     {
         /// <summary>
+        /// The current game of golf.
+        /// </summary>
+        public GolfLogic Game;
+
+        /// <summary>
         /// The constructor for the MiddleStack class.
         /// </summary>
-        public MiddleStack()
+        public MiddleStack(GolfLogic GolfGame)
         {
             try
             {
                 this.ConstructMe(LoadedCardResources.GetBack(), this.GetSize(), this.GetTopLeft());
+                Game = GolfGame;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// The logic we do before draw is called.
+        /// </summary>
+        public override void PreDraw()
+        {
+            try
+            {
+                if (Game.TheDeck.GetSize() > 0)
+                {
+                    this.Visible = true;
+                }
+                else
+                {
+                    this.Visible = false;
+                }
             }
             catch (Exception TheException)
             {

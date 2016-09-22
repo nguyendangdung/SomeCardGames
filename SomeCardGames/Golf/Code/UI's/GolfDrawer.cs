@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
 using Golf.Code.UIs;
 using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.API.Controls.UI;
 using SomeCardGamesAPI.Error;
 
 namespace Golf.Code.UI_s
@@ -27,7 +29,12 @@ namespace Golf.Code.UI_s
         /// <summary>
         /// The main UI for when the player is playing golf.
         /// </summary>
-        public MainUI MainGolfUI = new MainUI(true);
+        public MainUI MainGolfUI;
+
+        /// <summary>
+        /// Holds all of the UIs this drawer is responsible for drawing.
+        /// </summary>
+        public List<UI> UIs = new List<UI>();
 
         /// <summary>
         /// Called by the paint event on the form. Draws the current status of the golf card game.
@@ -39,28 +46,9 @@ namespace Golf.Code.UI_s
             {
                 Current = G;
 
-                this.DrawStackInTheMiddle();
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
-        /// Draws the stack of cards in the middle of the screen.
-        /// </summary>
-        public void DrawStackInTheMiddle()
-        {
-            try
-            {
-                if (Game.TheDeck.GetSize() > 0)
+                foreach (UI item in this.UIs)
                 {
-                    this.MainGolfUI.MiddleStack.Visible = true;
-                }
-                else
-                {
-                    this.MainGolfUI.MiddleStack.Visible = false;
+                    item.DrawAll(G);
                 }
             }
             catch (Exception TheException)
@@ -78,6 +66,7 @@ namespace Golf.Code.UI_s
             try
             {
                 this.Game = (GolfLogic)Game;
+                MainGolfUI = new MainUI(true, this.Game);
             }
             catch (Exception TheException)
             {

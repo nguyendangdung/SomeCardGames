@@ -13,11 +13,17 @@ namespace SomeCardGamesAPI.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
-    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
+
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        public static Settings Default
+        {
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
             get {
                 return defaultInstance;
             }

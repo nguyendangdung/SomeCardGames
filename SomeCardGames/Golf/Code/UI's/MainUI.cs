@@ -28,15 +28,14 @@ namespace Golf.Code.UIs
         /// <summary>
         /// The constructor for the MainUI class.
         /// </summary>
-        /// <param name="TheForm"></param>
-        /// <param name="controls"></param>
         /// <param name="Visibility"></param>
-        public MainUI(bool Visibility)
+        /// <param name="GolfGame"></param>
+        public MainUI(bool Visibility, GolfLogic GolfGame)
         {
             try
             {
                 CardBox[] controls = new CardBox[1];
-                MiddleStack = new CardBox(this.CreateMiddleStack());
+                MiddleStack = new CardBox(new MiddleStack(GolfGame));
 
                 controls[0] = MiddleStack;
 
@@ -45,23 +44,6 @@ namespace Golf.Code.UIs
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
-        /// Creates the CardBox for the middle stack of cards.
-        /// </summary>
-        /// <returns></returns>
-        private CardBox CreateMiddleStack()
-        {
-            try
-            {
-                return new MiddleStack();
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-                return null;
             }
         }
     }
