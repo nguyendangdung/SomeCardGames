@@ -52,12 +52,12 @@ namespace SomeCardGamesAPI.Utility
         }
 
         /// <summary>
-        /// Represents the screen width of the moniter this game is designed for.
+        /// Represents the screen width of the monitor this game is designed for.
         /// </summary>
         public static int WidthProgrammedFor = 2560;
 
         /// <summary>
-        /// Represents the screen height of the moniter this game is designed for.
+        /// Represents the screen height of the monitor this game is designed for.
         /// </summary>
         public static int HeightProgrammedFor = 1410;
 

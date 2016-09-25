@@ -17,6 +17,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// <summary>
         /// The event called when this card box is clicked on.
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1009:DeclareEventHandlersCorrectly")]
         public event EventHandler<Point> EventClick;
 
         /// <summary>
