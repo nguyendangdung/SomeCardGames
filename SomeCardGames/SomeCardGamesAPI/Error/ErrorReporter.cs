@@ -14,6 +14,11 @@ namespace SomeCardGamesAPI.Error
     public static class ErrorReporter
     {
         /// <summary>
+        /// Used by this to tell if we should fail a test because this is called.
+        /// </summary>
+        public static bool IsUnitTesting = false;
+
+        /// <summary>
         /// Used to interact with Github.
         /// </summary>
         private static GitHubClient client = ConstructClient();
@@ -26,6 +31,10 @@ namespace SomeCardGamesAPI.Error
         {
             try
             {
+                if (IsUnitTesting)
+                {
+                    Assert.Fail("There is a bug!");
+                }
                 string Report = GenerateReport(ex);
                 string IssueTitle = "Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult + " Assembly Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 

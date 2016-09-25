@@ -14,6 +14,7 @@ namespace SomeCardGamesAPI.Utility.Tests
         [TestMethod()]
         public void CollectFormTest()
         {
+            Error.ErrorReporter.IsUnitTesting = true;
             Assert.Fail();
         }
     }
