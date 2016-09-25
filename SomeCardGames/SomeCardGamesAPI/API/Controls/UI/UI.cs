@@ -72,6 +72,7 @@ namespace SomeCardGamesAPI.API.Controls.UI
         {
             try
             {
+                this.Controls = new List<CardBox>();
                 this.form = (Form)TheForm;
                 this.form.Click += Form_Click;
 
