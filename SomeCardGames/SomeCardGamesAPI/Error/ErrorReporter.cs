@@ -8,12 +8,12 @@ using System.Reflection;
 namespace SomeCardGamesAPI.Error
 {
     /// <summary>
-    /// Automatically reports exceptions to my github page.
+    /// Automatically reports exceptions to my Github page.
     /// </summary>
     public static class ErrorReporter
     {
         /// <summary>
-        /// Used to interact with github.
+        /// Used to interact with Github.
         /// </summary>
         private static GitHubClient client = ConstructClient();
 
