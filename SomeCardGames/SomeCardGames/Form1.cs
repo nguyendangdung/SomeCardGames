@@ -16,7 +16,7 @@ namespace SomeCardGames
         private Main main = new Main();
 
         /// <summary>
-        /// The inital call to this program.
+        /// The initial call to this program.
         /// </summary>
         public Form1()
         {
