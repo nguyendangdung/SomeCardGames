@@ -16,7 +16,7 @@ namespace Golf.Code.UI_s.Main.Controls.Tests
         {
             Assert.Fail();
         }
-
+         
         [TestMethod()]
         public void PreDrawTest()
         {
