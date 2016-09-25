@@ -11,6 +11,7 @@ namespace SomeCardGamesAPI.Error
     /// <summary>
     /// Automatically reports exceptions to my Github page.
     /// </summary>
+    [TestClass]
     public static class ErrorReporter
     {
         /// <summary>
@@ -27,6 +28,7 @@ namespace SomeCardGamesAPI.Error
         /// Auto reports an error to my Github issues section.
         /// </summary>
         /// <param name="ex"></param>
+        [TestMethod]
         public static void Report(Exception ex)
         {
             try
@@ -35,6 +37,7 @@ namespace SomeCardGamesAPI.Error
                 {
                     Assert.Fail("There is a bug!");
                 }
+
                 string Report = GenerateReport(ex);
                 string IssueTitle = "Error in method: " + ex.TargetSite.Name + ", error code: " + ex.HResult + " Assembly Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
@@ -64,7 +67,7 @@ namespace SomeCardGamesAPI.Error
 #pragma warning restore CS0168 // Variable is declared but never used
             {
                 //Eat it
-                Debug.Assert(false);
+                Assert.Fail();
             }
         }
 

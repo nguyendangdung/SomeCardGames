@@ -84,7 +84,14 @@ namespace SomeCardGamesAPI.Utility
         {
             try
             {
-                TheForm = (Form)Form;
+                if (Form == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                else
+                {
+                    TheForm = (Form)Form;
+                }
             }
             catch (Exception TheException)
             {
