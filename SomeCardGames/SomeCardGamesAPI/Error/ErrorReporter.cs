@@ -1,4 +1,5 @@
-﻿using Octokit;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Octokit;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -149,7 +150,7 @@ namespace SomeCardGamesAPI.Error
                 catch (Exception e)
 #pragma warning restore CS0168 // Variable is declared but never used
                 {
-                    //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too currupt, this would fail.
+                    //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too corrupt, this would fail.
                 }
 
                 #endregion OtherInformation
@@ -217,7 +218,7 @@ namespace SomeCardGamesAPI.Error
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>
-        public static string ConvertListToString(List<string> list) //gota roll out my own picture box
+        public static string ConvertListToString(List<string> list) //gotta roll out my own picture box
         {
             try
             {
