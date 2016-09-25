@@ -14,13 +14,28 @@ namespace SomeCardGamesAPI.API.Controls.UI.Tests
         [TestMethod()]
         public void UITest()
         {
-            Assert.Fail();
+            try
+            {
+                UI a;
+                a = new UI();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void ConstructMeTest()
         {
-            Assert.Fail();
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
