@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeCardGamesAPI", "SomeCar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Golf", "Golf\Golf.csproj", "{E8591A9D-C8D6-4CC3-86AF-54A9F695CB0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeCardGamesAPITests", "SomeCardGamesAPITests\SomeCardGamesAPITests.csproj", "{39713FEA-27B4-4629-92CE-B364C295B186}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,14 @@ Global
 		{E8591A9D-C8D6-4CC3-86AF-54A9F695CB0D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E8591A9D-C8D6-4CC3-86AF-54A9F695CB0D}.Release|x64.ActiveCfg = Release|Any CPU
 		{E8591A9D-C8D6-4CC3-86AF-54A9F695CB0D}.Release|x64.Build.0 = Release|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Debug|x64.Build.0 = Debug|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Release|x64.ActiveCfg = Release|Any CPU
+		{39713FEA-27B4-4629-92CE-B364C295B186}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
