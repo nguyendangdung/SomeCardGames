@@ -36,7 +36,8 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Signing.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -65,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="870x1200\1.png" />
-    <None Include="Signing.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="870x1200\2.png" />

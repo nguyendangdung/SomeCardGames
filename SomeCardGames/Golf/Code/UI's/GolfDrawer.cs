@@ -37,6 +37,14 @@ namespace Golf.Code.UI_s
         public List<UI> UIs = new List<UI>();
 
         /// <summary>
+        /// The constructor for the GolfDrawer class.
+        /// </summary>
+        public GolfDrawer()
+        {
+
+        }
+
+        /// <summary>
         /// Called by the paint event on the form. Draws the current status of the golf card game.
         /// </summary>
         /// <param name="G"></param>

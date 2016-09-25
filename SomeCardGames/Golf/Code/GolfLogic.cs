@@ -31,6 +31,14 @@ namespace Golf.Code
         public Deck TheDeck;
 
         /// <summary>
+        /// The constructor for the GolfLogic class.
+        /// </summary>
+        public GolfLogic()
+        {
+
+        }
+
+        /// <summary>
         /// Creates and deals in all of the players for this game.
         /// </summary>
         private void DealInPlayers()
