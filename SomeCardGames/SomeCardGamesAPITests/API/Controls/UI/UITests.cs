@@ -34,7 +34,7 @@ namespace SomeCardGamesAPI.API.Controls.UI.Tests
             try
             {
                 Form a = this.GenerateForm(true);
-                CardBox b = new CardBox()
+                CardBox b = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(10, 10), new System.Drawing.Point(10, 10));
             }
             catch (Exception e)
             {
