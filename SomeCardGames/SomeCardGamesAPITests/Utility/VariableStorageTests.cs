@@ -7,14 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using SomeCardGamesAPI.Utility;
-
 namespace SomeCardGamesAPI.Utility.Tests
 {
     [TestClass()]
     public class VariableStorageTests
     {
         [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void CollectFormTest()
         {
             Error.ErrorReporter.IsUnitTesting = true;

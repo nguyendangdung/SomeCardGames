@@ -35,7 +35,7 @@ namespace SomeCardGamesAPI.Error
             {
                 if (IsUnitTesting)
                 {
-                    Assert.Fail("There is a bug!");
+                    throw ex;
                 }
 
                 string Report = GenerateReport(ex);
@@ -67,7 +67,14 @@ namespace SomeCardGamesAPI.Error
 #pragma warning restore CS0168 // Variable is declared but never used
             {
                 //Eat it
-                Assert.Fail();
+                if (IsUnitTesting)
+                {
+                    throw ex;
+                }
+                else
+                {
+                    //Eat it
+                }
             }
         }
 
