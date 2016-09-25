@@ -1,8 +1,6 @@
 ﻿using System.Configuration;
 using System.Drawing;
 
-using SomeCardGamesAPI.Properties;
-
 namespace SomeCardGamesAPI.API
 {
     /// <summary>

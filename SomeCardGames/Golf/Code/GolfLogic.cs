@@ -1,12 +1,11 @@
-﻿using SomeCardGamesAPI.API;
+﻿using Golf.Code.UI_s;
+using Golf.Properties;
+using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Configuration;
-
-using Golf.Properties;
-using Golf.Code.UI_s;
+using System.Drawing;
 
 namespace Golf.Code
 {
@@ -35,7 +34,6 @@ namespace Golf.Code
         /// </summary>
         public GolfLogic()
         {
-
         }
 
         /// <summary>

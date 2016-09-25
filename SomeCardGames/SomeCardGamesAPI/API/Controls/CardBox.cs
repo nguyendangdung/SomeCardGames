@@ -1,7 +1,6 @@
 ﻿using SomeCardGamesAPI.Error;
 using System;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace SomeCardGamesAPI.API.Controls
 {
@@ -54,7 +53,7 @@ namespace SomeCardGamesAPI.API.Controls
         /// </summary>
         /// <param name="old"></param>
         public CardBox(CardBox old)
-        { 
+        {
             try
             {
                 this.Image = old.Image;

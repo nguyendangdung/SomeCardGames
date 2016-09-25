@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Golf.Code.UI_s.Main.Controls;
-
-using SomeCardGamesAPI.API;
+﻿using Golf.Code.UI_s.Main.Controls;
 using SomeCardGamesAPI.API.Controls;
 using SomeCardGamesAPI.API.Controls.UI;
-using SomeCardGamesAPI.Utility;
 using SomeCardGamesAPI.Error;
+using SomeCardGamesAPI.Utility;
+using System;
 
 namespace Golf.Code.UI_s.Main
 {

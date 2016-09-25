@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-
-using Golf.Code.UI_s.Main;
-
+﻿using Golf.Code.UI_s.Main;
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.API.Controls.UI;
 using SomeCardGamesAPI.Error;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace Golf.Code.UI_s
 {
@@ -41,7 +39,6 @@ namespace Golf.Code.UI_s
         /// </summary>
         public GolfDrawer()
         {
-
         }
 
         /// <summary>

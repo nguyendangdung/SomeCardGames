@@ -1,10 +1,9 @@
-﻿using System;
+﻿using SomeCardGamesAPI.API.Controls.UI.Comparators;
+using SomeCardGamesAPI.Error;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-
-using SomeCardGamesAPI.API.Controls.UI.Comparators;
-using SomeCardGamesAPI.Error;
 
 namespace SomeCardGamesAPI.API.Controls.UI
 {
@@ -59,7 +58,6 @@ namespace SomeCardGamesAPI.API.Controls.UI
         /// </summary>
         public UI()
         {
-
         }
 
         /// <summary>
