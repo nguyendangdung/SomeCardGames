@@ -19,12 +19,10 @@ namespace SomeCardGames
         /// <summary>
         /// Called by the form, to do some start up stuff.
         /// </summary>
-        public void Startup(object Form)
+        public void Startup()
         {
             try
             {
-                throw new Exception("Test");
-                VariableStorage.CollectForm(Form);
                 LoadedCardResources.LoadResources();
                 this.SetupForm();
             }

@@ -18,17 +18,18 @@ namespace SomeCardGamesAPI.Utility
             try
             {
                 Size a = new Size(Screen.FromControl(TheForm).WorkingArea.Width, Screen.FromControl(TheForm).WorkingArea.Height);
+                
                 return a;
             }
             catch (Exception e)
             {
-                ErrorReporter.Report(e);
+                //Oops
                 return new Size();
             }
         }
 
         /// <summary>
-        /// Returns the scale that we should use when drawing the height of objects. Returns 1 if an error occured.
+        /// Returns the scale that we should use when drawing the height of objects. Returns 1 if an error occurred.
         /// </summary>
         /// <param name="TheForm"></param>
         /// <returns></returns>

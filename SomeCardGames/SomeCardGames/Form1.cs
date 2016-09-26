@@ -39,7 +39,7 @@ namespace SomeCardGames
         {
             try
             {
-                main.Startup(this);
+                main.Startup();
             }
             catch (Exception TheException)
             {
