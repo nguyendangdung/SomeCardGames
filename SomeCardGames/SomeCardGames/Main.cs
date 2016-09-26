@@ -23,6 +23,7 @@ namespace SomeCardGames
         {
             try
             {
+                throw new Exception("Test");
                 VariableStorage.CollectForm(Form);
                 LoadedCardResources.LoadResources();
                 this.SetupForm();
@@ -30,14 +31,6 @@ namespace SomeCardGames
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
-                try
-                {
-                    throw new Exception("Test", TheException);
-                }
-                catch (Exception LeException)
-                {
-                    ErrorReporter.Report(LeException);
-                }
             }
         }
 
