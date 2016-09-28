@@ -1,11 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SomeCardGamesAPI.API.Controls.UI;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using SomeCardGamesAPI.API.Controls.UI;
+using SomeCardGamesAPI.Error;
+using SomeCardGamesAPI.Utility;
 
 namespace SomeCardGamesAPI.API.Controls.UI.Tests
 {
@@ -18,6 +22,7 @@ namespace SomeCardGamesAPI.API.Controls.UI.Tests
             try
             {
                 //Normal Path
+                ErrorReporter.IsUnitTesting = true;
                 UI a;
                 a = new UI();
                 //
@@ -29,10 +34,11 @@ namespace SomeCardGamesAPI.API.Controls.UI.Tests
         }
 
         [TestMethod()]
-        public void ConstructMeNormalTest()
+        public void ConstructMeTest()
         {
             try
             {
+                ErrorReporter.IsUnitTesting = true;
                 Form a = this.GenerateForm(true);
                 CardBox b = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(10, 10), new System.Drawing.Point(10, 10));
             }
@@ -50,6 +56,7 @@ namespace SomeCardGamesAPI.API.Controls.UI.Tests
         {
             try
             {
+                ErrorReporter.IsUnitTesting = true;
                 if (Normal)
                 {
                     Form a;
@@ -72,15 +79,30 @@ namespace SomeCardGamesAPI.API.Controls.UI.Tests
         }
 
         [TestMethod()]
-        public void DrawAllTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void AddCardBoxTest()
         {
-            Assert.Fail();
+            try
+            {
+                ErrorReporter.IsUnitTesting = true;
+
+                UI a = new UI();
+
+                CardBox[] controls = new CardBox[1];
+                CardBox card = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(10, 10), new System.Drawing.Point(100, 100));
+
+                controls[0] = card;
+
+                a.ConstructMe((object)new Form(), controls, true);
+
+                if (a == null | a.Controls[0] != card)
+                {
+                    Assert.Fail();
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
     }
 }
