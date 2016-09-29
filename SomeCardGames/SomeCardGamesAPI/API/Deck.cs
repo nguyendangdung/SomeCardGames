@@ -95,11 +95,11 @@ namespace SomeCardGamesAPI.API
 
                 if (WithJokers)
                 {
-                    stop = 53;
+                    stop = 55;
                 }
                 else
                 {
-                    stop = 51;
+                    stop = 53;
                 }
 
                 while (i != stop)

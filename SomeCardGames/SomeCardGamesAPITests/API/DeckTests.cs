@@ -12,15 +12,28 @@ namespace SomeCardGamesAPI.API.Tests
     public class DeckTests
     {
         [TestMethod()]
-        public void DeckTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void GetSizeTest()
         {
-            Assert.Fail();
+            try
+            {
+                int i = 1;
+
+                while (i != 10)
+                {
+                    Deck a = new Deck(false, i);
+
+                    if (a.GetSize() != i * 52)
+                    {
+                        Assert.Fail("Deck size was incorrect");
+                        return;
+                    }
+                    i++;
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
