@@ -26,7 +26,7 @@ namespace SomeCardGamesAPI.API
         {
             try
             {
-                if (TheCard > 53 | TheCard < 1)
+                if (TheCard > 54 | TheCard < 1)
                 {
                     throw new Exception(ErrorStorage.CardNotFoundException);
                 }

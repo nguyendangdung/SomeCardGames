@@ -57,7 +57,7 @@ namespace SomeCardGamesAPI.API
         }
 
         /// <summary>
-        /// Returns the top card if there is one availible, and removes it from the deck. Returns null if no card availible.
+        /// Returns the top card if there is one available, and removes it from the deck. Returns null if no card available.
         /// </summary>
         /// <returns></returns>
         public Card GetTop()

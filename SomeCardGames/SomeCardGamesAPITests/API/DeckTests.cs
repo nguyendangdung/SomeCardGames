@@ -39,7 +39,20 @@ namespace SomeCardGamesAPI.API.Tests
         [TestMethod()]
         public void GetTopTest()
         {
-            Assert.Fail();
+            try
+            {
+                Deck a = new Deck(true, 2);
+                int Card = a.Cards[0].WhatCard;
+
+                if (a.GetTop().WhatCard != Card)
+                {
+                    Assert.Fail("Top card method is broken.");
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
