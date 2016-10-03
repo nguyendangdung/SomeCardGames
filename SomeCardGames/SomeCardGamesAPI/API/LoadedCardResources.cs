@@ -58,6 +58,7 @@ namespace SomeCardGamesAPI.API
         {
             try
             {
+                CardResources.Clear();
                 Back = MainResources870x1200.Resources.back;
                 CardResources.Add(MainResources870x1200.Resources._1);
                 CardResources.Add(MainResources870x1200.Resources._2);
@@ -127,6 +128,7 @@ namespace SomeCardGamesAPI.API
         {
             try
             {
+                CardResources.Clear();
                 Back = MainResources960x1440.Resources.back;
                 CardResources.Add(MainResources960x1440.Resources._1);
                 CardResources.Add(MainResources960x1440.Resources._2);
@@ -229,6 +231,7 @@ namespace SomeCardGamesAPI.API
         {
             try
             {
+                CardResources.Clear();
                 Back = MainResources.MainResources.back;
                 CardResources.Add(MainResources.MainResources._1);
                 CardResources.Add(MainResources.MainResources._2);

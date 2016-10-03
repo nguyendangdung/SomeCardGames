@@ -26,7 +26,29 @@ namespace SomeCardGamesAPI.API.Tests
         [TestMethod()]
         public void GetBackTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                LoadedCardResources.LoadResources870x1200();
+                if (LoadedCardResources.GetBack() == null)
+                {
+                    Assert.Fail("Something is wrong");
+                }
+                LoadedCardResources.LoadResources960x1440();
+                if (LoadedCardResources.GetBack() == null)
+                {
+                    Assert.Fail("Something is wrong");
+                }
+                LoadedCardResources.LoadResourcesHighestRes();
+                if (LoadedCardResources.GetBack() == null)
+                {
+                    Assert.Fail("Something is wrong");
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
