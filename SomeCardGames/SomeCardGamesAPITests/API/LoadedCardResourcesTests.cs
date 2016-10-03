@@ -126,12 +126,6 @@ namespace SomeCardGamesAPI.API.Tests
         }
 
         [TestMethod()]
-        public void LoadResourcesTest1()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void LoadResourcesHighestResTest()
         {
             try
