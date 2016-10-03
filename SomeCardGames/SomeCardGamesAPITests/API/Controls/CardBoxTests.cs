@@ -61,7 +61,16 @@ namespace SomeCardGamesAPI.API.Controls.Tests
         [TestMethod()]
         public void ConstructMeTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                CardBox a = new CardBox();
+                a.ConstructMe(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(100, 100), new System.Drawing.Point(10, 10));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
