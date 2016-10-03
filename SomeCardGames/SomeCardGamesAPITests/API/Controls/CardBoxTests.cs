@@ -14,19 +14,48 @@ namespace SomeCardGamesAPI.API.Controls.Tests
         [TestMethod()]
         public void CardBoxTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                CardBox a = new CardBox();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
+        
         [TestMethod()]
         public void CardBoxTest1()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                CardBox a = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(100, 100), new System.Drawing.Point(10, 10));
+                CardBox b = new CardBox(a);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void CardBoxTest2()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                CardBox a = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(100, 100), new System.Drawing.Point(10, 10));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
