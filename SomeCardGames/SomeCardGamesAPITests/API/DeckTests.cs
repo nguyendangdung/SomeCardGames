@@ -60,6 +60,7 @@ namespace SomeCardGamesAPI.API.Tests
         {
             try
             {
+                Error.ErrorReporter.IsUnitTesting = true;
                 Deck a = new Deck(true, 1);
                 a.AddCards(true);
 

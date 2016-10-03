@@ -32,13 +32,37 @@ namespace SomeCardGamesAPI.API.Tests
         [TestMethod()]
         public void LoadResources870x1200Test()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                LoadedCardResources.LoadResources870x1200();
+                if (LoadedCardResources.GetResource(20) == null)
+                {
+                    Assert.Fail("Something is wrong");
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void LoadResources960x1440Test()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                LoadedCardResources.LoadResources960x1440();
+                if (LoadedCardResources.GetResource(20) == null)
+                {
+                    Assert.Fail("Something is wrong");
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
@@ -50,7 +74,19 @@ namespace SomeCardGamesAPI.API.Tests
         [TestMethod()]
         public void LoadResourcesHighestResTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                LoadedCardResources.LoadResourcesHighestRes();
+                if (LoadedCardResources.GetResource(20) == null)
+                {
+                    Assert.Fail("Something is wrong");
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
     }
 }
