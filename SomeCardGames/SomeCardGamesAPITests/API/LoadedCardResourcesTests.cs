@@ -12,15 +12,53 @@ namespace SomeCardGamesAPI.API.Tests
     public class LoadedCardResourcesTests
     {
         [TestMethod()]
-        public void LoadResourcesTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void GetResourceTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                LoadedCardResources.LoadResources870x1200();
+
+                int i = 0;
+
+                while (i != 54)
+                {
+                    if (LoadedCardResources.GetResource(i) == null)
+                    {
+                        Assert.Fail("Something went wrong");
+                    }
+                    i++;
+                }
+
+                i = 0;
+                LoadedCardResources.LoadResources960x1440();
+
+                while (i != 54)
+                {
+                    if (LoadedCardResources.GetResource(i) == null)
+                    {
+                        Assert.Fail("Something went wrong");
+                    }
+                    i++;
+                }
+
+                i = 0;
+                LoadedCardResources.LoadResourcesHighestRes();
+
+                while (i != 54)
+                {
+                    if (LoadedCardResources.GetResource(i) == null)
+                    {
+                        Assert.Fail("Something went wrong");
+                    }
+                    i++;
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
