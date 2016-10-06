@@ -204,6 +204,7 @@ namespace SomeCardGamesAPI.Error
                 int ExceptionCount = InnerException;
 
                 #region CollectData
+
                 Report.Add("\r\n");
                 Report.Add("Inner Exception # " + InnerException.ToString() + ":");
                 Report.Add("Error code: " + ex.HResult);
@@ -250,7 +251,7 @@ namespace SomeCardGamesAPI.Error
                     Report.Add(GenerateReportForException(ex, ExceptionCount));
                 }
 
-                #endregion
+                #endregion CollectData
 
                 if (ex.GetType() != null)
                 {

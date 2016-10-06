@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SomeCardGamesAPI.Utility;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SomeCardGamesAPI.Utility.Tests
@@ -26,7 +21,7 @@ namespace SomeCardGamesAPI.Utility.Tests
             //
 
             //Tests if the form was null, how we handle it
-           VariableStorage.CollectForm(null);
+            VariableStorage.CollectForm(null);
             //
         }
     }

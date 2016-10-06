@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SomeCardGamesAPI.API.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SomeCardGamesAPI.API.Controls.Tests
 {
@@ -26,7 +21,6 @@ namespace SomeCardGamesAPI.API.Controls.Tests
             }
         }
 
-        
         [TestMethod()]
         public void CardBoxTest1()
         {

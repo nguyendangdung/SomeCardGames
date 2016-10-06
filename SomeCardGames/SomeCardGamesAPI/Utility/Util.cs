@@ -19,7 +19,7 @@ namespace SomeCardGamesAPI.Utility
             try
             {
                 Size a = new Size(Screen.FromControl(TheForm).WorkingArea.Width, Screen.FromControl(TheForm).WorkingArea.Height);
-                
+
                 return a;
             }
             catch (Exception e)
