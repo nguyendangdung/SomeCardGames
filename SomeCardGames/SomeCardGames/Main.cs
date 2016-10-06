@@ -25,6 +25,7 @@ namespace SomeCardGames
             {
                 LoadedCardResources.LoadResources();
                 this.SetupForm();
+                VariableStorage.TheForm.Text = VariableStorage.GetRandomTitle();
             }
             catch (Exception TheException)
             {

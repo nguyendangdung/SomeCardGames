@@ -1,5 +1,6 @@
 ﻿using SomeCardGamesAPI.Error;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace SomeCardGamesAPI.Utility
@@ -13,6 +14,8 @@ namespace SomeCardGamesAPI.Utility
         /// The main form.
         /// </summary>
         public static Form TheForm;
+
+        public static Random random = new Random();
 
         /// <summary>
         /// If true, then this program is currently running a card game.
@@ -96,6 +99,25 @@ namespace SomeCardGamesAPI.Utility
             catch (Exception TheException)
             {
                 ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// Gets a random title from a list of titles.
+        /// </summary>
+        /// <returns></returns>
+        public static string GetRandomTitle()
+        {
+            try
+            {
+                string Unformatted = SomeCardGamesAPI.Resources.Titles;
+                List<string> Options = Util.ParseString(Unformatted);
+                return Options[random.Next(Options.Count - 1)];
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return "Error";
             }
         }
     }
