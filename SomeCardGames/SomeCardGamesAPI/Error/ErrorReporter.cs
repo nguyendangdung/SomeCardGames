@@ -173,6 +173,8 @@ namespace SomeCardGamesAPI.Error
                     //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too corrupt, this would fail.
                 }
 
+                Report.Add(GetReflectionData(ex));
+
                 #endregion OtherInformation
 
                 return ConvertListToString(Report);
@@ -321,8 +323,7 @@ namespace SomeCardGamesAPI.Error
 
                     if (ex.TargetSite != null)
                     {
-                        object log = ex.TargetSite;
-                        Report.Add(GetDebugDataFromObject(log));
+                        Report.Add(GetDebugDataFromObject(ex.TargetSite));
                     }
 
                     Report.Add("\r\n");
@@ -330,8 +331,12 @@ namespace SomeCardGamesAPI.Error
 
                     if (ex.Data != null)
                     {
-                        object log = ex.Data;
                         Report.Add(GetDebugDataFromObject(ex.Data));
+                    }
+
+                    if (ex.GetType() != null)
+                    {
+                        Report.Add(GetDebugDataFromObject(ex.GetType()));
                     }
 
                     return ConvertListToString(Report);
