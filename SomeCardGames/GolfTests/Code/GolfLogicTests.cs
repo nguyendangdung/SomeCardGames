@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Golf.Code.Tests
 {
@@ -8,7 +9,16 @@ namespace Golf.Code.Tests
         [TestMethod()]
         public void GolfLogicTest()
         {
-            Assert.Fail();
+            try
+            {
+                SomeCardGamesAPI.Error.ErrorReporter.IsUnitTesting = true;
+                GolfLogic a;
+                a = new GolfLogic();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]

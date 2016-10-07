@@ -64,6 +64,10 @@
       <Project>{E8591A9D-C8D6-4CC3-86AF-54A9F695CB0D}</Project>
       <Name>Golf</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SomeCardGamesAPI\SomeCardGamesAPI.csproj">
+      <Project>{bfbb452c-d5aa-4fa4-87f3-215f8f78b566}</Project>
+      <Name>SomeCardGamesAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
