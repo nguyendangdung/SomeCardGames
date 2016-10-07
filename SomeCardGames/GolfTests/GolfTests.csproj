@@ -54,7 +54,6 @@
   <ItemGroup>
     <Compile Include="Code\GolfEventHandlerTests.cs" />
     <Compile Include="Code\GolfLogicTests.cs" />
-    <Compile Include="Code\GolfPlayerTests.cs" />
     <Compile Include="Code\UI%27s\GolfDrawerTests.cs" />
     <Compile Include="Code\UI%27s\Main\Controls\MiddleStackTests.cs" />
     <Compile Include="Code\UI%27s\Main\MainUITests.cs" />
