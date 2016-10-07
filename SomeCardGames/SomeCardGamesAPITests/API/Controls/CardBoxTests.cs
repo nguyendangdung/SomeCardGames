@@ -68,12 +68,6 @@ namespace SomeCardGamesAPI.API.Controls.Tests
         }
 
         [TestMethod()]
-        public void DrawTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void WasIClickedTest()
         {
             Assert.Fail();
@@ -81,12 +75,6 @@ namespace SomeCardGamesAPI.API.Controls.Tests
 
         [TestMethod()]
         public void OnClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void PreDrawTest()
         {
             Assert.Fail();
         }
