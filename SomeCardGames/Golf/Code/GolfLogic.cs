@@ -168,4 +168,4 @@ namespace Golf.Code
             return new Settings();
         }
     }
-}
+} 
