@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Golf.Code;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Golf.Code.Tests
 {
@@ -14,13 +9,33 @@ namespace Golf.Code.Tests
         [TestMethod()]
         public void GolfLogicTest()
         {
-            Assert.Fail();
+            try
+            {
+                SomeCardGamesAPI.Error.ErrorReporter.IsUnitTesting = true;
+                GolfLogic a;
+                a = new GolfLogic();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void StartTest()
         {
-            Assert.Fail();
+            try
+            {
+                SomeCardGamesAPI.Error.ErrorReporter.IsUnitTesting = true;
+                SomeCardGamesAPI.Utility.VariableStorage.TheForm = new System.Windows.Forms.Form();
+                GolfLogic a;
+                a = new GolfLogic();
+                a.Start();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]

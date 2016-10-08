@@ -1,5 +1,6 @@
 ﻿using SomeCardGamesAPI.Error;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -18,7 +19,7 @@ namespace SomeCardGamesAPI.Utility
             try
             {
                 Size a = new Size(Screen.FromControl(TheForm).WorkingArea.Width, Screen.FromControl(TheForm).WorkingArea.Height);
-                
+
                 return a;
             }
             catch (Exception e)
@@ -47,7 +48,7 @@ namespace SomeCardGamesAPI.Utility
         }
 
         /// <summary>
-        /// Returns the scale that we should use when drawing the width of objects. Returns 1 if an error occured.
+        /// Returns the scale that we should use when drawing the width of objects. Returns 1 if an error occurred.
         /// </summary>
         /// <param name="TheForm"></param>
         /// <returns></returns>
@@ -61,6 +62,32 @@ namespace SomeCardGamesAPI.Utility
             {
                 ErrorReporter.Report(TheException);
                 return 1;
+            }
+        }
+
+        /// <summary>
+        /// Parses a null ended string into a list, assuming the string is something like an entire file in one line or something.
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> ParseString(string Parse)
+        {
+            try
+            {
+                List<string> Ret = new List<string>();
+
+                string[] EscapeSequences = { "\r\n", "\n", "\r", };
+
+                foreach (string item in Parse.Split(EscapeSequences, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    Ret.Add(item);
+                }
+
+                return Ret;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return null;
             }
         }
     }

@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SomeCardGamesAPI.API;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SomeCardGamesAPI.API.Tests
 {
@@ -58,7 +53,45 @@ namespace SomeCardGamesAPI.API.Tests
         [TestMethod()]
         public void AddCardsTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                Deck a = new Deck(true, 1);
+                a.AddCards(true);
+
+                Card b = new Card(1);
+                int i = 1;
+                int NumberOfCurrentCard = 0;
+
+                while (i != 55)
+                {
+                    int ii = 0;
+
+                    while (ii != a.GetSize())
+                    {
+                        if (a.Cards[ii].WhatCard == b.WhatCard)
+                        {
+                            NumberOfCurrentCard++;
+                        }
+                        ii++;
+                    }
+                    if (NumberOfCurrentCard != 2)
+                    {
+                        Assert.Fail("Not all of the cards were properly added");
+                    }
+                    else
+                    {
+                        NumberOfCurrentCard = 0;
+                    }
+
+                    b.WhatCard = i;
+                    i++;
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]

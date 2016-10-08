@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SomeCardGamesAPI.API.Controls.UI.Comparators;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SomeCardGamesAPI.API.Controls.UI.Comparators.Tests
 {
@@ -14,7 +9,23 @@ namespace SomeCardGamesAPI.API.Controls.UI.Comparators.Tests
         [TestMethod()]
         public void CompareTest()
         {
-            Assert.Fail();
+            try
+            {
+                CardBox a = new CardBox();
+                a.DrawOrder = 1;
+                CardBox b = new CardBox();
+                b.DrawOrder = 2;
+                CardBoxComparator c;
+                c = new CardBoxComparator();
+                if (c.Compare(a, b) > 1)
+                {
+                    Assert.Fail();
+                }
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using Octokit;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -172,6 +173,8 @@ namespace SomeCardGamesAPI.Error
                     //Needed to catch this, as it goes outside of this class. If variable storage, or Util is too corrupt, this would fail.
                 }
 
+                Report.Add(GetReflectionData(ex));
+
                 #endregion OtherInformation
 
                 return ConvertListToString(Report);
@@ -200,20 +203,46 @@ namespace SomeCardGamesAPI.Error
 
                 int ExceptionCount = InnerException;
 
+                #region CollectData
+
                 Report.Add("\r\n");
                 Report.Add("Inner Exception # " + InnerException.ToString() + ":");
                 Report.Add("Error code: " + ex.HResult);
-                Report.Add("Error message: " + ex.Message);
-                Report.Add("Exception hash code: " + ex.GetHashCode());
-                Report.Add("Help link: " + ex.HelpLink);
-                Report.Add("Method: " + ex.TargetSite.Name);
-                Report.Add("Method hash code: " + ex.TargetSite.GetMethodBody().GetHashCode());
-                Report.Add("Source: " + ex.Source);
+
+                if (ex.Message != null)
+                {
+                    Report.Add("Error message: " + ex.Message);
+                }
+
+                if (ex.HelpLink != null)
+                {
+                    Report.Add("Help link: " + ex.HelpLink);
+                }
+
+                if (ex.TargetSite != null)
+                {
+                    Report.Add("Method: " + ex.TargetSite.Name);
+                }
+
+                if (ex.Source != null)
+                {
+                    Report.Add("Source: " + ex.Source);
+                }
+
                 Report.Add("\r\n");
                 Report.Add("Stack trace: ");
-                Report.Add(ex.StackTrace);
+
+                if (ex.StackTrace != null)
+                {
+                    Report.Add(ex.StackTrace);
+                }
+
                 Report.Add("\r\n");
-                Report.Add("Type: " + ex.GetType());
+
+                if (ex.GetType() != null)
+                {
+                    Report.Add("Type: " + ex.GetType());
+                }
 
                 ExceptionCount++;
 
@@ -222,13 +251,113 @@ namespace SomeCardGamesAPI.Error
                     Report.Add(GenerateReportForException(ex, ExceptionCount));
                 }
 
+                #endregion CollectData
+
+                if (ex.GetType() != null)
+                {
+                    Report.Add(GetReflectionData(ex));
+                }
+
                 return ConvertListToString(Report);
             }
             catch (Exception TheException)
             {
-                ErrorReporter.Report(TheException);
                 Debug.Assert(false);
                 return "Error while generating inner exception data";
+            }
+        }
+
+        /// <summary>
+        /// Gets the kind of debug data you would see in visual studio on a object.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        private static string GetDebugDataFromObject(Object obj)
+        {
+            try
+            {
+                List<string> Report = new List<string>();
+
+                Report.Add("\r\n");
+
+                foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(obj))
+                {
+                    string name = descriptor.Name;
+                    object value = descriptor.GetValue(obj);
+
+                    Report.Add("\r\n");
+
+                    Report.Add("Object: " + name);
+                    Report.Add(value.ToString());
+
+                    Report.Add("\r\n");
+                }
+
+                return ConvertListToString(Report);
+            }
+            catch (Exception e)
+            {
+                if (IsUnitTesting)
+                {
+                    Assert.Fail("We screwed up in GetDebugDataFromObject()");
+                    return null;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Gets a lot of incredibly in depth information.
+        /// </summary>
+        /// <returns></returns>
+        private static string GetReflectionData(Exception ex)
+        {
+            try
+            {
+                if (ex.GetType() != null)
+                {
+                    List<string> Report = new List<string>();
+
+                    Report.Add("\r\n");
+                    Report.Add("Method data:");
+
+                    if (ex.TargetSite != null)
+                    {
+                        Report.Add(GetDebugDataFromObject(ex.TargetSite));
+                    }
+
+                    Report.Add("\r\n");
+                    Report.Add("Other data:");
+
+                    if (ex.Data != null)
+                    {
+                        Report.Add(GetDebugDataFromObject(ex.Data));
+                    }
+
+                    if (ex.GetType() != null)
+                    {
+                        Report.Add(GetDebugDataFromObject(ex.GetType()));
+                    }
+
+                    return ConvertListToString(Report);
+                }
+                else
+                {
+                    return "Reflection data is null";
+                }
+            }
+            catch (Exception e)
+            {
+                if (IsUnitTesting)
+                {
+                    Assert.Fail("We screwed up in GetReflectionData()");
+                    return "oops";
+                }
+                else
+                {
+                    return "oops";
+                }
             }
         }
 

@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SomeCardGamesAPI.API.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SomeCardGamesAPI.API.Controls.Tests
 {
@@ -14,31 +9,62 @@ namespace SomeCardGamesAPI.API.Controls.Tests
         [TestMethod()]
         public void CardBoxTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                CardBox a = new CardBox();
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void CardBoxTest1()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                CardBox a = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(100, 100), new System.Drawing.Point(10, 10));
+                CardBox b = new CardBox(a);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void CardBoxTest2()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                CardBox a = new CardBox(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(100, 100), new System.Drawing.Point(10, 10));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
         public void ConstructMeTest()
         {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void DrawTest()
-        {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+                CardBox a = new CardBox();
+                a.ConstructMe(SomeCardGamesAPITests.TestResources.TriangleGrid, new System.Drawing.Size(100, 100), new System.Drawing.Point(10, 10));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail(e.Message);
+            }
         }
 
         [TestMethod()]
@@ -49,12 +75,6 @@ namespace SomeCardGamesAPI.API.Controls.Tests
 
         [TestMethod()]
         public void OnClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void PreDrawTest()
         {
             Assert.Fail();
         }
