@@ -90,5 +90,32 @@ namespace SomeCardGamesAPI.Utility
                 return null;
             }
         }
+
+        /// <summary>
+        /// Returns a new version of the previously passed in list, that has been randomized.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static List<T> Randomize<T>(List<T> list)
+        {
+            try
+            {
+                List<T> randomizedList = new List<T>();
+                Random rnd = new Random(1999);
+                while (list.Count > 0)
+                {
+                    int index = rnd.Next(0, list.Count); //pick a random item from the master list
+                    randomizedList.Add(list[index]); //place it at the end of the randomized list
+                    list.RemoveAt(index);
+                }
+                return randomizedList;
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+                return null;
+            }
+        }
     }
 }

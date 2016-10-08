@@ -1,6 +1,9 @@
-﻿using SomeCardGamesAPI.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
+using SomeCardGamesAPI.Error;
+using SomeCardGamesAPI.Utility;
 
 namespace SomeCardGamesAPI.API
 {
@@ -121,16 +124,7 @@ namespace SomeCardGamesAPI.API
         {
             try
             {
-                int n = this.Cards.Count;
-                int k;
-                while (n > 1)
-                {
-                    n--;
-                    k = rng.Next(n + 1);
-                    Card value = this.Cards[k];
-                    this.Cards[k] = this.Cards[n];
-                    this.Cards[n] = value;
-                }
+                this.Cards = Util.Randomize<Card>(Cards);
             }
             catch (Exception TheException)
             {

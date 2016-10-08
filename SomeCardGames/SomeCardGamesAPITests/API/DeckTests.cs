@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace SomeCardGamesAPI.API.Tests
 {
@@ -97,7 +98,65 @@ namespace SomeCardGamesAPI.API.Tests
         [TestMethod()]
         public void ShuffleTest()
         {
-            Assert.Fail();
+            try
+            {
+                Error.ErrorReporter.IsUnitTesting = true;
+
+                Deck a = new Deck(true, 1);
+
+                Deck b = new Deck(true, 1);
+                b.Cards = new List<Card>(a.Cards);
+
+                b.Shuffle();
+
+                if (this.Are2ListsTheSame(a.Cards, b.Cards))
+                {
+                    Assert.Fail("The shuffle failed to work properly.");
+                }
+
+
+                //Assert.AreNotEqual(b.Cards, a.Cards);
+            }
+            catch (Exception e)
+            {
+                int i = 0;
+                Assert.Fail(e.Message);
+            }
+        }
+
+        /// <summary>
+        /// An exception will occur if the lists are not the exact same size.
+        /// </summary>
+        /// <param name="One"></param>
+        /// <param name="Two"></param>
+        /// <returns></returns>
+        private bool Are2ListsTheSame(List<Card> One, List<Card> Two)
+        {
+            try
+            {
+                if (One.Count != Two.Count)
+                {
+                    Assert.Fail("The lists do not have identical sizes");
+                }
+
+                int i = 0;
+
+                foreach (Card item in One)
+                {
+                    if (Two[i] != item)
+                    {
+                        return false;
+                    }
+                    i++;
+                }
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("There is an error in the test code");
+                return true;
+            }
         }
     }
 }
