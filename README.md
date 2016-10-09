@@ -4,6 +4,15 @@
 
 Built with [Visual Studio](https://www.visualstudio.com/), Some Card Games is a [C#](https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx) application with the power of the .net framework behind it, that allows you to play a few card games.
 
+#**License**
+
+1. Don't use this code, and claim it as your own.
+  a. If you provide credit to this project, you are fine.
+2. Don't make money off of this code
+3. Don't do anything illegal with this.
+4. Include this exact same license on your own project, except always direct credit torwards this project.
+5. I reserve the right to change this license at any time, and by using this software and code, you agree to these terms.
+
 #**Development Versions**
 
 Release versions are not availible currently, but if you desperately want to see where I am at in developing this, you can compile it yourself and see. However, due to security reasons I removed the Secure.cs file, which contains sensitive information. If you are compiling it yourself, then you will need to remove the reference to that file. The program will work fine without it, it just won't auto report the errors to this page.
