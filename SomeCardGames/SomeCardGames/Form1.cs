@@ -81,7 +81,6 @@ namespace SomeCardGames
             try
             {
                 this.main.StartNewCardGame(new GolfLogic());
-
             }
             catch (Exception TheException)
             {
@@ -106,7 +105,6 @@ namespace SomeCardGames
         {
             try
             {
-
             }
             catch (Exception TheException)
             {
@@ -118,7 +116,6 @@ namespace SomeCardGames
         {
             try
             {
-
             }
             catch (Exception TheException)
             {
@@ -130,7 +127,6 @@ namespace SomeCardGames
         {
             try
             {
-
             }
             catch (Exception TheException)
             {
@@ -142,7 +138,6 @@ namespace SomeCardGames
         {
             try
             {
-
             }
             catch (Exception TheException)
             {
@@ -154,7 +149,6 @@ namespace SomeCardGames
         {
             try
             {
-
             }
             catch (Exception TheException)
             {
