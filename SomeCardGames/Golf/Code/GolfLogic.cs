@@ -167,5 +167,37 @@ namespace Golf.Code
         {
             return new Settings();
         }
+
+        /// <summary>
+        /// Launches a menu that allows the user to specify what to load.
+        /// </summary>
+        public void LaunchLoadMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Launches a menu that allows the user to adjust some options.
+        /// </summary>
+        public void LaunchOptions()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Launches a menu that allows the user to save the current game.
+        /// </summary>
+        public void LaunchSaveMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Launches a menu that allows the user to create a new game.
+        /// </summary>
+        public void LaunchNewMenu()
+        {
+            throw new NotImplementedException();
+        }
     }
 } 

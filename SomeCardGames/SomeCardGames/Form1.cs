@@ -99,5 +99,53 @@ namespace SomeCardGames
                 ErrorReporter.Report(TheException);
             }
         }
+
+        private void golfToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void golfToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void golfToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void universalOptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
     }
 }

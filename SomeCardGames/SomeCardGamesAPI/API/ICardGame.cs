@@ -29,5 +29,25 @@ namespace SomeCardGamesAPI.API
         /// </summary>
         /// <returns></returns>
         SettingsBase GetSettings();
+
+        /// <summary>
+        /// This is called when the user wants to load a game of whatever card game is inheriting from this.
+        /// </summary>
+        void LaunchLoadMenu();
+
+        /// <summary>
+        /// This is called when the user wants to load the options of a game of whatever card game is inheriting from this.
+        /// </summary>
+        void LaunchOptions();
+
+        /// <summary>
+        /// This is called when the user wants to save a game of whatever card game is inheriting from this.
+        /// </summary>
+        void LaunchSaveMenu();
+
+        /// <summary>
+        /// This is called when the user wants to load a new game of whatever card game is inheriting from this.
+        /// </summary>
+        void LaunchNewMenu();
     }
 }
