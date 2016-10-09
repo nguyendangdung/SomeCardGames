@@ -89,6 +89,8 @@
             this.newToolStripMenuItem6.Name = "newToolStripMenuItem6";
             this.newToolStripMenuItem6.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem6.Text = "New";
+            this.newToolStripMenuItem6.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.newToolStripMenuItem6_DropDownItemClicked);
+            this.newToolStripMenuItem6.Click += new System.EventHandler(this.newToolStripMenuItem6_Click);
             // 
             // golfToolStripMenuItem2
             // 
@@ -104,6 +106,7 @@
             this.loadToolStripMenuItem5.Name = "loadToolStripMenuItem5";
             this.loadToolStripMenuItem5.Size = new System.Drawing.Size(45, 20);
             this.loadToolStripMenuItem5.Text = "Load";
+            this.loadToolStripMenuItem5.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.loadToolStripMenuItem5_DropDownItemClicked);
             // 
             // optionsToolStripMenuItem5
             // 
@@ -119,6 +122,7 @@
             this.saveToolStripMenuItem5.Name = "saveToolStripMenuItem5";
             this.saveToolStripMenuItem5.Size = new System.Drawing.Size(43, 20);
             this.saveToolStripMenuItem5.Text = "Save";
+            this.saveToolStripMenuItem5.Click += new System.EventHandler(this.saveToolStripMenuItem5_Click);
             // 
             // loadToolStripMenuItem6
             // 

@@ -9,12 +9,7 @@ namespace SomeCardGamesAPI.API
     public interface ICardGame
     {
         /// <summary>
-        /// Called by the main form when the new card game button is clicked, and a card game is selected.
-        /// </summary>
-        void Start();
-
-        /// <summary>
-        /// Called by the main form when the new card game button is clicked, and this card game was running previously.
+        /// Called by the main form when the new, load, or exit button is clicked, and this card game was running previously.
         /// </summary>
         void Stop();
 
@@ -33,21 +28,21 @@ namespace SomeCardGamesAPI.API
         /// <summary>
         /// This is called when the user wants to load a game of whatever card game is inheriting from this.
         /// </summary>
-        void LaunchLoadMenu();
+        void Load();
 
         /// <summary>
         /// This is called when the user wants to load the options of a game of whatever card game is inheriting from this.
         /// </summary>
-        void LaunchOptions();
+        void Options();
 
         /// <summary>
         /// This is called when the user wants to save a game of whatever card game is inheriting from this.
         /// </summary>
-        void LaunchSaveMenu();
+        void Save();
 
         /// <summary>
         /// This is called when the user wants to load a new game of whatever card game is inheriting from this.
         /// </summary>
-        void LaunchNewMenu();
+        void New();
     }
 }

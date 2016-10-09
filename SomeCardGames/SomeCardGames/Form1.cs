@@ -81,6 +81,7 @@ namespace SomeCardGames
             try
             {
                 this.main.StartNewCardGame(new GolfLogic());
+
             }
             catch (Exception TheException)
             {
@@ -92,6 +93,7 @@ namespace SomeCardGames
         {
             try
             {
+                this.main.StopCardGame();
                 this.main.Shutdown(0);
             }
             catch (Exception TheException)
@@ -141,6 +143,54 @@ namespace SomeCardGames
             try
             {
 
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void newToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void newToolStripMenuItem6_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            try
+            {
+                this.main.StopCardGame();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void loadToolStripMenuItem5_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            try
+            {
+                this.main.StopCardGame();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        private void saveToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.main.Current.Save();
             }
             catch (Exception TheException)
             {
