@@ -6,9 +6,7 @@ Built with [Visual Studio](https://www.visualstudio.com/), Some Card Games is a 
 
 #**License**
 
-1. Don't use this code, and claim it as your own.
-
-      a. If you provide credit to this project, you are fine.
+1. Don't use this code, and claim it as your own. If you provide credit to this project, you are fine.
 2. Don't make money off of this code
 3. Don't do anything illegal with this.
 4. Include this exact same license on your own project, except always direct credit torwards this project.
