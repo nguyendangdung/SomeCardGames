@@ -7,5 +7,12 @@ namespace Golf.Code.UI_s.WinForms
     /// </summary>
     public class NewGolfForm : Form
     {
+        /// <summary>
+        /// The constructor for the 
+        /// </summary>
+        public NewGolfForm()
+        {
+
+        }
     }
 }
