@@ -19,6 +19,9 @@ namespace Golf.Code.UI_s.WinForms
             try
             {
                 VariableStorage.TheForm.AddOwnedForm(this);
+                this.Size = VariableStorage.TheForm.Size;
+                this.Location = VariableStorage.TheForm.Location;
+                this.WindowState = FormWindowState.Normal;
             }
             catch (Exception TheException)
             {
