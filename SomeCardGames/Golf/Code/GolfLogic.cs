@@ -1,11 +1,14 @@
-﻿using Golf.Code.UI_s;
-using Golf.Properties;
-using SomeCardGamesAPI.API;
-using SomeCardGamesAPI.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
+
+using Golf.Code.UI_s;
+using Golf.Code.UI_s.WinForms;
+using Golf.Properties;
+
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Error;
 
 namespace Golf.Code
 {
@@ -119,24 +122,6 @@ namespace Golf.Code
         }
 
         /// <summary>
-        /// Called to start running this card game.
-        /// </summary>
-        public void Start()
-        {
-            try
-            {
-                this.Drawer = new GolfDrawer();
-                this.Drawer.StartUp(this);
-                this.CreateGolfDeck();
-                this.DealInPlayers();
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
         /// Called to stop this card game.
         /// </summary>
         public void Stop()
@@ -171,7 +156,7 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to specify what to load.
         /// </summary>
-        public void LaunchLoadMenu()
+        public void Load()
         {
             throw new NotImplementedException();
         }
@@ -179,7 +164,7 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to adjust some options.
         /// </summary>
-        public void LaunchOptions()
+        public void Options()
         {
             throw new NotImplementedException();
         }
@@ -187,7 +172,7 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to save the current game.
         /// </summary>
-        public void LaunchSaveMenu()
+        public void Save()
         {
             throw new NotImplementedException();
         }
@@ -195,9 +180,22 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to create a new game.
         /// </summary>
-        public void LaunchNewMenu()
+        public void New()
         {
-            throw new NotImplementedException();
+            try
+            {
+                NewGolfForm a = new NewGolfForm();
+
+                a.Show();
+                this.Drawer = new GolfDrawer();
+                this.Drawer.StartUp(this);
+                this.CreateGolfDeck();
+                this.DealInPlayers();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
         }
     }
 }
