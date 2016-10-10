@@ -9,6 +9,7 @@ using Golf.Properties;
 
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
+using System.Threading.Tasks;
 
 namespace Golf.Code
 {
@@ -180,13 +181,16 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to create a new game.
         /// </summary>
-        public void New()
+        public async void New()
         {
             try
             {
                 NewGolfForm a = new NewGolfForm();
 
                 a.Show();
+                Task AwaitSettingsUpdate = new Task(new Action(a.RefreshGameOptions));
+                await AwaitSettingsUpdate;
+                
                 this.Drawer = new GolfDrawer();
                 this.Drawer.StartUp(this);
                 this.CreateGolfDeck();

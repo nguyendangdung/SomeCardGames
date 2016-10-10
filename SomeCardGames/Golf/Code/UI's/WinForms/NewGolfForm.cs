@@ -28,5 +28,14 @@ namespace Golf.Code.UI_s.WinForms
                 ErrorReporter.Report(TheException);
             }
         }
+
+        /// <summary>
+        /// Sets the settings file embedded in here with new game settings, for the next game.
+        /// Returns true if it completed successfully.
+        /// </summary>
+        public void RefreshGameOptions()
+        {
+
+        }
     }
 }
