@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
+using System.Threading.Tasks;
 
 using Golf.Code.UI_s;
 using Golf.Code.UI_s.WinForms;
@@ -9,7 +10,7 @@ using Golf.Properties;
 
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
-using System.Threading.Tasks;
+using SomeCardGamesAPI.Utility;
 
 namespace Golf.Code
 {
@@ -187,9 +188,9 @@ namespace Golf.Code
             {
                 NewGolfForm a = new NewGolfForm();
 
-                a.Show();
-                Task AwaitSettingsUpdate = new Task(new Action(a.RefreshGameOptions));
-                await AwaitSettingsUpdate;
+                a.ShowDialog(VariableStorage.TheForm);
+                //Task AwaitSettingsUpdate = new Task(new Action(a.RefreshGameOptions)); Shouldn't need this
+                //await AwaitSettingsUpdate;
                 
                 this.Drawer = new GolfDrawer();
                 this.Drawer.StartUp(this);

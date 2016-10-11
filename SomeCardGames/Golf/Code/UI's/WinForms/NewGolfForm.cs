@@ -22,6 +22,7 @@ namespace Golf.Code.UI_s.WinForms
                 this.Size = VariableStorage.TheForm.Size;
                 this.Location = VariableStorage.TheForm.Location;
                 this.WindowState = FormWindowState.Normal;
+                this.DialogResult = DialogResult.OK;
             }
             catch (Exception TheException)
             {
