@@ -81,7 +81,26 @@ namespace SomeCardGames
                 VariableStorage.IsCardGameAlreadyGoing = true;
 
                 this.Current = game;
-                game.Start();
+                game.New();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
+
+        /// <summary>
+        /// Called by several buttons, when the current card game needs to be stopped.
+        /// </summary>
+        public void StopCardGame()
+        {
+            try
+            {
+                if (VariableStorage.IsCardGameAlreadyGoing)
+                {
+                    this.Current.Save();
+                    this.Current.Stop();
+                }
             }
             catch (Exception TheException)
             {

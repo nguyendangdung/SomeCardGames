@@ -1,11 +1,15 @@
-﻿using Golf.Code.UI_s;
-using Golf.Properties;
-using SomeCardGamesAPI.API;
-using SomeCardGamesAPI.Error;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
+
+using Golf.Code.UI_s;
+using Golf.Code.UI_s.WinForms;
+using Golf.Properties;
+
+using SomeCardGamesAPI.API;
+using SomeCardGamesAPI.Error;
+using System.Threading.Tasks;
 
 namespace Golf.Code
 {
@@ -119,24 +123,6 @@ namespace Golf.Code
         }
 
         /// <summary>
-        /// Called to start running this card game.
-        /// </summary>
-        public void Start()
-        {
-            try
-            {
-                this.Drawer = new GolfDrawer();
-                this.Drawer.StartUp(this);
-                this.CreateGolfDeck();
-                this.DealInPlayers();
-            }
-            catch (Exception TheException)
-            {
-                ErrorReporter.Report(TheException);
-            }
-        }
-
-        /// <summary>
         /// Called to stop this card game.
         /// </summary>
         public void Stop()
@@ -167,5 +153,53 @@ namespace Golf.Code
         {
             return new Settings();
         }
+
+        /// <summary>
+        /// Launches a menu that allows the user to specify what to load.
+        /// </summary>
+        public void Load()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Launches a menu that allows the user to adjust some options.
+        /// </summary>
+        public void Options()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Launches a menu that allows the user to save the current game.
+        /// </summary>
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Launches a menu that allows the user to create a new game.
+        /// </summary>
+        public async void New()
+        {
+            try
+            {
+                NewGolfForm a = new NewGolfForm();
+
+                a.Show();
+                Task AwaitSettingsUpdate = new Task(new Action(a.RefreshGameOptions));
+                await AwaitSettingsUpdate;
+                
+                this.Drawer = new GolfDrawer();
+                this.Drawer.StartUp(this);
+                this.CreateGolfDeck();
+                this.DealInPlayers();
+            }
+            catch (Exception TheException)
+            {
+                ErrorReporter.Report(TheException);
+            }
+        }
     }
-} 
+}

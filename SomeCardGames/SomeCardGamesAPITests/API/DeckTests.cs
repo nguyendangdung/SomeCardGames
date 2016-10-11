@@ -114,7 +114,6 @@ namespace SomeCardGamesAPI.API.Tests
                     Assert.Fail("The shuffle failed to work properly.");
                 }
 
-
                 //Assert.AreNotEqual(b.Cards, a.Cards);
             }
             catch (Exception e)

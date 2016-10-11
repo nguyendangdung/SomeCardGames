@@ -63,6 +63,9 @@
             this.optionsToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.golfToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.golfToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.universalOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,22 +89,30 @@
             this.newToolStripMenuItem6.Name = "newToolStripMenuItem6";
             this.newToolStripMenuItem6.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem6.Text = "New";
+            this.newToolStripMenuItem6.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.newToolStripMenuItem6_DropDownItemClicked);
+            this.newToolStripMenuItem6.Click += new System.EventHandler(this.newToolStripMenuItem6_Click);
             // 
             // golfToolStripMenuItem2
             // 
             this.golfToolStripMenuItem2.Name = "golfToolStripMenuItem2";
-            this.golfToolStripMenuItem2.Size = new System.Drawing.Size(96, 22);
+            this.golfToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.golfToolStripMenuItem2.Text = "Golf";
             this.golfToolStripMenuItem2.Click += new System.EventHandler(this.golfToolStripMenuItem2_Click);
             // 
             // loadToolStripMenuItem5
             // 
+            this.loadToolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.golfToolStripMenuItem3});
             this.loadToolStripMenuItem5.Name = "loadToolStripMenuItem5";
             this.loadToolStripMenuItem5.Size = new System.Drawing.Size(45, 20);
             this.loadToolStripMenuItem5.Text = "Load";
+            this.loadToolStripMenuItem5.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.loadToolStripMenuItem5_DropDownItemClicked);
             // 
             // optionsToolStripMenuItem5
             // 
+            this.optionsToolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.universalOptionsToolStripMenuItem,
+            this.golfToolStripMenuItem4});
             this.optionsToolStripMenuItem5.Name = "optionsToolStripMenuItem5";
             this.optionsToolStripMenuItem5.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem5.Text = "Options";
@@ -111,6 +122,7 @@
             this.saveToolStripMenuItem5.Name = "saveToolStripMenuItem5";
             this.saveToolStripMenuItem5.Size = new System.Drawing.Size(43, 20);
             this.saveToolStripMenuItem5.Text = "Save";
+            this.saveToolStripMenuItem5.Click += new System.EventHandler(this.saveToolStripMenuItem5_Click);
             // 
             // loadToolStripMenuItem6
             // 
@@ -259,6 +271,27 @@
             this.exitToolStripMenuItem4.Name = "exitToolStripMenuItem4";
             this.exitToolStripMenuItem4.Size = new System.Drawing.Size(32, 19);
             // 
+            // golfToolStripMenuItem3
+            // 
+            this.golfToolStripMenuItem3.Name = "golfToolStripMenuItem3";
+            this.golfToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.golfToolStripMenuItem3.Text = "Golf";
+            this.golfToolStripMenuItem3.Click += new System.EventHandler(this.golfToolStripMenuItem3_Click);
+            // 
+            // golfToolStripMenuItem4
+            // 
+            this.golfToolStripMenuItem4.Name = "golfToolStripMenuItem4";
+            this.golfToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.golfToolStripMenuItem4.Text = "Golf";
+            this.golfToolStripMenuItem4.Click += new System.EventHandler(this.golfToolStripMenuItem4_Click);
+            // 
+            // universalOptionsToolStripMenuItem
+            // 
+            this.universalOptionsToolStripMenuItem.Name = "universalOptionsToolStripMenuItem";
+            this.universalOptionsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.universalOptionsToolStripMenuItem.Text = "Universal Options";
+            this.universalOptionsToolStripMenuItem.Click += new System.EventHandler(this.universalOptionsToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,5 +347,8 @@
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem golfToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem golfToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem universalOptionsToolStripMenuItem;
     }
 }
