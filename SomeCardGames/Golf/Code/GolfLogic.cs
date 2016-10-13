@@ -182,15 +182,13 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to create a new game.
         /// </summary>
-        public async void New()
+        public void New()
         {
             try
             {
                 NewGolfForm a = new NewGolfForm();
 
                 a.ShowDialog(VariableStorage.TheForm);
-                //Task AwaitSettingsUpdate = new Task(new Action(a.RefreshGameOptions)); Shouldn't need this
-                //await AwaitSettingsUpdate;
                 
                 this.Drawer = new GolfDrawer();
                 this.Drawer.StartUp(this);
