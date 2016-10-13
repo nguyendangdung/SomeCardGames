@@ -28,6 +28,7 @@ namespace Golf.Code.UI_s.WinForms
                 this.Location = VariableStorage.TheForm.Location;
                 this.WindowState = FormWindowState.Normal;
                 this.DialogResult = DialogResult.OK;
+
             }
             catch (Exception TheException)
             {
@@ -39,5 +40,5 @@ namespace Golf.Code.UI_s.WinForms
         {
 
         }
-    }
+	}
 }
