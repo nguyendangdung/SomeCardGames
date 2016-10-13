@@ -30,7 +30,7 @@ namespace Golf.Code.Tests
                 SomeCardGamesAPI.Utility.VariableStorage.TheForm = new System.Windows.Forms.Form();
                 GolfLogic a;
                 a = new GolfLogic();
-                a.Start();
+                a.New();
             }
             catch (Exception e)
             {

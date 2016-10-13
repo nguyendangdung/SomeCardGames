@@ -118,7 +118,6 @@ namespace SomeCardGamesAPI.API.Tests
             }
             catch (Exception e)
             {
-                int i = 0;
                 Assert.Fail(e.Message);
             }
         }
@@ -151,7 +150,9 @@ namespace SomeCardGamesAPI.API.Tests
 
                 return true;
             }
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception e)
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 Assert.Fail("There is an error in the test code");
                 return true;
