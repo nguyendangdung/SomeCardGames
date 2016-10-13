@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using SomeCardGamesAPI.Error;
@@ -6,10 +13,7 @@ using SomeCardGamesAPI.Utility;
 
 namespace Golf.Code.UI_s.WinForms
 {
-    /// <summary>
-    /// This form is called when creating a new golf game.
-    /// </summary>
-    public class NewGolfForm : Form
+    public partial class NewGolfForm : Form
     {
         /// <summary>
         /// The constructor for the NewGolfForm class.
@@ -18,6 +22,7 @@ namespace Golf.Code.UI_s.WinForms
         {
             try
             {
+                InitializeComponent();
                 VariableStorage.TheForm.AddOwnedForm(this);
                 this.Size = VariableStorage.TheForm.Size;
                 this.Location = VariableStorage.TheForm.Location;
@@ -29,11 +34,7 @@ namespace Golf.Code.UI_s.WinForms
             }
         }
 
-        /// <summary>
-        /// Sets the settings file embedded in here with new game settings, for the next game.
-        /// Returns true if it completed successfully.
-        /// </summary>
-        public void RefreshGameOptions()
+        private void NewGolfForm_Load(object sender, EventArgs e)
         {
 
         }
