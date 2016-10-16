@@ -38,7 +38,14 @@ namespace Golf.Code.UI_s.WinForms
 
         private void NewGolfForm_Load(object sender, EventArgs e)
         {
-			
+			try
+			{
+				this.AICountTBox.Text = Golf.Properties.Settings.Default.GolfAIPlayers.ToString();
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+			}
         }
 
 		private void panel1_Paint(object sender, PaintEventArgs e)
@@ -50,7 +57,18 @@ namespace Golf.Code.UI_s.WinForms
 		{
 			try
 			{
-				if (this.AICountTBox.Text.
+				if (!Util.IsTextOnlyNumbers(this.AICountTBox.Text))
+				{
+					MessageBox.Show("Error:", "There was a non number character found in the AI box.");
+					this.AICountTBox.Text = "3";
+				}
+				else
+				{
+					if (this.AICountTBox.Text.Trim(' ') != "")
+					{
+						Golf.Properties.Settings.Default.GolfAIPlayers = Convert.ToInt32(this.AICountTBox.Text);
+					}
+				}
 			}
 			catch (Exception TheException)
 			{
