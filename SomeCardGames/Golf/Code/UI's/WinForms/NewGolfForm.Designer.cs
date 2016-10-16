@@ -28,20 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.MainPanel = new System.Windows.Forms.Panel();
+			this.NumberOfAIsDescription = new System.Windows.Forms.TextBox();
+			this.AICountTBox = new System.Windows.Forms.TextBox();
+			this.MainPanel.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// MainPanel
+			// 
+			this.MainPanel.Controls.Add(this.AICountTBox);
+			this.MainPanel.Controls.Add(this.NumberOfAIsDescription);
+			this.MainPanel.Location = new System.Drawing.Point(13, 13);
+			this.MainPanel.Name = "MainPanel";
+			this.MainPanel.Size = new System.Drawing.Size(259, 236);
+			this.MainPanel.TabIndex = 0;
+			this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+			// 
+			// NumberOfAIsDescription
+			// 
+			this.NumberOfAIsDescription.Location = new System.Drawing.Point(4, 4);
+			this.NumberOfAIsDescription.Name = "NumberOfAIsDescription";
+			this.NumberOfAIsDescription.ReadOnly = true;
+			this.NumberOfAIsDescription.Size = new System.Drawing.Size(81, 20);
+			this.NumberOfAIsDescription.TabIndex = 0;
+			this.NumberOfAIsDescription.Text = "Number Of AI\'s:";
+			// 
+			// AICountTBox
+			// 
+			this.AICountTBox.Location = new System.Drawing.Point(92, 4);
+			this.AICountTBox.Name = "AICountTBox";
+			this.AICountTBox.Size = new System.Drawing.Size(164, 20);
+			this.AICountTBox.TabIndex = 1;
+			this.AICountTBox.TextChanged += new System.EventHandler(this.AICountTBox_TextChanged);
 			// 
 			// NewGolfForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.Controls.Add(this.MainPanel);
 			this.Name = "NewGolfForm";
 			this.Text = "NewGolfForm";
 			this.Load += new System.EventHandler(this.NewGolfForm_Load);
+			this.MainPanel.ResumeLayout(false);
+			this.MainPanel.PerformLayout();
 			this.ResumeLayout(false);
 
         }
 
 		#endregion
+
+		private System.Windows.Forms.Panel MainPanel;
+		private System.Windows.Forms.TextBox NumberOfAIsDescription;
+		private System.Windows.Forms.TextBox AICountTBox;
 	}
 }

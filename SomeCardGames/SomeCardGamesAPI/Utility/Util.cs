@@ -117,5 +117,51 @@ namespace SomeCardGamesAPI.Utility
                 return null;
             }
         }
+
+		/// <summary>
+		/// Returns true if there is only number characters in the string.
+		/// </summary>
+		/// <param name="Text"></param>
+		/// <returns></returns>
+		public static bool IsTextOnlyNumbers(string Text)
+		{
+			try
+			{
+				foreach (char item in Text)
+				{
+					switch (item)
+					{
+						case '0':
+							break;
+						case '1':
+							break;
+						case '2':
+							break;
+						case '3':
+							break;
+						case '4':
+							break;
+						case '5':
+							break;
+						case '6':
+							break;
+						case '7':
+							break;
+						case '8':
+							break;
+						case '9':
+							break;
+						default:
+							return false;
+					}
+				}
+				return true;
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+				return false;
+			}
+		}
     }
 }

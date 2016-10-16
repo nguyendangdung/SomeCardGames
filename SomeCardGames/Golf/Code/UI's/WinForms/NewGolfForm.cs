@@ -38,7 +38,24 @@ namespace Golf.Code.UI_s.WinForms
 
         private void NewGolfForm_Load(object sender, EventArgs e)
         {
-
+			
         }
+
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void AICountTBox_TextChanged(object sender, EventArgs e)
+		{
+			try
+			{
+				if (this.AICountTBox.Text.
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+			}
+		}
 	}
 }
