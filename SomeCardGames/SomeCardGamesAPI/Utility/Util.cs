@@ -186,5 +186,25 @@ namespace SomeCardGamesAPI.Utility
 				ErrorReporter.Report(TheException);
 			}
 		}
+
+		/// <summary>
+		/// Reads an object from an binary XML document and returns it as an object.
+		/// </summary>
+		/// <param name="FilePath"></param>
+		/// <returns></returns>
+		public static object ReadSerializedObjectFromFile(string FilePath)
+		{
+			try
+			{
+				Stream stream = File.Open(FilePath, FileMode.Open);
+				BinaryFormatter bform = new BinaryFormatter();
+				return bform.Deserialize(stream);
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+				return null;
+			}
+		}
     }
 }

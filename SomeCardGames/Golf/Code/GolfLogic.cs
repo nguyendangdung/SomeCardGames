@@ -227,7 +227,6 @@ namespace Golf.Code
 			catch (Exception TheException)
 			{
 				ErrorReporter.Report(TheException);
-				MessageBox.Show("Error!", "Failed to save golf game data.");
 			}
 		}
 	}
