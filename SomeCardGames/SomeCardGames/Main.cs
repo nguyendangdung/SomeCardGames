@@ -23,6 +23,7 @@ namespace SomeCardGames
         {
             try
             {
+				Filing.DoMaintinence();
                 LoadedCardResources.LoadResources();
                 this.SetupForm();
                 VariableStorage.TheForm.Text = VariableStorage.GetRandomTitle();
