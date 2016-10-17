@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Windows.Forms;
 
 using Golf.Code.UI_s;
 using Golf.Code.UI_s.WinForms;
@@ -11,18 +13,20 @@ using Golf.Properties;
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
 using SomeCardGamesAPI.Utility;
-using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace Golf.Code
 {
     /// <summary>
     /// This class is the main source and entrance for the card game "Golf".
     /// </summary>
+	[Serializable()]
     public class GolfLogic : ICardGame
     {
         /// <summary>
         /// A list of all of the players currently in the golf game.
         /// </summary>
+		[XmlArrayItem(ElementName = "GolfPlayers")]
         public List<GolfPlayer> Players;
 
         /// <summary>
@@ -41,6 +45,13 @@ namespace Golf.Code
         public GolfLogic()
         {
         }
+		/// <summary>
+		/// This constructor is for construction from XML.
+		/// </summary>
+		public GolfLogic(SerializationInfo info, StreamingContext context)
+		{
+
+		}
 
         /// <summary>
         /// Creates and deals in all of the players for this game.
@@ -209,7 +220,15 @@ namespace Golf.Code
 		/// <param name="context"></param>
 		public void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				info.AddValue()
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+				MessageBox.Show("Error!", "Failed to save golf game data.");
+			}
 		}
 	}
 }
