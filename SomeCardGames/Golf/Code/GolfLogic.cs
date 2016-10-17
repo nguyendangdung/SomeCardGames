@@ -222,7 +222,7 @@ namespace Golf.Code
 		{
 			try
 			{
-				info.AddValue()
+				info.AddValue("GolfPlayers", this.Players);
 			}
 			catch (Exception TheException)
 			{

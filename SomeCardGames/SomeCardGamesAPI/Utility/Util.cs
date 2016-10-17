@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace SomeCardGamesAPI.Utility
@@ -161,6 +163,27 @@ namespace SomeCardGamesAPI.Utility
 			{
 				ErrorReporter.Report(TheException);
 				return false;
+			}
+		}
+
+		/// <summary>
+		/// Serializes an object to XML to the specified file location.
+		/// </summary>
+		/// <param name="FilePath">No file extensions please.</param>
+		/// <param name="ToSerialize"></param>
+		public static void SerializeObjectToFile(string FilePath, object ToSerialize)
+		{
+			try
+			{
+				string Extension = ".xml";
+				Stream stream = File.Open(FilePath + Extension, FileMode.Create);
+				BinaryFormatter bform = new BinaryFormatter();
+
+				bform.Serialize(stream, ToSerialize);
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
 			}
 		}
     }
