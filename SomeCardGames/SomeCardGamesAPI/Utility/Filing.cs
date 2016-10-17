@@ -21,6 +21,7 @@ namespace SomeCardGamesAPI.Utility
 		private static string RootPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
 		private static string ModulesFolderPath = RootPath + "\\Modules";
 		private static string GolfFolderPath = ModulesFolderPath + "\\Golf";
+		private static string GolfSaveFolderPath = GolfFolderPath + "\\Saves";
 		/// <summary>
 		/// Kicked off on startup to launch various processes.
 		/// </summary>
@@ -47,6 +48,16 @@ namespace SomeCardGamesAPI.Utility
 				{
 					Directory.CreateDirectory(ModulesFolderPath);
 				}
+				//Golf
+				if (!Directory.Exists(GolfFolderPath))
+				{
+					Directory.CreateDirectory(GolfFolderPath);
+					if (!Directory.Exists(GolfSaveFolderPath))
+					{
+						Directory.CreateDirectory(GolfSaveFolderPath);
+					}
+				}
+				//End
 			}
 			catch (Exception TheException)
 			{
@@ -61,7 +72,21 @@ namespace SomeCardGamesAPI.Utility
 		/// <param name="ModuleName"></param>
 		public static void AddAndVerifyExternalModule(string ModuleName)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				if (!Directory.Exists(ModulesFolderPath + "\\" + ModuleName))
+				{
+					Directory.CreateDirectory(ModulesFolderPath + "\\" + ModuleName);
+					if (!Directory.Exists(ModulesFolderPath + "\\" + ModuleName + "\\Saves"))
+					{
+						Directory.CreateDirectory(ModulesFolderPath + "\\" + ModuleName + "\\Saves");
+					}
+				}
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+			}
 		}
 	}
 }
