@@ -1,12 +1,13 @@
 ﻿using System.Configuration;
 using System.Drawing;
+using System.Runtime.Serialization;
 
 namespace SomeCardGamesAPI.API
 {
     /// <summary>
     /// Things that implement this interface are card games
     /// </summary>
-    public interface ICardGame
+    public interface ICardGame : ISerializable
     {
         /// <summary>
         /// Called by the main form when the new, load, or exit button is clicked, and this card game was running previously.

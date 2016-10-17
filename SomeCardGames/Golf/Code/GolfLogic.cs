@@ -11,6 +11,7 @@ using Golf.Properties;
 using SomeCardGamesAPI.API;
 using SomeCardGamesAPI.Error;
 using SomeCardGamesAPI.Utility;
+using System.Runtime.Serialization;
 
 namespace Golf.Code
 {
@@ -200,5 +201,15 @@ namespace Golf.Code
                 ErrorReporter.Report(TheException);
             }
         }
-    }
+
+		/// <summary>
+		/// Serializes this object to XML.
+		/// </summary>
+		/// <param name="info"></param>
+		/// <param name="context"></param>
+		public void GetObjectData(SerializationInfo info, StreamingContext context)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

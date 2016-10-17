@@ -5,7 +5,7 @@ using System.Windows.Forms;
 namespace Golf.Code
 {
     /// <summary>
-    /// This is used to recieve and process mouse and keyboard events.
+    /// This is used to receive and process mouse and keyboard events.
     /// </summary>
     public class GolfEventHandler : IEventHandler
     {
