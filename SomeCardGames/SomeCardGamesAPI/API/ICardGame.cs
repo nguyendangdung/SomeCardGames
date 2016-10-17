@@ -29,7 +29,7 @@ namespace SomeCardGamesAPI.API
         /// <summary>
         /// This is called when the user wants to load a game of whatever card game is inheriting from this.
         /// </summary>
-        void Load();
+        void Load(string GameName);
 
         /// <summary>
         /// This is called when the user wants to load the options of a game of whatever card game is inheriting from this.

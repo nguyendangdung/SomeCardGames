@@ -55,7 +55,7 @@ namespace Golf.Code
 		/// </summary>
 		public GolfLogic(SerializationInfo info, StreamingContext context)
 		{
-
+			throw new NotImplementedException();
 		}
 
         /// <summary>
@@ -175,9 +175,16 @@ namespace Golf.Code
         /// <summary>
         /// Launches a menu that allows the user to specify what to load.
         /// </summary>
-        public void Load()
+        public void Load(string GameName)
         {
-            throw new NotImplementedException();
+			try
+			{
+				GolfLogic
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+			}
         }
 
         /// <summary>
