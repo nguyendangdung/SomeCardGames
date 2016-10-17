@@ -170,7 +170,7 @@ namespace SomeCardGamesAPI.Utility
 		/// Serializes an object to XML to the specified file location.
 		/// </summary>
 		/// <param name="FilePath">No file extensions please.</param>
-		/// <param name="ToSerialize"></param>
+		/// <param name="ToSerialize">Must contain all serializable objects.</param>
 		public static void SerializeObjectToFile(string FilePath, object ToSerialize)
 		{
 			try
