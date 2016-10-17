@@ -18,10 +18,10 @@ namespace SomeCardGamesAPI.Utility
 		/// <summary>
 		/// Gets the location of the folder that this assembly is executing from.
 		/// </summary>
-		private static string RootPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-		private static string ModulesFolderPath = RootPath + "\\Modules";
-		private static string GolfFolderPath = ModulesFolderPath + "\\Golf";
-		private static string GolfSaveFolderPath = GolfFolderPath + "\\Saves";
+		private static string RootPath = new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase)).LocalPath;
+		private static string ModulesFolderPath = new Uri(RootPath + "\\Modules").LocalPath;
+		private static string GolfFolderPath = new Uri(ModulesFolderPath + "\\Golf").LocalPath;
+		public static string GolfSaveFolderPath = new Uri(GolfFolderPath + "\\Saves").LocalPath;
 		/// <summary>
 		/// Kicked off on startup to launch various processes.
 		/// </summary>
@@ -74,12 +74,12 @@ namespace SomeCardGamesAPI.Utility
 		{
 			try
 			{
-				if (!Directory.Exists(ModulesFolderPath + "\\" + ModuleName))
+				if (!Directory.Exists(new Uri(ModulesFolderPath + "\\" + ModuleName).LocalPath))
 				{
-					Directory.CreateDirectory(ModulesFolderPath + "\\" + ModuleName);
-					if (!Directory.Exists(ModulesFolderPath + "\\" + ModuleName + "\\Saves"))
+					Directory.CreateDirectory(new Uri(ModulesFolderPath + "\\" + ModuleName).LocalPath);
+					if (!Directory.Exists(new Uri(ModulesFolderPath + "\\" + ModuleName + "\\Saves").LocalPath))
 					{
-						Directory.CreateDirectory(ModulesFolderPath + "\\" + ModuleName + "\\Saves");
+						Directory.CreateDirectory(new Uri(ModulesFolderPath + "\\" + ModuleName + "\\Saves").LocalPath);
 					}
 				}
 			}
