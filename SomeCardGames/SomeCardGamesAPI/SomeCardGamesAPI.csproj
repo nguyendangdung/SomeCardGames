@@ -80,6 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utility\Filing.cs" />
     <Compile Include="Utility\Util.cs" />
     <Compile Include="Utility\VariableStorage.cs" />
   </ItemGroup>
