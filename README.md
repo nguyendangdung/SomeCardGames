@@ -1,3 +1,4 @@
+
 # SomeCardGames
 
 ##**Short Description**
@@ -15,6 +16,10 @@ Built with [Visual Studio](https://www.visualstudio.com/), Some Card Games is a 
 ##**Development Versions**
 
 Release versions are not availible currently, but if you desperately want to see where I am at in developing this, you can compile it yourself and see. However, due to security reasons I removed the Secure.cs file, which contains sensitive information. If you are compiling it yourself, then you will need to remove the reference to that file. The program will work fine without it, it just won't auto report the errors to this page.
+
+##**User Created Content**
+
+More to come on this later :)
 
 ##**Libraries**
 
