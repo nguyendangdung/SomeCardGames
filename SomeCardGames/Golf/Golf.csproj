@@ -56,9 +56,9 @@
   <ItemGroup>
     <Compile Include="Code\UI%27s\Main\Controls\MiddleStack.cs" />
     <Compile Include="Code\UI%27s\GolfDrawer.cs" />
-    <Compile Include="Code\GolfEventHandler.cs" />
-    <Compile Include="Code\GolfLogic.cs" />
-    <Compile Include="Code\GolfPlayer.cs" />
+    <Compile Include="Code\Core\GolfEventHandler.cs" />
+    <Compile Include="Code\Core\GolfLogic.cs" />
+    <Compile Include="Code\Core\GolfPlayer.cs" />
     <Compile Include="Code\UI%27s\Main\MainUI.cs" />
     <Compile Include="Code\UI%27s\WinForms\NewGolfForm.cs">
       <SubType>Form</SubType>
