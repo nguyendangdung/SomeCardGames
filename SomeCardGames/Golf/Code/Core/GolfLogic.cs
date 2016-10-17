@@ -23,6 +23,11 @@ namespace Golf.Code
 	[Serializable()]
     public class GolfLogic : ICardGame
     {
+		/// <summary>
+		/// The name of the current game.
+		/// </summary>
+		string CurrentGameSaveName;
+
         /// <summary>
         /// A list of all of the players currently in the golf game.
         /// </summary>
@@ -187,8 +192,15 @@ namespace Golf.Code
         /// Launches a menu that allows the user to save the current game.
         /// </summary>
         public void Save()
-        {
-            throw new NotImplementedException();
+		{
+			try
+			{
+				Util.SerializeObjectToFile(Filing.GolfSaveFolderPath + "\\" + this.CurrentGameSaveName, this);
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+			}
         }
 
         /// <summary>

@@ -176,7 +176,7 @@ namespace SomeCardGamesAPI.Utility
 			try
 			{
 				string Extension = ".xml";
-				Stream stream = File.Open(FilePath + Extension, FileMode.Create);
+				Stream stream = File.Open(new Uri(FilePath + Extension).LocalPath, FileMode.Create);
 				BinaryFormatter bform = new BinaryFormatter();
 
 				bform.Serialize(stream, ToSerialize);
@@ -196,7 +196,7 @@ namespace SomeCardGamesAPI.Utility
 		{
 			try
 			{
-				Stream stream = File.Open(FilePath, FileMode.Open);
+				Stream stream = File.Open(new Uri(FilePath + ".xml").LocalPath, FileMode.Open);
 				BinaryFormatter bform = new BinaryFormatter();
 				return bform.Deserialize(stream);
 			}
