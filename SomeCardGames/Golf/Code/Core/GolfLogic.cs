@@ -53,7 +53,7 @@ namespace Golf.Code
 		/// <summary>
 		/// This constructor is for construction from XML.
 		/// </summary>
-		public GolfLogic(SerializationInfo info, StreamingContext context)
+		public void LoadFromXML(SerializationInfo info, StreamingContext context)
 		{
 			throw new NotImplementedException();
 		}
@@ -179,7 +179,7 @@ namespace Golf.Code
         {
 			try
 			{
-				GolfLogic
+				Util.ReadSerializedObjectFromFile(Filing.GolfSaveFolderPath + "\\" + GameName);
 			}
 			catch (Exception TheException)
 			{

@@ -75,5 +75,21 @@ namespace Golf.Code.UI_s.WinForms
 				ErrorReporter.Report(TheException);
 			}
 		}
+
+		private void GameNameTextBox_TextChanged(object sender, EventArgs e)
+		{
+			try
+			{
+				if (Util.DoesGameAlreadyExist(this.GameNameTextBox.Text, Filing.GolfSaveFolderPath))
+				{
+					MessageBox.Show("Error!", "We already have a game that exists with that name");
+				}
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+			}
+			
+		}
 	}
 }

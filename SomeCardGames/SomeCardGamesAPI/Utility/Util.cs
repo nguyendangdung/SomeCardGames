@@ -206,5 +206,25 @@ namespace SomeCardGamesAPI.Utility
 				return null;
 			}
 		}
+
+		/// <summary>
+		/// Figures out if the same game already exists.
+		/// </summary>
+		/// <param name="GameName"></param>
+		/// <param name="PathToSaveDirectory"></param>
+		/// <returns></returns>
+		public static bool DoesGameAlreadyExist(string GameName, string PathToSaveDirectory)
+		{
+			try
+			{
+				List<string> a = new List<string>(Directory.GetFiles(PathToSaveDirectory));
+				return a.Contains(GameName);
+			}
+			catch (Exception TheException)
+			{
+				ErrorReporter.Report(TheException);
+				return false;
+			}
+		}
     }
 }
